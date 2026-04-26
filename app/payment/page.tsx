@@ -32,7 +32,11 @@ function PaymentContent() {
   const [emailError, setEmailError] = React.useState('');
 
   const upiId = '8840734369@jupiteraxis';
-  const upiLink = `upi://pay?pa=${upiId}&pn=DoctorSite&am=${finalAmount}&cu=INR`;
+  
+  // Convert USD to INR for UPI payment (1 USD ≈ 84 INR)
+  const USD_TO_INR = 84;
+  const amountInINR = Math.round(parseFloat(finalAmount) * USD_TO_INR);
+  const upiLink = `upi://pay?pa=${upiId}&pn=DoctorSite&am=${amountInINR}&cu=INR`;
 
   const copyUpiId = () => {
     navigator.clipboard.writeText(upiId);
@@ -107,6 +111,9 @@ function PaymentContent() {
                   <span className="text-3xl font-bold text-blue-600">${parseInt(finalAmount).toLocaleString()}</span>
                 </div>
                 <p className="text-sm text-gray-600">One-time payment</p>
+                <p className="text-sm text-orange-600 font-medium mt-1">
+                  ≈ ₹{amountInINR.toLocaleString()} (UPI will charge in INR)
+                </p>
               </div>
 
               {/* Email field */}
