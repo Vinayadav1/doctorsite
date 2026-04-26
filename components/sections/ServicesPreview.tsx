@@ -52,7 +52,7 @@ const ServicesPreview: React.FC = () => {
 
   return (
     <section ref={ref} className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -116,3 +116,4 @@ const ServicesPreview: React.FC = () => {
 ServicesPreview.displayName = 'ServicesPreview';
 
 export default ServicesPreview;
+

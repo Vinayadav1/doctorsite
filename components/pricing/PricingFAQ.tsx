@@ -114,3 +114,4 @@ const PricingFAQ: React.FC = () => {
 };
 
 export default PricingFAQ;
+

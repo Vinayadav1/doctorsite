@@ -11,7 +11,7 @@ const TrustSection: React.FC = () => {
 
   return (
     <section ref={ref} className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left: Image */}
           <motion.div
@@ -107,3 +107,4 @@ const TrustSection: React.FC = () => {
 TrustSection.displayName = 'TrustSection';
 
 export default TrustSection;
+

@@ -148,7 +148,7 @@ const PortfolioGrid: React.FC = () => {
 
   return (
     <section ref={ref} className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Filter Tabs */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -256,3 +256,4 @@ const PortfolioGrid: React.FC = () => {
 };
 
 export default PortfolioGrid;
+

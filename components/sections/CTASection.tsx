@@ -27,7 +27,7 @@ const CTASection: React.FC<CTASectionProps> = ({ onConsultationClick }) => {
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full translate-x-1/2 translate-y-1/2" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left: Content */}
           <motion.div
@@ -122,3 +122,4 @@ const CTASection: React.FC<CTASectionProps> = ({ onConsultationClick }) => {
 CTASection.displayName = 'CTASection';
 
 export default CTASection;
+

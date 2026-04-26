@@ -114,7 +114,7 @@ function SuccessContent() {
   /* ── SUCCESS SCREEN ── */
   if (submitted) {
     return (
-      <main className="min-h-screen bg-gray-50 flex items-center justify-center" style={{ marginTop: '80px' }}>
+      <main className="min-h-screen bg-gray-50 flex items-center justify-center pt-16 sm:pt-20">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -182,8 +182,8 @@ function SuccessContent() {
 
   /* ── FORM SCREEN ── */
   return (
-    <main className="min-h-screen bg-gray-50" style={{ marginTop: '80px' }}>
-      <div className="max-w-3xl mx-auto px-6 py-12">
+    <main className="min-h-screen bg-gray-50 pt-16 sm:pt-20">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
           <div className="text-center mb-8">
             <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
