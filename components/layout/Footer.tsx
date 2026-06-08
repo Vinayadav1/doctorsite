@@ -11,26 +11,26 @@ export const Footer: React.FC<FooterProps> = ({ className = '' }) => {
 
   return (
     <footer className={`bg-gray-900 text-gray-100 ${className}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-16">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div className="mb-12 grid grid-cols-1 gap-10 border-b border-white/15 pb-12 md:grid-cols-2 lg:grid-cols-4">
           {/* Company Info */}
-          <div className="space-y-4">
-            <h3 className="text-xl font-bold text-white">{SITE_NAME}</h3>
-            <p className="text-gray-400 text-sm">
-              Building professional digital presence for doctors and surgeons. Get more patients, build trust, and grow your practice.
+          <div className="space-y-5">
+            <h3 className="font-secondary text-2xl font-bold tracking-[-0.02em] text-white">{SITE_NAME}</h3>
+            <p className="text-sm leading-6 text-gray-400">
+              Building professional digital presence for doctors and surgeons with editorial design, surgical precision, and conversion clarity.
             </p>
           </div>
 
           {/* Quick Links */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-white">Quick Links</h4>
-            <nav className="flex flex-col space-y-2">
+          <div className="space-y-5">
+            <h4 className="text-xs font-bold uppercase tracking-[0.16em] text-[#e9c176]">Quick Links</h4>
+            <nav className="flex flex-col space-y-3">
               {navigationLinks.slice(0, 4).map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-gray-400 hover:text-white transition-colors text-sm"
+                  className="text-sm text-gray-400 transition-colors hover:text-white"
                 >
                   {link.label}
                 </Link>
@@ -39,14 +39,14 @@ export const Footer: React.FC<FooterProps> = ({ className = '' }) => {
           </div>
 
           {/* Services */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-white">Services</h4>
-            <nav className="flex flex-col space-y-2">
+          <div className="space-y-5">
+            <h4 className="text-xs font-bold uppercase tracking-[0.16em] text-[#e9c176]">Services</h4>
+            <nav className="flex flex-col space-y-3">
               {navigationLinks.slice(4).map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-gray-400 hover:text-white transition-colors text-sm"
+                  className="text-sm text-gray-400 transition-colors hover:text-white"
                 >
                   {link.label}
                 </Link>
@@ -55,8 +55,8 @@ export const Footer: React.FC<FooterProps> = ({ className = '' }) => {
           </div>
 
           {/* Contact Info */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-white">Contact Us</h4>
+          <div className="space-y-5">
+            <h4 className="text-xs font-bold uppercase tracking-[0.16em] text-[#e9c176]">Contact Us</h4>
             <div className="space-y-3 text-sm">
               <div className="flex items-start space-x-2">
                 <span className="text-gray-400">Email:</span>
@@ -91,7 +91,7 @@ export const Footer: React.FC<FooterProps> = ({ className = '' }) => {
 
             {/* Social Links */}
             <div className="pt-2">
-              <h5 className="text-sm font-semibold text-white mb-3">Follow Us</h5>
+              <h5 className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-white">Follow Us</h5>
               <div className="flex space-x-4">
                 <a
                   href="https://facebook.com"
@@ -143,7 +143,7 @@ export const Footer: React.FC<FooterProps> = ({ className = '' }) => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 pt-8">
+        <div>
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-400 text-sm">
               © {currentYear} {SITE_NAME}. All rights reserved.

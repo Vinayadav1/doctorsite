@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Navigation from './Navigation';
-import { navigationLinks, SITE_NAME } from '@/lib/constants';
+import { SITE_NAME } from '@/lib/constants';
 
 // Mock Next.js navigation hooks
 jest.mock('next/navigation', () => ({
@@ -10,6 +10,8 @@ jest.mock('next/navigation', () => ({
 }));
 
 describe('Navigation Component', () => {
+  const landingLinks = ['Home', 'About', 'Service', 'Pricing'];
+
   it('renders the site name/logo', () => {
     render(<Navigation />);
     expect(screen.getByText(SITE_NAME)).toBeInTheDocument();
@@ -18,21 +20,21 @@ describe('Navigation Component', () => {
   it('renders all navigation links', () => {
     render(<Navigation />);
     
-    navigationLinks.forEach((link) => {
-      expect(screen.getByText(link.label)).toBeInTheDocument();
+    landingLinks.forEach((label) => {
+      expect(screen.getByText(label)).toBeInTheDocument();
     });
   });
 
   it('renders the CTA button', () => {
     render(<Navigation />);
-    expect(screen.getByText('Book Free Consultation')).toBeInTheDocument();
+    expect(screen.getByText('Book Audit')).toBeInTheDocument();
   });
 
   it('highlights the active link', () => {
     render(<Navigation currentPath="/services" />);
     
-    const servicesLink = screen.getByText('Services');
-    expect(servicesLink).toHaveClass('text-primary-main');
+    const servicesLink = screen.getByText('Service');
+    expect(servicesLink).toHaveClass('border-b', 'text-black');
   });
 
   it('applies backdrop blur styles when scrolled', () => {
@@ -40,7 +42,7 @@ describe('Navigation Component', () => {
     const nav = container.querySelector('nav');
     
     // Initially should have base styles
-    expect(nav).toHaveClass('bg-white/95');
+    expect(nav).toHaveClass('bg-[#fbf9f8]/95');
     
     // Simulate scroll
     global.window.scrollY = 100;

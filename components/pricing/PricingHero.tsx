@@ -24,11 +24,11 @@ const PricingHero: React.FC = () => {
           </div>
 
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Simple, Affordable Pricing
+            Transparent Pricing
           </h1>
           
           <p className="text-lg md:text-xl text-gray-600">
-            Choose the perfect plan for your practice. No hidden fees, no surprises.
+            Choose a clear one-time website package designed to bring more patient appointments.
           </p>
         </motion.div>
       </div>

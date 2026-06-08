@@ -86,7 +86,7 @@ const AllServices: React.FC = () => {
                 {/* Price */}
                 <div className="pt-6 border-t border-gray-200">
                   <div className="mb-2">
-                    <span className="text-3xl font-bold text-blue-600">${service.price}</span>
+                    <span className="text-3xl font-bold text-blue-600">₹{service.price}</span>
                   </div>
                   <div className="mb-4">
                     <span className="text-sm text-gray-500">{service.priceNote}</span>

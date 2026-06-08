@@ -17,154 +17,167 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onConsultationClick }) => {
     setMounted(true);
   }, []);
 
-  const onPortfolioClick = () => {
-    router.push('/portfolio');
+  const onDemoClick = () => {
+    router.push('/previews/dr-rajesh');
   };
 
-  const statsCards = (
-    <>
-      <div className="flex items-center gap-3 sm:gap-4 bg-white/95 backdrop-blur-sm rounded-2xl p-4 sm:p-5 shadow-md">
-        <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center" style={{ backgroundColor: '#D1FAE5' }}>
-          <svg className="w-6 h-6 sm:w-7 sm:h-7" style={{ color: '#10B981' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-          </svg>
-        </div>
-        <div>
-          <div className="font-bold text-2xl sm:text-3xl" style={{ color: '#1F2937' }}>+150%</div>
-          <div className="text-xs sm:text-sm" style={{ color: '#6B7280' }}>Increased Patient Inquiries</div>
-        </div>
-      </div>
-      <div className="flex items-center gap-3 sm:gap-4 bg-white/95 backdrop-blur-sm rounded-2xl p-4 sm:p-5 shadow-md">
-        <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center" style={{ backgroundColor: '#DBEAFE' }}>
-          <svg className="w-6 h-6 sm:w-7 sm:h-7" style={{ color: '#5B8DEF' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-          </svg>
-        </div>
-        <div>
-          <div className="text-xs sm:text-sm" style={{ color: '#6B7280' }}>Launch in</div>
-          <div className="font-bold text-2xl sm:text-3xl" style={{ color: '#5B8DEF' }}>2-3 Weeks</div>
-        </div>
-      </div>
-      <div className="flex items-center gap-3 sm:gap-4 bg-white/95 backdrop-blur-sm rounded-2xl p-4 sm:p-5 shadow-md">
-        <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center" style={{ backgroundColor: '#DBEAFE' }}>
-          <svg className="w-6 h-6 sm:w-7 sm:h-7" style={{ color: '#5B8DEF' }} fill="currentColor" viewBox="0 0 20 20">
-            <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-          </svg>
-        </div>
-        <div>
-          <div className="font-bold text-base sm:text-lg" style={{ color: '#1F2937' }}>HIPAA-Compliant</div>
-          <div className="text-xs sm:text-sm" style={{ color: '#6B7280' }}>& Secure</div>
-        </div>
-      </div>
-    </>
-  );
+  const trustItems = [
+    { label: 'Starting ₹2,999', color: 'text-green-600', bg: 'bg-green-50' },
+    { label: 'Delivered in 3 Days', color: 'text-teal-600', bg: 'bg-teal-50' },
+    { label: 'Free Homepage Mockup', color: 'text-blue-600', bg: 'bg-blue-50' },
+    { label: 'WhatsApp Booking Included', color: 'text-green-600', bg: 'bg-green-50' },
+  ];
+
+  const stats = [
+    { value: '500+', label: 'Doctors Trust Us', bg: 'bg-blue-50', color: 'text-blue-600' },
+    { value: '3x', label: 'More Appointments', bg: 'bg-green-50', color: 'text-green-600' },
+    { value: '4.9/5', label: 'Client Rating', bg: 'bg-purple-50', color: 'text-purple-600' },
+    { value: '3 Days', label: 'Average Delivery', bg: 'bg-orange-50', color: 'text-orange-500' },
+    { value: '100%', label: 'Satisfaction', bg: 'bg-pink-50', color: 'text-pink-500' },
+  ];
 
   return (
-    <section 
-      className="relative overflow-hidden"
-      style={{ 
-        backgroundImage: 'url(/images/hero-background.jpg.png)',
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-        backgroundColor: '#E8F0F7',
-        marginTop: '64px'
-      }}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
-        {/* Main Content Area */}
-        <div className="grid grid-cols-1 lg:grid-cols-[38%_62%] gap-6 lg:gap-8 items-center">
-          {/* Left Content */}
+    <section className="relative min-h-screen overflow-hidden bg-[#F3F8FF] pt-24 pb-8 lg:pt-[96px] lg:pb-6">
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute left-0 top-20 h-72 w-72 rounded-full bg-blue-100/60 blur-3xl" />
+        <div className="absolute right-0 top-24 h-96 w-96 rounded-full bg-cyan-100/70 blur-3xl" />
+      </div>
+
+      <div className="relative z-10 mx-auto flex w-full flex-col gap-6 px-4 sm:px-6 lg:max-w-[850px] lg:px-0 xl:max-w-7xl xl:px-10">
+        <div className="grid grid-cols-1 lg:grid-cols-[52%_48%] gap-6 lg:gap-8 items-start">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={mounted ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
-            className="space-y-4 sm:space-y-6 relative z-10 text-center lg:text-left"
+            className="space-y-3.5 text-center lg:text-left"
             style={{ opacity: mounted ? undefined : 1 }}
           >
-            {/* Headline */}
+            <div className="inline-flex items-center gap-2 rounded-full bg-white px-3.5 py-1.5 shadow-md ring-1 ring-blue-100">
+              <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-blue-50 text-blue-600">
+                <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 20h5v-2a4 4 0 00-4-4h-1M9 20H4v-2a4 4 0 014-4h1m0-4a4 4 0 118 0 4 4 0 01-8 0z" />
+                </svg>
+              </span>
+              <span className="text-xs sm:text-sm font-semibold text-gray-800">Trusted by 500+ Doctors & Clinics</span>
+              <span className="text-xs sm:text-sm font-bold text-yellow-400">★★★★★</span>
+            </div>
+
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={mounted ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="font-bold leading-tight text-4xl sm:text-5xl lg:text-6xl"
-              style={{ color: '#1F2937', lineHeight: '1.1', opacity: mounted ? undefined : 1 }}
+              className="text-4xl sm:text-5xl lg:text-[36px] xl:text-[48px] font-extrabold tracking-tight leading-[1.08] text-gray-950"
+              style={{ opacity: mounted ? undefined : 1 }}
             >
-              Professional<br />
-              <span style={{ color: '#5B8DEF' }}>Websites</span> for<br />
-              <span style={{ color: '#5B8DEF' }}>Doctors</span>
+              <span className="block">Get More Patients</span>
+              <span className="block">Online</span>
+              <span className="block text-blue-600 lg:whitespace-nowrap">Starting at Just ₹2,999</span>
             </motion.h1>
 
-            {/* Subheading */}
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={mounted ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="leading-relaxed text-sm sm:text-base mx-auto lg:mx-0"
-              style={{ color: '#4B5563', maxWidth: '85%', opacity: mounted ? undefined : 1 }}
+              className="max-w-[600px] mx-auto lg:mx-0 text-[13px] xl:text-sm leading-5 text-gray-600"
+              style={{ opacity: mounted ? undefined : 1 }}
             >
-              Empower your practice with a custom website that attracts patients and builds trust online.
+              We help doctors, dentists, surgeons, and clinics attract more patients through high-converting websites, Google visibility, and online appointment systems.
             </motion.p>
 
-            {/* CTA Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={mounted ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2 justify-center lg:justify-start"
+              className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start pt-2"
               style={{ opacity: mounted ? undefined : 1 }}
             >
               <button 
                 onClick={onConsultationClick}
-                className="text-white px-6 sm:px-8 py-3 sm:py-3.5 rounded-lg font-medium transition-all hover:shadow-lg hover:scale-105 text-sm sm:text-base"
-                style={{ backgroundColor: '#5B8DEF' }}
+                className="inline-flex items-center justify-center gap-2.5 rounded-xl bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-xl shadow-blue-600/20 transition-all hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-2xl"
               >
-                Get a Free Consultation
+                <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-white/15">
+                  <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.2} d="M9 12l2 2 4-4m5 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </span>
+                Get Free Website Audit
+                <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
               </button>
               <button 
-                onClick={onPortfolioClick}
-                className="bg-white px-6 sm:px-8 py-3 sm:py-3.5 rounded-lg font-medium transition-all hover:shadow-lg hover:scale-105 text-sm sm:text-base"
-                style={{ border: '2px solid #5B8DEF', color: '#5B8DEF' }}
+                onClick={onDemoClick}
+                className="inline-flex items-center justify-center gap-2.5 rounded-xl bg-white px-5 py-2.5 text-sm font-semibold text-blue-600 shadow-lg ring-1 ring-blue-100 transition-all hover:-translate-y-0.5 hover:shadow-xl"
               >
-                View Portfolio
+                See Live Demo
+                <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
               </button>
             </motion.div>
+
           </motion.div>
 
-          {/* Right Image - Doctors */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={mounted ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="relative hidden lg:flex justify-start items-center z-10"
-            style={{ marginTop: '-10px', marginLeft: '-15px', opacity: mounted ? undefined : 1 }}
+            className="relative hidden lg:flex justify-end overflow-visible"
+            style={{ opacity: mounted ? undefined : 1 }}
           >
-            <Image
-              src="/images/doctors-team.jpg.png"
-              alt="Professional medical team of three doctors"
-              width={750}
-              height={525}
-              className="w-full h-auto"
-              priority
-            />
+            <div className="relative h-[300px] w-full max-w-[430px] overflow-hidden rounded-[1.5rem] bg-blue-50 shadow-2xl ring-1 ring-blue-100 xl:h-[360px] xl:max-w-[560px]">
+              <Image
+                src="/images/doctors-team.jpg.png"
+                alt="Professional medical team of doctors"
+                width={760}
+                height={540}
+                className="absolute inset-0 h-full w-full object-contain object-bottom"
+                priority
+              />
+            </div>
           </motion.div>
         </div>
 
-        {/* Bottom Stats Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={mounted ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="relative z-30 mt-3 flex flex-wrap justify-center gap-3 lg:mt-0 lg:flex-nowrap lg:justify-between"
+          style={{ opacity: mounted ? undefined : 1 }}
+        >
+          {trustItems.map((item) => (
+            <div key={item.label} className="flex min-w-max items-center gap-2.5 rounded-xl bg-white px-4 py-2.5 text-left shadow-md ring-1 ring-gray-100">
+              <span className={`inline-flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-lg ${item.bg} ${item.color}`}>
+                <svg className="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.3} d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <span className="whitespace-nowrap text-xs font-semibold leading-tight text-gray-700">{item.label}</span>
+            </div>
+          ))}
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={mounted ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="relative z-20 mt-6 lg:mt-0"
-          style={{ marginTop: undefined }}
+          className="mt-3 lg:mt-0"
+          style={{ opacity: mounted ? undefined : 1 }}
         >
-          <div className="hidden lg:block" style={{ marginTop: '-65px' }}>
-            <div className="grid grid-cols-3 gap-6">
-              {statsCards}
-            </div>
-          </div>
-          {/* Mobile stats - no overlap */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:hidden mt-4">
-            {statsCards}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 rounded-2xl bg-white shadow-xl ring-1 ring-gray-100">
+            {stats.map((stat, index) => (
+              <div key={stat.label} className={`flex min-h-[68px] items-center gap-3 px-5 py-2.5 ${index < stats.length - 1 ? 'lg:border-r lg:border-gray-100' : ''}`}>
+                <div className={`inline-flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-xl ${stat.bg} ${stat.color}`}>
+                  <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                  </svg>
+                </div>
+                <div>
+                  <div className="whitespace-nowrap text-lg font-extrabold leading-tight text-gray-950 xl:text-xl">{stat.value}</div>
+                  <div className="text-xs leading-[1.45] text-gray-600">{stat.label}</div>
+                </div>
+              </div>
+            ))}
           </div>
         </motion.div>
       </div>

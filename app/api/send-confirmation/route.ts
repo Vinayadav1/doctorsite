@@ -8,6 +8,7 @@ export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
     const { customerEmail, customerName, planName, amount, transactionId } = body;
+    const formattedAmount = `₹${Number(amount || 0).toLocaleString('en-IN')}`;
 
     if (!customerEmail) {
       return NextResponse.json({ error: 'Email is required' }, { status: 400 });
@@ -25,7 +26,7 @@ export async function POST(req: NextRequest) {
       </tr>
       <tr style="border-top:1px solid #F3F4F6;">
         <td style="padding:8px 0;color:#6B7280;font-size:14px;">Amount Paid</td>
-        <td style="padding:8px 0;color:#3B82F6;font-weight:700;font-size:18px;text-align:right;">$${amount}</td>
+        <td style="padding:8px 0;color:#3B82F6;font-weight:700;font-size:18px;text-align:right;">${formattedAmount}</td>
       </tr>
       ${transactionId ? `
       <tr style="border-top:1px solid #F3F4F6;">
@@ -79,7 +80,7 @@ export async function POST(req: NextRequest) {
     await resend.emails.send({
       from: 'DoctorSite <onboarding@resend.dev>',
       to: OWNER_EMAIL,
-      subject: `💰 New Payment – ${planName} Plan ($${amount})`,
+      subject: `💰 New Payment – ${planName} Plan (${formattedAmount})`,
       html: `
         <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;padding:20px;">
           <div style="background:#10B981;padding:24px;border-radius:12px 12px 0 0;text-align:center;">
@@ -90,7 +91,7 @@ export async function POST(req: NextRequest) {
               <tr><td style="padding:6px 0;color:#6B7280;">Name</td><td style="font-weight:600;text-align:right;">${customerName || 'N/A'}</td></tr>
               <tr style="border-top:1px solid #F3F4F6;"><td style="padding:6px 0;color:#6B7280;">Email</td><td style="font-weight:600;text-align:right;">${customerEmail}</td></tr>
               <tr style="border-top:1px solid #F3F4F6;"><td style="padding:6px 0;color:#6B7280;">Plan</td><td style="font-weight:600;text-align:right;">${planName}</td></tr>
-              <tr style="border-top:1px solid #F3F4F6;"><td style="padding:6px 0;color:#6B7280;">Amount</td><td style="font-weight:700;color:#10B981;font-size:18px;text-align:right;">$${amount}</td></tr>
+              <tr style="border-top:1px solid #F3F4F6;"><td style="padding:6px 0;color:#6B7280;">Amount</td><td style="font-weight:700;color:#10B981;font-size:18px;text-align:right;">${formattedAmount}</td></tr>
               ${transactionId ? `<tr style="border-top:1px solid #F3F4F6;"><td style="padding:6px 0;color:#6B7280;">Transaction ID</td><td style="font-weight:600;font-family:monospace;text-align:right;">${transactionId}</td></tr>` : ''}
             </table>
           </div>

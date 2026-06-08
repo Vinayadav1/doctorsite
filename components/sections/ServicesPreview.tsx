@@ -11,8 +11,8 @@ const ServicesPreview: React.FC = () => {
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
-  // Show only first 6 services for preview
-  const previewServices = services.slice(0, 6);
+  // Highlight the core patient growth packages on the homepage.
+  const previewServices = services.slice(0, 3);
 
   const getIcon = (iconName: string) => {
     const icons: Record<string, JSX.Element> = {
@@ -60,10 +60,10 @@ const ServicesPreview: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Our Services
+            Packages That Bring More Patients
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Comprehensive digital solutions designed specifically for medical professionals
+            Focused solutions for websites, Google visibility, and appointment automation
           </p>
         </motion.div>
 

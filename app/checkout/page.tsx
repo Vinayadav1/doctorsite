@@ -11,6 +11,9 @@ const COUPONS: Record<string, { discount: number; label: string }> = {
   BESTDOCTOR: { discount: 10, label: '10% off' },  // shown on website
   PCDOCTOR:   { discount: 25, label: '25% off' },  // hidden / secret
 };
+
+const ADD_ON_PRICES = { logo: 999, seo: 2999, fastDelivery: 1499 };
+
 const stages = [
   {
     step: 1,
@@ -93,13 +96,14 @@ function CheckoutContent() {
   const [couponError, setCouponError]   = React.useState('');
   const [couponSuccess, setCouponSuccess] = React.useState('');
 
-  const addOnPrices = { logo: 25, seo: 60, fastDelivery: 35 };
+  const addOnPrices = ADD_ON_PRICES;
+  const formatAmount = (amount: number) => `₹${Math.round(amount).toLocaleString('en-IN')}`;
 
   const basePrice = React.useMemo(() => {
     let t = selectedPlan.price;
-    if (addOns.logo) t += addOnPrices.logo;
-    if (addOns.seo) t += addOnPrices.seo;
-    if (addOns.fastDelivery) t += addOnPrices.fastDelivery;
+    if (addOns.logo) t += ADD_ON_PRICES.logo;
+    if (addOns.seo) t += ADD_ON_PRICES.seo;
+    if (addOns.fastDelivery) t += ADD_ON_PRICES.fastDelivery;
     return t;
   }, [selectedPlan.price, addOns]);
 
@@ -117,7 +121,7 @@ function CheckoutContent() {
     setPaymentInput(val);
     const num = parseFloat(val);
     if (val && (isNaN(num) || num < minRequired)) {
-      setPaymentError(`Minimum payment is $${minRequired} (10% of total)`);
+      setPaymentError(`Minimum payment is ${formatAmount(minRequired)} (10% of total)`);
     } else {
       setPaymentError('');
     }
@@ -126,7 +130,7 @@ function CheckoutContent() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!paymentInput || enteredAmount < minRequired) {
-      setPaymentError(`Minimum payment is $${minRequired} (10% of total)`);
+      setPaymentError(`Minimum payment is ${formatAmount(minRequired)} (10% of total)`);
       return;
     }
 
@@ -227,7 +231,7 @@ function CheckoutContent() {
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Selected Plan</label>
                   <div className="w-full px-4 py-3 bg-gray-100 border border-gray-300 rounded-lg text-gray-900 font-semibold">
-                    {selectedPlan.name} — ${selectedPlan.price.toLocaleString()}
+                    {selectedPlan.name} — {formatAmount(selectedPlan.price)}
                   </div>
                 </div>
 
@@ -253,7 +257,7 @@ function CheckoutContent() {
                             <div className="text-sm text-gray-600">{addon.desc}</div>
                           </div>
                         </div>
-                        <div className="font-bold text-blue-600">+${addon.price}</div>
+                        <div className="font-bold text-blue-600">+{formatAmount(addon.price)}</div>
                       </label>
                     ))}
                   </div>
@@ -334,15 +338,15 @@ function CheckoutContent() {
                 <div className="space-y-3 mb-4 text-sm">
                   <div className="flex justify-between text-gray-700">
                     <span>{selectedPlan.name} Plan</span>
-                    <span>${selectedPlan.price}</span>
+                    <span>{formatAmount(selectedPlan.price)}</span>
                   </div>
-                  {addOns.logo && <div className="flex justify-between text-gray-700"><span>Logo Design</span><span>+${addOnPrices.logo}</span></div>}
-                  {addOns.seo && <div className="flex justify-between text-gray-700"><span>SEO Boost</span><span>+${addOnPrices.seo}</span></div>}
-                  {addOns.fastDelivery && <div className="flex justify-between text-gray-700"><span>Fast Delivery</span><span>+${addOnPrices.fastDelivery}</span></div>}
+                  {addOns.logo && <div className="flex justify-between text-gray-700"><span>Logo Design</span><span>+{formatAmount(addOnPrices.logo)}</span></div>}
+                  {addOns.seo && <div className="flex justify-between text-gray-700"><span>SEO Boost</span><span>+{formatAmount(addOnPrices.seo)}</span></div>}
+                  {addOns.fastDelivery && <div className="flex justify-between text-gray-700"><span>Fast Delivery</span><span>+{formatAmount(addOnPrices.fastDelivery)}</span></div>}
                   {appliedCoupon && (
                     <div className="flex justify-between text-green-600 font-semibold">
                       <span>Coupon ({appliedCoupon.code})</span>
-                      <span>-${discountAmount}</span>
+                      <span>-{formatAmount(discountAmount)}</span>
                     </div>
                   )}
                 </div>
@@ -350,7 +354,7 @@ function CheckoutContent() {
                 <div className="border-t border-gray-200 pt-4 mb-6">
                   <div className="flex justify-between items-center">
                     <span className="font-bold text-gray-900">Total Price</span>
-                    <span className="text-2xl font-bold text-blue-600">${totalPrice}</span>
+                    <span className="text-2xl font-bold text-blue-600">{formatAmount(totalPrice)}</span>
                   </div>
                 </div>
 
@@ -385,7 +389,7 @@ function CheckoutContent() {
                     <div className="bg-green-50 border border-green-200 rounded-lg p-3 flex items-center justify-between">
                       <div>
                         <p className="text-green-700 text-sm font-semibold">{couponSuccess}</p>
-                        <p className="text-green-600 text-xs">Code: <strong>{appliedCoupon.code}</strong> — saved ${discountAmount}</p>
+                        <p className="text-green-600 text-xs">Code: <strong>{appliedCoupon.code}</strong> — saved {formatAmount(discountAmount)}</p>
                       </div>
                       <button
                         type="button"
@@ -405,10 +409,10 @@ function CheckoutContent() {
                 {appliedCoupon && (
                   <div className="bg-green-50 rounded-lg p-3 mb-4 flex justify-between items-center">
                     <div>
-                      <p className="text-xs text-gray-500 line-through">${basePrice} original</p>
+                      <p className="text-xs text-gray-500 line-through">{formatAmount(basePrice)} original</p>
                       <p className="text-sm font-bold text-green-700">After discount</p>
                     </div>
-                    <span className="text-2xl font-bold text-green-600">${totalPrice}</span>
+                    <span className="text-2xl font-bold text-green-600">{formatAmount(totalPrice)}</span>
                   </div>
                 )}
 
@@ -423,23 +427,23 @@ function CheckoutContent() {
                   <div className="space-y-2 text-sm">
                     <div className="flex justify-between text-gray-700">
                       <span>Total Price</span>
-                      <span className="font-semibold">${totalPrice}</span>
+                      <span className="font-semibold">{formatAmount(totalPrice)}</span>
                     </div>
                     <div className="flex justify-between text-gray-700">
                       <span>Minimum Required (10%)</span>
-                      <span className="font-semibold text-orange-600">${minRequired}</span>
+                      <span className="font-semibold text-orange-600">{formatAmount(minRequired)}</span>
                     </div>
                     {enteredAmount > 0 && (
                       <>
                         <div className="flex justify-between text-gray-700">
                           <span>You're Paying</span>
                           <span className={`font-semibold ${enteredAmount >= minRequired ? 'text-green-600' : 'text-red-500'}`}>
-                            ${enteredAmount.toFixed(2)}
+                            {formatAmount(enteredAmount)}
                           </span>
                         </div>
                         <div className="flex justify-between text-gray-700 border-t border-blue-200 pt-2">
                           <span>Remaining Balance</span>
-                          <span className="font-bold text-gray-900">${remaining.toFixed(2)}</span>
+                          <span className="font-bold text-gray-900">{formatAmount(remaining)}</span>
                         </div>
                       </>
                     )}
@@ -451,15 +455,15 @@ function CheckoutContent() {
                       Enter Payment Amount *
                     </label>
                     <div className="relative">
-                      <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 font-semibold">$</span>
+                      <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 font-semibold">₹</span>
                       <input
                         type="number"
                         min={minRequired}
                         max={totalPrice}
-                        step="0.01"
+                        step="1"
                         value={paymentInput}
                         onChange={handlePaymentInput}
-                        placeholder={`Min $${minRequired}`}
+                        placeholder={`Min ${formatAmount(minRequired)}`}
                         className={`w-full pl-7 pr-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent text-sm ${
                           paymentError ? 'border-red-400 bg-red-50' : 'border-gray-300 bg-white'
                         }`}

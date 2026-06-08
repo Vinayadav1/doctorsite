@@ -27,8 +27,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        primary: ['var(--font-inter)', 'sans-serif'],
-        secondary: ['var(--font-poppins)', 'sans-serif'],
+        primary: ['var(--font-hanken)', 'sans-serif'],
+        secondary: ['var(--font-playfair)', 'serif'],
       },
       spacing: {
         section: '5rem',

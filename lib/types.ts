@@ -20,7 +20,7 @@ export interface Service {
 
 export interface PricingPlan {
   id: string;
-  name: 'Basic' | 'Professional' | 'Premium';
+  name: 'Starter' | 'Professional' | 'Growth';
   price: number;
   period: 'month' | 'one-time';
   description: string;
@@ -61,6 +61,7 @@ export interface Testimonial {
   location?: string;
   avatar?: string;
   rating?: number;
+  metrics?: string[];
 }
 
 export interface BlogPost {

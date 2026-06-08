@@ -19,45 +19,35 @@ export const navigationLinks: NavLink[] = [
 // Services data
 export const services: Service[] = [
   {
-    id: 'website-development',
-    title: 'Website Development for Doctors',
-    description: 'Custom-built, professional websites designed specifically for medical professionals to attract more patients and build trust.',
+    id: 'more-patients-package',
+    title: 'More Patients Package',
+    description: 'A professional medical website designed to build trust and turn visitors into patient inquiries.',
     icon: 'globe',
-    features: ['Responsive design', 'SEO optimized', 'Fast loading', 'Mobile-first approach'],
+    features: ['Professional website', 'Mobile optimized', 'Trust-building design'],
     category: 'core',
-    price: '180 – 500',
-    priceNote: 'one-time',
-    priceSubtext: 'Starting at $180 (₹15,000 for Indian clients)'
+    price: '2,999',
+    priceNote: 'starting price',
+    priceSubtext: 'Includes WhatsApp booking and contact form basics'
   },
   {
-    id: 'personal-branding',
-    title: 'Personal Branding',
-    description: 'Build a strong personal brand that establishes you as a trusted authority in your medical specialty.',
-    icon: 'user',
-    features: ['Brand strategy', 'Visual identity', 'Professional positioning', 'Reputation management'],
-    category: 'marketing',
-    price: '100 – 250',
-    priceNote: 'one-time'
-  },
-  {
-    id: 'seo-optimization',
-    title: 'SEO Optimization (Google ranking)',
-    description: 'Get found by patients searching for medical services in your area with proven SEO strategies.',
+    id: 'google-visibility-package',
+    title: 'Google Visibility Package',
+    description: 'Improve how your clinic appears when local patients search for your specialty nearby.',
     icon: 'search',
-    features: ['Local SEO', 'Keyword optimization', 'Google My Business', 'Content optimization'],
+    features: ['Google Business setup', 'Local SEO', 'Location ranking'],
     category: 'marketing',
-    price: '120 – 350',
-    priceNote: 'one-time'
+    price: '7,999',
+    priceNote: 'starting price'
   },
   {
-    id: 'appointment-system',
-    title: 'Online Appointment System',
-    description: 'Allow patients to book appointments 24/7 with an integrated online booking system.',
+    id: 'appointment-automation',
+    title: 'Appointment Automation',
+    description: 'Make it easy for patients to contact, book, and get tracked from the moment they land on your site.',
     icon: 'calendar',
-    features: ['Real-time availability', 'Automated reminders', 'Calendar integration', 'Patient management'],
+    features: ['WhatsApp booking', 'Contact forms', 'Lead tracking'],
     category: 'core',
-    price: '100 – 300',
-    priceNote: 'one-time'
+    price: '14,999',
+    priceNote: 'starting price'
   },
   {
     id: 'video-editing',
@@ -104,64 +94,50 @@ export const services: Service[] = [
 // Pricing plans
 export const pricingPlans: PricingPlan[] = [
   {
-    id: 'basic',
-    name: 'Basic',
-    price: 180,
+    id: 'starter',
+    name: 'Starter',
+    price: 2999,
     period: 'one-time',
-    description: 'Perfect for doctors starting their online presence',
+    description: 'Perfect for clinics that need a fast professional online presence.',
     features: [
-      '5-page website',
-      'Mobile responsive design',
-      'Basic SEO optimization',
-      'Contact form integration',
-      '1 month support',
-      'Free domain for 1 year',
-      'SSL certificate included'
+      '1 Page Website',
+      'WhatsApp Button',
+      'Mobile Responsive',
+      'Contact Form'
     ],
     isPopular: false,
-    targetAudience: 'Starter doctors'
+    targetAudience: 'Doctors starting online'
   },
   {
     id: 'professional',
     name: 'Professional',
-    price: 360,
+    price: 7999,
     period: 'one-time',
-    description: 'Most popular choice for established doctors',
+    description: 'Best for practices that want stronger trust and booking flow.',
     features: [
-      '10-page website',
-      'Advanced SEO optimization',
-      'Online appointment booking',
-      'Blog section',
-      'Google My Business setup',
-      '3 months support',
-      'Free domain for 1 year',
-      'SSL certificate included',
-      'Social media integration'
+      '5 Pages',
+      'SEO Setup',
+      'Appointment Booking',
+      'Google Maps'
     ],
     isPopular: true,
-    targetAudience: 'Established doctors'
+    targetAudience: 'Growing clinics'
   },
   {
-    id: 'premium',
-    name: 'Premium',
-    price: 600,
+    id: 'growth',
+    name: 'Growth',
+    price: 14999,
     period: 'one-time',
-    description: 'Complete branding and marketing solution',
+    description: 'For clinics ready to compete harder on Google and speed.',
     features: [
-      'Unlimited pages',
-      'Complete SEO package',
-      'Online appointment system',
-      'Patient portal',
-      'Blog and content management',
-      'Social media management (3 months)',
-      'Video content creation',
-      '6 months support',
-      'Free domain for 1 year',
-      'SSL certificate included',
+      'Everything Above',
+      'Local SEO',
+      'Blog Setup',
+      'Speed Optimization',
       'Priority support'
     ],
     isPopular: false,
-    targetAudience: 'Premium doctors'
+    targetAudience: 'Competitive practices'
   }
 ];
 
@@ -219,7 +195,8 @@ export const testimonials: Testimonial[] = [
     author: 'Dr. Rajesh Kumar',
     specialty: 'Orthopedic Surgeon',
     location: 'Mumbai',
-    rating: 5
+    rating: 5,
+    metrics: ['2.8x increase in appointment requests', 'Ranked on Google for local searches']
   },
   {
     id: 'testimonial-2',
@@ -227,7 +204,8 @@ export const testimonials: Testimonial[] = [
     author: 'Dr. Priya Sharma',
     specialty: 'Dermatologist',
     location: 'Delhi',
-    rating: 5
+    rating: 5,
+    metrics: ['3x more WhatsApp inquiries', 'More trust from first-time patients']
   },
   {
     id: 'testimonial-3',
@@ -235,7 +213,8 @@ export const testimonials: Testimonial[] = [
     author: 'Dr. Amit Patel',
     specialty: 'General Physician',
     location: 'Bangalore',
-    rating: 5
+    rating: 5,
+    metrics: ['Homepage delivered in 3 days', 'Consistent contact form leads']
   },
   {
     id: 'testimonial-4',
@@ -243,7 +222,8 @@ export const testimonials: Testimonial[] = [
     author: 'Dr. Sneha Reddy',
     specialty: 'Gynecologist',
     location: 'Hyderabad',
-    rating: 5
+    rating: 5,
+    metrics: ['Ranked for specialty + city keywords', 'Higher patient footfall from Google']
   }
 ];
 

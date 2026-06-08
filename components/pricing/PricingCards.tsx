@@ -11,18 +11,6 @@ const PricingCards: React.FC = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const router = useRouter();
 
-  const techStacks = {
-    basic: ['HTML5', 'CSS3', 'JavaScript (Vanilla)'],
-    professional: ['React.js', 'Tailwind CSS', 'API integrations'],
-    premium: ['MERN / Next.js', 'MongoDB', 'APIs'],
-  };
-
-  const notIncluded = {
-    basic: ['No backend', 'No database', 'No booking system', 'No CMS', 'No scalability'],
-    professional: ['No advanced automation', 'No paid tools', 'No branding services'],
-    premium: ['Paid ads budget', 'Third-party subscriptions'],
-  };
-
   const handleGetStarted = (planId: string) => {
     router.push(`/checkout?plan=${planId}`);
   };
@@ -65,13 +53,12 @@ const PricingCards: React.FC = () => {
                 <div className="mb-6">
                   <div className="flex items-baseline gap-2">
                     <span className="text-4xl font-bold text-gray-900">
-                      ${plan.price.toLocaleString()}
+                      ₹{plan.price.toLocaleString('en-IN')}
                     </span>
                     <span className="text-gray-600">
                       {plan.period}
                     </span>
                   </div>
-                  <p className="text-xs text-gray-500 mt-1">≈ ₹{(plan.price * 83).toLocaleString()} for Indian clients</p>
                 </div>
 
                 {/* CTA Button */}
@@ -101,40 +88,10 @@ const PricingCards: React.FC = () => {
                   </ul>
                 </div>
 
-                {/* Tech Stack */}
-                <div className="mb-6 bg-blue-50 rounded-lg p-4">
-                  <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
-                    <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                    </svg>
-                    Tech Stack:
-                  </h4>
-                  <ul className="space-y-2">
-                    {techStacks[plan.id as keyof typeof techStacks].map((tech, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-sm text-gray-700">
-                        <div className="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
-                        {tech}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Not Included */}
-                <div className="mt-auto bg-gray-50 rounded-lg p-4">
-                  <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2">
-                    <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                    Not Included:
-                  </h4>
-                  <ul className="space-y-2">
-                    {notIncluded[plan.id as keyof typeof notIncluded].map((item, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-sm text-gray-600">
-                        <div className="w-1.5 h-1.5 bg-gray-400 rounded-full"></div>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
+                <div className="mt-auto bg-blue-50 rounded-lg p-4">
+                  <p className="text-sm text-gray-700">
+                    Includes mobile responsive design, medical trust sections, and clear patient contact paths.
+                  </p>
                 </div>
               </div>
             </motion.div>
@@ -150,11 +107,11 @@ const PricingCards: React.FC = () => {
         >
           <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6 max-w-2xl mx-auto">
             <p className="text-gray-800 font-medium">
-              📌 Note: Any paid tools or subscriptions will be charged separately.
+              Note: Any paid tools or third-party subscriptions will be charged separately.
             </p>
           </div>
           <p className="text-gray-600 mb-4">
-            All plans include free domain for 1 year and SSL certificate
+            All plans include a free homepage mockup and WhatsApp booking guidance
           </p>
           <p className="text-sm text-gray-500">
             Need a custom solution? <a href="/contact" className="text-blue-600 font-semibold hover:underline">Contact us</a> for a personalized quote

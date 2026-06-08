@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
-import { Inter, Poppins } from "next/font/google";
+import { Hanken_Grotesk, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import ClientLayout from "@/components/layout/ClientLayout";
 
-const inter = Inter({
+const hankenGrotesk = Hanken_Grotesk({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-hanken",
   display: "swap",
 });
 
-const poppins = Poppins({
+const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-poppins",
+  weight: ["400", "600", "700"],
+  variable: "--font-playfair",
   display: "swap",
 });
 
@@ -46,7 +46,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${poppins.variable} font-primary antialiased`}>
+      <body className={`${hankenGrotesk.variable} ${playfairDisplay.variable} font-primary antialiased`}>
         <ClientLayout>
           {children}
         </ClientLayout>

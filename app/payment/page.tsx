@@ -26,17 +26,15 @@ function PaymentContent() {
 
   const selectedPlan = pricingPlans.find(p => p.id === planId) || pricingPlans[1];
   const finalAmount = amount || selectedPlan.price.toString();
+  const finalAmountNumber = parseFloat(finalAmount) || selectedPlan.price;
+  const formatAmount = (value: number) => `₹${Math.round(value).toLocaleString('en-IN')}`;
 
   const [copied, setCopied] = React.useState(false);
   const [email, setEmail] = React.useState(customerEmailParam);
   const [emailError, setEmailError] = React.useState('');
 
   const upiId = '8840734369@jupiteraxis';
-  
-  // Convert USD to INR for UPI payment (1 USD ≈ 84 INR)
-  const USD_TO_INR = 84;
-  const amountInINR = Math.round(parseFloat(finalAmount) * USD_TO_INR);
-  const upiLink = `upi://pay?pa=${upiId}&pn=DoctorSite&am=${amountInINR}&cu=INR`;
+  const upiLink = `upi://pay?pa=${upiId}&pn=DoctorSite&am=${Math.round(finalAmountNumber)}&cu=INR`;
 
   const copyUpiId = () => {
     navigator.clipboard.writeText(upiId);
@@ -108,12 +106,9 @@ function PaymentContent() {
               <div className="bg-blue-50 rounded-lg p-6 mb-6">
                 <div className="flex justify-between items-center mb-2">
                   <span className="text-lg font-semibold text-gray-900">Total Amount</span>
-                  <span className="text-3xl font-bold text-blue-600">${parseInt(finalAmount).toLocaleString()}</span>
+                  <span className="text-3xl font-bold text-blue-600">{formatAmount(finalAmountNumber)}</span>
                 </div>
                 <p className="text-sm text-gray-600">One-time payment</p>
-                <p className="text-sm text-orange-600 font-medium mt-1">
-                  ≈ ₹{amountInINR.toLocaleString()} (UPI will charge in INR)
-                </p>
               </div>
 
               {/* Email field */}

@@ -8,11 +8,11 @@ jest.mock('next/navigation', () => ({
 
 // Mock the font imports
 jest.mock('next/font/google', () => ({
-  Inter: () => ({
-    variable: '--font-inter',
+  Hanken_Grotesk: () => ({
+    variable: '--font-hanken',
   }),
-  Poppins: () => ({
-    variable: '--font-poppins',
+  Playfair_Display: () => ({
+    variable: '--font-playfair',
   }),
 }));
 
@@ -27,7 +27,7 @@ describe('RootLayout', () => {
     // Check for navigation elements - use getAllByText since DoctorSite appears in both nav and footer
     const doctorSiteElements = screen.getAllByText('DoctorSite');
     expect(doctorSiteElements.length).toBeGreaterThan(0);
-    expect(screen.getByText('Book Free Consultation')).toBeInTheDocument();
+    expect(screen.getByText('Book Audit')).toBeInTheDocument();
   });
 
   it('renders Footer component', () => {

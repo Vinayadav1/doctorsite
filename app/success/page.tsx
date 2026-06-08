@@ -27,9 +27,10 @@ function SuccessContent() {
   const customerName = searchParams.get('name')   || '';
 
   const planNames: Record<string, string> = {
-    basic: 'Basic', professional: 'Professional', premium: 'Premium',
+    starter: 'Starter', professional: 'Professional', growth: 'Growth',
   };
   const planName = planNames[planId] || planId || 'Website Plan';
+  const formattedAmount = `₹${(parseInt(amount, 10) || 0).toLocaleString('en-IN')}`;
 
   const [transactionId, setTransactionId] = React.useState('');
   const [email, setEmail]                 = React.useState(urlEmail);
@@ -90,11 +91,11 @@ function SuccessContent() {
           name:           customerName || 'Valued Customer',
           email:          email,
           plan_name:      planName,
-          amount:         `$${amount}`,
+          amount:         formattedAmount,
           transaction_id: transactionId || 'N/A',
           owner_email:    OWNER_EMAIL,
           reply_to:       email,
-          message:        `Plan: ${planName}, Amount: $${amount}, Transaction ID: ${transactionId}`,
+          message:        `Plan: ${planName}, Amount: ${formattedAmount}, Transaction ID: ${transactionId}`,
         },
         EMAILJS_PUBLIC_KEY
       );
@@ -200,7 +201,7 @@ function SuccessContent() {
               <div className="flex justify-between items-center">
                 <div>
                   <div className="text-sm text-gray-600 mb-1">Amount Paid</div>
-                  <div className="text-2xl font-bold text-blue-600">${parseInt(amount).toLocaleString()}</div>
+                  <div className="text-2xl font-bold text-blue-600">{formattedAmount}</div>
                 </div>
                 <div className="text-right">
                   <div className="text-sm text-gray-600 mb-1">Plan</div>

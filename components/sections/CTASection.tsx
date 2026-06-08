@@ -15,8 +15,8 @@ const CTASection: React.FC<CTASectionProps> = ({ onConsultationClick }) => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const router = useRouter();
 
-  const handlePricingClick = () => {
-    router.push('/pricing');
+  const handleDemoClick = () => {
+    router.push('/previews/dr-rajesh');
   };
 
   return (
@@ -36,11 +36,10 @@ const CTASection: React.FC<CTASectionProps> = ({ onConsultationClick }) => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Grow Your Practice?
+              Stop Losing Patients to Competitors
             </h2>
             <p className="text-lg md:text-xl text-white/90 mb-8">
-              Join hundreds of doctors who have transformed their online presence and attracted more patients. 
-              Book a free consultation today and let's discuss how we can help you succeed.
+              Get a professional medical website designed to bring more appointments and build trust online.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -48,13 +47,13 @@ const CTASection: React.FC<CTASectionProps> = ({ onConsultationClick }) => {
                 onClick={onConsultationClick}
                 className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all hover:shadow-2xl hover:scale-105 shadow-xl"
               >
-                Book Free Consultation
+                Get Free Website Audit
               </button>
               <button 
-                onClick={handlePricingClick}
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all hover:scale-105"
+                onClick={handleDemoClick}
+                className="bg-yellow-300 text-gray-900 px-8 py-4 rounded-lg font-semibold hover:bg-yellow-200 transition-all hover:scale-105"
               >
-                View Our Pricing
+                View Live Demo
               </button>
             </div>
 
@@ -63,19 +62,19 @@ const CTASection: React.FC<CTASectionProps> = ({ onConsultationClick }) => {
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
-                <span>No setup fees</span>
+                <span>Starting ₹2,999</span>
               </div>
               <div className="flex items-center gap-2">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
-                <span>Free consultation</span>
+                <span>Free homepage mockup</span>
               </div>
               <div className="flex items-center gap-2">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
-                <span>Launch in 2-3 weeks</span>
+                <span>Delivered in 3 days</span>
               </div>
             </div>
           </motion.div>
