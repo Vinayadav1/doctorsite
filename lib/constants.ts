@@ -12,6 +12,7 @@ export const navigationLinks: NavLink[] = [
   { label: 'How We Work', href: '/how-we-work' },
   { label: 'Pricing', href: '/pricing' },
   { label: 'Portfolio', href: '/portfolio' },
+  { label: 'Case Studies', href: '/case-studies' },
   { label: 'Contact', href: '/contact' },
   { label: 'Blog', href: '/blog' }
 ];

@@ -77,7 +77,7 @@ export default function PricingPage() {
         <div className="flex flex-col justify-center">
           <p className="mb-6 text-xs font-bold uppercase tracking-[0.18em] text-[#775a19]">Pricing</p>
           <h1 className="font-secondary text-5xl font-bold leading-[1.08] tracking-[-0.04em] text-black sm:text-6xl lg:text-[72px]">
-            Transparent Pricing For Modern Healthcare Practices
+            Transparent Pricing For <span className="italic text-[#775a19]">Modern Healthcare Practices</span>
           </h1>
           <p className="mt-8 max-w-xl text-xl leading-8 text-[#444748]">
             Choose the right level of digital presence for your clinic, specialty, or healthcare practice.
