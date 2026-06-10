@@ -18,10 +18,10 @@ export default function BrightSmilePreview() {
                 Transform your smile with our advanced cosmetic dentistry services. We specialize in teeth whitening, veneers, implants, and complete smile makeovers.
               </p>
               <div className="flex gap-4">
-                <button className="bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-orange-700 transition-colors shadow-lg">
+                <button type="button" data-consultation-modal className="bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-orange-700 transition-colors shadow-lg">
                   Book Appointment
                 </button>
-                <button className="border-2 border-orange-600 text-orange-600 px-8 py-4 rounded-lg font-semibold hover:bg-orange-50 transition-colors">
+                <button type="button" data-consultation-modal className="border-2 border-orange-600 text-orange-600 px-8 py-4 rounded-lg font-semibold hover:bg-orange-50 transition-colors">
                   View Gallery
                 </button>
               </div>
@@ -246,7 +246,7 @@ export default function BrightSmilePreview() {
               <div className="text-orange-100">Pune, India</div>
             </div>
           </div>
-          <button className="bg-white text-orange-600 px-10 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors shadow-xl">
+          <button type="button" data-consultation-modal className="bg-white text-orange-600 px-10 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors shadow-xl">
             Book Free Consultation
           </button>
         </div>

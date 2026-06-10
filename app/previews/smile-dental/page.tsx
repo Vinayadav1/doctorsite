@@ -10,7 +10,7 @@ export default function SmileDentalPreview() {
           <div className="text-center mb-12">
             <h1 className="text-6xl font-bold mb-4">😁 Smile Dental Clinic</h1>
             <p className="text-2xl mb-8">Your Partner in Perfect Smiles</p>
-            <button className="bg-white text-teal-600 px-10 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors shadow-xl text-lg">
+            <button type="button" data-consultation-modal className="bg-white text-teal-600 px-10 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors shadow-xl text-lg">
               Book Your Appointment
             </button>
           </div>
@@ -149,7 +149,7 @@ export default function SmileDentalPreview() {
               <span className="text-lg">Bangalore, India</span>
             </div>
           </div>
-          <button className="bg-white text-teal-600 px-10 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors shadow-xl text-lg">
+          <button type="button" data-consultation-modal className="bg-white text-teal-600 px-10 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors shadow-xl text-lg">
             Book Appointment Now
           </button>
         </div>

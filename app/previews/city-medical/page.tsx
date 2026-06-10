@@ -18,10 +18,10 @@ export default function CityMedicalPreview() {
                 Comprehensive primary healthcare for the entire family. From routine checkups to emergency care, we're here for you 24/7.
               </p>
               <div className="flex gap-4">
-                <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors shadow-lg">
+                <button type="button" data-consultation-modal className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors shadow-lg">
                   Book Appointment
                 </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-blue-700 transition-colors">
+                <button type="button" data-consultation-modal className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-blue-700 transition-colors">
                   Emergency: 24/7
                 </button>
               </div>
@@ -167,7 +167,7 @@ export default function CityMedicalPreview() {
                     </li>
                   ))}
                 </ul>
-                <button className={`w-full py-3 rounded-lg font-semibold transition-colors ${pkg.popular ? 'bg-blue-600 text-white hover:bg-blue-700' : 'bg-gray-100 text-gray-900 hover:bg-gray-200'}`}>
+                <button type="button" data-consultation-modal className={`w-full py-3 rounded-lg font-semibold transition-colors ${pkg.popular ? 'bg-blue-600 text-white hover:bg-blue-700' : 'bg-gray-100 text-gray-900 hover:bg-gray-200'}`}>
                   Book Now
                 </button>
               </div>
@@ -263,7 +263,7 @@ export default function CityMedicalPreview() {
               <div className="text-blue-100">Mumbai, India</div>
             </div>
           </div>
-          <button className="bg-white text-blue-600 px-10 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors shadow-xl">
+          <button type="button" data-consultation-modal className="bg-white text-blue-600 px-10 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors shadow-xl">
             Book Appointment Now
           </button>
         </div>

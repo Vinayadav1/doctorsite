@@ -16,14 +16,17 @@ const projects = [
   {
     title: 'Cardiology Practice Website',
     type: 'Specialist Website',
+    image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=900&q=80',
   },
   {
     title: 'Dental Implant Clinic',
     type: 'Conversion Landing Page',
+    image: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=900&q=80',
   },
   {
     title: 'Multi-Specialty Care Studio',
     type: 'Clinic Growth System',
+    image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=900&q=80',
   },
 ];
 
@@ -73,7 +76,7 @@ export default function PortfolioPage() {
             <a href="#projects" className="border border-black bg-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#775a19] hover:bg-[#775a19]">
               View Projects
             </a>
-            <a href="#contact" className="border border-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">
+            <a href="/contact#consultation" data-consultation-modal className="border border-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">
               Start Your Site
             </a>
           </div>
@@ -88,7 +91,10 @@ export default function PortfolioPage() {
                   <span className="h-2 w-16 bg-[#e9c176]" />
                 </div>
                 <div className="grid gap-4 md:grid-cols-[1.4fr_1fr]">
-                  <div className="h-72 bg-[radial-gradient(circle_at_center,#686868,#111_58%,#050505)]" />
+                  <div
+                    className="h-72 bg-cover bg-center"
+                    style={{ backgroundImage: 'linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.58)), url(https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1000&q=80)' }}
+                  />
                   <div className="space-y-4">
                     <div className="h-20 border border-white/15 bg-white/10" />
                     <div className="h-20 border border-white/15 bg-white/10" />
@@ -142,7 +148,10 @@ export default function PortfolioPage() {
 
           <div className="relative border border-black bg-white p-8">
             <div className="h-[460px] bg-[#e4e2e2] p-8">
-              <div className="flex h-full items-center justify-center bg-[radial-gradient(circle_at_center,#f2f0f0_0%,#9ba8a8_18%,#445354_38%,#111_70%)]">
+              <div
+                className="flex h-full items-center justify-center bg-cover bg-center"
+                style={{ backgroundImage: 'linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.48)), url(https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1000&q=80)' }}
+              >
                 <div className="h-44 w-44 rounded-full border border-[#e9c176] bg-[#e9c176]/20" />
               </div>
             </div>
@@ -158,12 +167,15 @@ export default function PortfolioPage() {
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-16">
           <div className="mb-12 flex flex-col justify-between gap-6 border-b border-black pb-8 lg:flex-row lg:items-end">
             <h2 className="font-secondary text-4xl font-bold tracking-[-0.03em] lg:text-5xl">More Healthcare Projects</h2>
-            <a href="#contact" className="text-xs font-bold uppercase tracking-[0.16em] text-[#775a19]">Request A Similar Build</a>
+            <a href="/contact#consultation" data-consultation-modal className="text-xs font-bold uppercase tracking-[0.16em] text-[#775a19]">Request A Similar Build</a>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
-            {projects.map((project, index) => (
+            {projects.map((project) => (
               <article key={project.title} className="border border-black bg-white p-5">
-                <div className={`mb-6 h-64 ${index === 0 ? 'bg-[linear-gradient(135deg,#f2f0f0,#111)]' : index === 1 ? 'bg-[repeating-linear-gradient(135deg,#111_0_8px,#777_8px_10px,#f2f0f0_10px_22px)]' : 'bg-[linear-gradient(135deg,#111,#444,#f2f0f0)]'}`} />
+                <div
+                  className="mb-6 h-64 bg-cover bg-center"
+                  style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.48)), url(${project.image})` }}
+                />
                 <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#775a19]">{project.type}</p>
                 <h3 className="mt-3 font-secondary text-2xl font-bold">{project.title}</h3>
               </article>
@@ -246,7 +258,7 @@ export default function PortfolioPage() {
             Ready To Create A Website That <span className="italic text-[#775a19]">Reflects Your Expertise?</span>
           </h2>
           <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-            <a href="mailto:vinaysalempur45@gmail.com" className="border border-black bg-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#775a19] hover:bg-[#775a19]">
+            <a href="/contact#consultation" data-consultation-modal className="border border-black bg-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#775a19] hover:bg-[#775a19]">
               Start A Project
             </a>
             <a href="tel:+918840734369" className="border border-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">

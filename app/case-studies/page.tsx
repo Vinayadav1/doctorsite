@@ -60,7 +60,7 @@ export default function CaseStudiesPage() {
             <a href="#gallery" className="border border-black bg-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#775a19] hover:bg-[#775a19]">
               View Case Studies
             </a>
-            <a href="#contact" className="border border-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">
+            <a href="/contact#consultation" data-consultation-modal className="border border-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">
               Book Consultation
             </a>
           </div>
@@ -135,7 +135,7 @@ export default function CaseStudiesPage() {
               <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#775a19]">Clinical Impact Gallery</p>
               <h2 className="font-secondary text-4xl font-bold tracking-[-0.03em] lg:text-5xl">Clinical Impact Gallery</h2>
             </div>
-            <a href="#contact" className="text-xs font-bold uppercase tracking-[0.16em] text-[#775a19]">Start Your Project</a>
+            <a href="/contact#consultation" data-consultation-modal className="text-xs font-bold uppercase tracking-[0.16em] text-[#775a19]">Start Your Project</a>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {gallery.map((item, index) => (
@@ -170,7 +170,7 @@ export default function CaseStudiesPage() {
             Professional healthcare websites designed to support your reputation and create confidence for every patient that finds you.
           </p>
           <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-            <a href="mailto:vinaysalempur45@gmail.com" className="bg-[#e9c176] px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-white">
+            <a href="/contact#consultation" data-consultation-modal className="bg-[#e9c176] px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-white">
               Start A Case Study
             </a>
             <a href="tel:+918840734369" className="border border-white px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:bg-white hover:text-black">

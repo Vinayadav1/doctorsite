@@ -10,6 +10,7 @@ export const navigationLinks: NavLink[] = [
   { label: 'About Us', href: '/about' },
   { label: 'Services', href: '/services' },
   { label: 'How We Work', href: '/how-we-work' },
+  { label: 'Shop', href: '/shop' },
   { label: 'Pricing', href: '/pricing' },
   { label: 'Portfolio', href: '/portfolio' },
   { label: 'Case Studies', href: '/case-studies' },

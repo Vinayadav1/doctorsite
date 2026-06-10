@@ -18,10 +18,10 @@ export default function DrSnehaPreview() {
                 Compassionate care for women at every stage of life. Specializing in pregnancy care, gynecological surgery, and women's wellness.
               </p>
               <div className="flex gap-4">
-                <button className="bg-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-pink-700 transition-colors shadow-lg">
+                <button type="button" data-consultation-modal className="bg-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-pink-700 transition-colors shadow-lg">
                   Schedule Consultation
                 </button>
-                <button className="border-2 border-pink-600 text-pink-600 px-8 py-4 rounded-lg font-semibold hover:bg-pink-50 transition-colors">
+                <button type="button" data-consultation-modal className="border-2 border-pink-600 text-pink-600 px-8 py-4 rounded-lg font-semibold hover:bg-pink-50 transition-colors">
                   Learn More
                 </button>
               </div>
@@ -193,7 +193,7 @@ export default function DrSnehaPreview() {
               <div className="text-pink-100">Hyderabad, India</div>
             </div>
           </div>
-          <button className="bg-white text-pink-600 px-10 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors shadow-xl">
+          <button type="button" data-consultation-modal className="bg-white text-pink-600 px-10 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors shadow-xl">
             Schedule Appointment
           </button>
         </div>

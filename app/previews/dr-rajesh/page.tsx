@@ -16,7 +16,7 @@ export default function DrRajeshPreview() {
               <p className="text-lg text-gray-600 mb-8">
                 With over 15 years of experience in orthopedic surgery, I specialize in joint replacement, sports injuries, and trauma care.
               </p>
-              <button className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+              <button type="button" data-consultation-modal className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
                 Book Appointment
               </button>
             </div>
@@ -133,7 +133,7 @@ export default function DrRajeshPreview() {
               <div className="text-blue-100">Mumbai, India</div>
             </div>
           </div>
-          <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+          <button type="button" data-consultation-modal className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
             Book Appointment Now
           </button>
         </div>

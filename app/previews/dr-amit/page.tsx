@@ -18,10 +18,10 @@ export default function DrAmitPreview() {
                 Expert cardiac care with over 12 years of experience in treating heart conditions. Specializing in angioplasty, heart failure management, and preventive cardiology.
               </p>
               <div className="flex gap-4">
-                <button className="bg-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-red-700 transition-colors shadow-lg">
+                <button type="button" data-consultation-modal className="bg-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-red-700 transition-colors shadow-lg">
                   Book Consultation
                 </button>
-                <button className="border-2 border-red-600 text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-red-50 transition-colors">
+                <button type="button" data-consultation-modal className="border-2 border-red-600 text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-red-50 transition-colors">
                   Emergency Care
                 </button>
               </div>
@@ -196,7 +196,7 @@ export default function DrAmitPreview() {
               <div className="text-red-100">Mumbai, India</div>
             </div>
           </div>
-          <button className="bg-white text-red-600 px-10 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors shadow-xl">
+          <button type="button" data-consultation-modal className="bg-white text-red-600 px-10 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors shadow-xl">
             Book Appointment Now
           </button>
         </div>

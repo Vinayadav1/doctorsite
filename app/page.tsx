@@ -42,8 +42,16 @@ const plans = [
 ];
 
 const portfolio = [
-  { title: 'Cardiac Care Studio', tag: 'Specialist Website' },
-  { title: 'Surgical Landing Suite', tag: 'Conversion System' },
+  {
+    title: 'Cardiac Care Studio',
+    tag: 'Specialist Website',
+    image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=900&q=80',
+  },
+  {
+    title: 'Surgical Landing Suite',
+    tag: 'Conversion System',
+    image: 'https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=900&q=80',
+  },
 ];
 
 export default function Home() {
@@ -59,7 +67,7 @@ export default function Home() {
             We engineer high-converting medical websites that turn local searches into booked patient appointments with surgical precision.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <a href="#contact" className="inline-flex border border-black bg-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#775a19] hover:bg-[#775a19]">
+            <a href="/contact#consultation" data-consultation-modal className="inline-flex border border-black bg-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#775a19] hover:bg-[#775a19]">
               Book Audit
             </a>
             <a href="#portfolio" className="inline-flex border border-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">
@@ -70,14 +78,17 @@ export default function Home() {
 
         <div className="relative min-h-[420px] border border-black bg-[#e4e2e2] p-6">
           <div className="absolute inset-6 border border-black/20" />
-          <div className="absolute bottom-10 left-10 right-10 top-10 bg-[#101111] p-6 text-white">
+          <div
+            className="absolute bottom-10 left-10 right-10 top-10 bg-[#101111] bg-cover bg-center p-6 text-white"
+            style={{ backgroundImage: 'linear-gradient(90deg, rgba(16,17,17,0.92), rgba(16,17,17,0.38)), url(https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80)' }}
+          >
             <div className="grid h-full grid-cols-[1fr_1.35fr] gap-4">
               <div className="border border-white/20 bg-white/5 p-4">
                 <div className="mb-10 h-px bg-white/30" />
                 <p className="font-secondary text-3xl leading-tight">Clinical Web Presence</p>
                 <p className="mt-4 text-xs uppercase tracking-[0.16em] text-[#e9c176]">Audit Dashboard</p>
               </div>
-              <div className="flex flex-col justify-end border border-white/20 bg-[linear-gradient(135deg,#2b2b2b,#0b0b0b)] p-5">
+              <div className="flex flex-col justify-end border border-white/20 bg-black/30 p-5">
                 <div className="mb-4 h-24 border border-white/15 bg-white/10" />
                 <div className="grid grid-cols-3 gap-2">
                   <span className="h-10 border border-white/15 bg-white/10" />
@@ -139,14 +150,15 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-16">
           <div className="mb-12 flex items-center justify-between border-b border-white/20 pb-8">
             <h2 className="font-secondary text-4xl font-bold tracking-[-0.03em]">The Clinical Portfolio</h2>
-            <a href="#contact" className="text-xs font-bold uppercase tracking-[0.16em] text-[#e9c176]">Request Preview</a>
+            <a href="/contact#consultation" data-consultation-modal className="text-xs font-bold uppercase tracking-[0.16em] text-[#e9c176]">Request Preview</a>
           </div>
           <div className="grid gap-6 md:grid-cols-2">
             {portfolio.map((item) => (
               <article key={item.title} className="border border-white/20 bg-white/[0.03] p-5">
-                <div className="mb-6 h-64 border border-white/15 bg-[linear-gradient(135deg,#343434,#080908)] p-5">
-                  <div className="h-full border border-white/10 bg-[radial-gradient(circle_at_center,#555,transparent_45%)]" />
-                </div>
+                <div
+                  className="mb-6 h-64 border border-white/15 bg-cover bg-center p-5"
+                  style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.58)), url(${item.image})` }}
+                />
                 <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#e9c176]">{item.tag}</p>
                 <h3 className="mt-3 font-secondary text-2xl font-semibold">{item.title}</h3>
               </article>
@@ -196,7 +208,7 @@ export default function Home() {
                     <li key={feature} className={`border-t pt-4 text-sm ${plan.featured ? 'border-black/20' : 'border-white/15'}`}>{feature}</li>
                   ))}
                 </ul>
-                <a href="#contact" className={`mt-10 inline-flex w-full justify-center border px-5 py-4 text-xs font-bold uppercase tracking-[0.14em] transition-colors ${plan.featured ? 'border-black bg-black text-white hover:border-[#775a19] hover:bg-[#775a19]' : 'border-white text-white hover:bg-white hover:text-black'}`}>
+                <a href="/contact#consultation" data-consultation-modal className={`mt-10 inline-flex w-full justify-center border px-5 py-4 text-xs font-bold uppercase tracking-[0.14em] transition-colors ${plan.featured ? 'border-black bg-black text-white hover:border-[#775a19] hover:bg-[#775a19]' : 'border-white text-white hover:bg-white hover:text-black'}`}>
                   Start Build
                 </a>
               </article>
@@ -222,7 +234,7 @@ export default function Home() {
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 px-5 text-center sm:px-8 lg:flex-row lg:px-16 lg:text-left">
           <h2 className="font-secondary text-3xl font-bold tracking-[-0.03em] lg:text-4xl">Ready For A Surgical Audit of Your Presence?</h2>
           <div className="flex flex-col gap-4 sm:flex-row">
-            <a href="mailto:vinaysalempur45@gmail.com" className="border border-white bg-white px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">
+            <a href="/contact#consultation" data-consultation-modal className="border border-white bg-white px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">
               Request Audit
             </a>
             <a href="tel:+918840734369" className="border border-white px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:bg-white hover:text-black">

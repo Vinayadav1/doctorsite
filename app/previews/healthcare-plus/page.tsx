@@ -18,10 +18,10 @@ export default function HealthCarePlusPreview() {
                 State-of-the-art multi-specialty hospital offering comprehensive medical care under one roof. Expert doctors, advanced technology, and compassionate care.
               </p>
               <div className="flex gap-4">
-                <button className="bg-white text-green-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors shadow-lg">
+                <button type="button" data-consultation-modal className="bg-white text-green-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors shadow-lg">
                   Book Appointment
                 </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-green-700 transition-colors">
+                <button type="button" data-consultation-modal className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-green-700 transition-colors">
                   Emergency: 24/7
                 </button>
               </div>
@@ -190,7 +190,7 @@ export default function HealthCarePlusPreview() {
               <div className="text-green-100">Hyderabad, India</div>
             </div>
           </div>
-          <button className="bg-white text-green-600 px-10 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors shadow-xl">
+          <button type="button" data-consultation-modal className="bg-white text-green-600 px-10 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors shadow-xl">
             Book Appointment Now
           </button>
         </div>

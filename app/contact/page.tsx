@@ -94,28 +94,28 @@ export default function ContactPage() {
             </p>
           </div>
 
-          <form className="border border-black bg-white p-8">
+          <form data-lead-form data-form-type="consultation" className="border border-black bg-white p-8">
             <p className="mb-8 text-xs font-bold uppercase tracking-[0.18em] text-[#775a19]">Request Consultation</p>
             <div className="grid gap-5 md:grid-cols-2">
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase tracking-[0.12em] text-[#444748]">Full name</span>
-                <input className="h-12 w-full border border-black/20 bg-transparent px-4 text-sm outline-none focus:border-[#775a19]" type="text" />
+                <input className="h-12 w-full border border-black/20 bg-transparent px-4 text-sm outline-none focus:border-[#775a19]" type="text" name="name" required />
               </label>
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase tracking-[0.12em] text-[#444748]">Phone number</span>
-                <input className="h-12 w-full border border-black/20 bg-transparent px-4 text-sm outline-none focus:border-[#775a19]" type="tel" />
+                <input className="h-12 w-full border border-black/20 bg-transparent px-4 text-sm outline-none focus:border-[#775a19]" type="tel" name="phone" required />
               </label>
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase tracking-[0.12em] text-[#444748]">Email address</span>
-                <input className="h-12 w-full border border-black/20 bg-transparent px-4 text-sm outline-none focus:border-[#775a19]" type="email" />
+                <input className="h-12 w-full border border-black/20 bg-transparent px-4 text-sm outline-none focus:border-[#775a19]" type="email" name="email" required />
               </label>
               <label className="block">
                 <span className="mb-2 block text-xs font-bold uppercase tracking-[0.12em] text-[#444748]">Practice type</span>
-                <input className="h-12 w-full border border-black/20 bg-transparent px-4 text-sm outline-none focus:border-[#775a19]" type="text" />
+                <input className="h-12 w-full border border-black/20 bg-transparent px-4 text-sm outline-none focus:border-[#775a19]" type="text" name="practiceType" required />
               </label>
               <label className="block md:col-span-2">
                 <span className="mb-2 block text-xs font-bold uppercase tracking-[0.12em] text-[#444748]">What do you need?</span>
-                <select className="h-12 w-full border border-black/20 bg-transparent px-4 text-sm outline-none focus:border-[#775a19]">
+                <select className="h-12 w-full border border-black/20 bg-transparent px-4 text-sm outline-none focus:border-[#775a19]" name="projectType">
                   <option>New medical website</option>
                   <option>Website redesign</option>
                   <option>SEO and patient growth</option>
@@ -124,7 +124,7 @@ export default function ContactPage() {
               </label>
               <label className="block md:col-span-2">
                 <span className="mb-2 block text-xs font-bold uppercase tracking-[0.12em] text-[#444748]">Message</span>
-                <textarea className="min-h-[130px] w-full border border-black/20 bg-transparent p-4 text-sm outline-none focus:border-[#775a19]" />
+                <textarea className="min-h-[130px] w-full border border-black/20 bg-transparent p-4 text-sm outline-none focus:border-[#775a19]" name="message" />
               </label>
             </div>
             <button className="mt-8 w-full border border-black bg-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#775a19] hover:bg-[#775a19]" type="submit">

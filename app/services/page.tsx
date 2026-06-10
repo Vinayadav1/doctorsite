@@ -85,7 +85,7 @@ export default function ServicesPage() {
             <a href="#services" className="border border-black bg-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#775a19] hover:bg-[#775a19]">
               Explore Services
             </a>
-            <a href="#contact" className="border border-black bg-white px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">
+            <a href="/contact#consultation" data-consultation-modal className="border border-black bg-white px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">
               Book Free Audit
             </a>
           </div>
@@ -95,7 +95,10 @@ export default function ServicesPage() {
           <div className="relative w-full max-w-[520px] border border-black bg-white p-6">
             <div className="bg-[#111312] p-6 text-white">
               <div className="mb-8 bg-black p-5 ring-1 ring-white/15">
-                <div className="mx-auto h-56 w-56 border border-[#e9c176]/40 bg-[radial-gradient(circle_at_center,#e9c176_0%,#c9c6c5_18%,#5f5e5e_42%,#111312_72%)]" />
+                <div
+                  className="mx-auto h-64 w-full border border-[#e9c176]/40 bg-cover bg-center"
+                  style={{ backgroundImage: 'linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.42)), url(https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=80)' }}
+                />
               </div>
               <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#e9c176]">Digital Practice Engine</p>
               <h2 className="mt-4 font-secondary text-3xl font-medium">Medical Presence OS</h2>
@@ -137,8 +140,11 @@ export default function ServicesPage() {
         <article className="bg-white py-24 lg:py-32">
           <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[5fr_7fr] lg:px-16">
             <div className="border border-black bg-[#e4e2e2] p-5">
-              <div className="h-[360px] bg-[linear-gradient(135deg,#f2f0f0,#111312)] p-5">
-                <div className="h-full border border-white/30 bg-white/20" />
+              <div
+                className="h-[360px] bg-cover bg-center p-5"
+                style={{ backgroundImage: 'linear-gradient(135deg, rgba(242,240,240,0.24), rgba(17,19,18,0.54)), url(https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1000&q=80)' }}
+              >
+                <div className="h-full border border-white/30 bg-black/10" />
               </div>
             </div>
             <div className="flex flex-col justify-center">
@@ -273,7 +279,7 @@ export default function ServicesPage() {
             Let us create a premium medical website and online patient journey that reflects the quality of your care.
           </p>
           <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-            <a href="mailto:vinaysalempur45@gmail.com" className="border border-[#775a19] bg-[#775a19] px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:bg-white hover:text-black">
+            <a href="/contact#consultation" data-consultation-modal className="border border-[#775a19] bg-[#775a19] px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:bg-white hover:text-black">
               Start Your Website
             </a>
             <a href="tel:+918840734369" className="border border-white px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:bg-white hover:text-black">

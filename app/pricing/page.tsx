@@ -86,7 +86,7 @@ export default function PricingPage() {
             <a href="#plans" className="border border-black bg-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#775a19] hover:bg-[#775a19]">
               View Plans
             </a>
-            <a href="#contact" className="border border-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">
+            <a href="#faq" className="border border-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">
               Ask Question
             </a>
           </div>
@@ -137,7 +137,7 @@ export default function PricingPage() {
                     </li>
                   ))}
                 </ul>
-                <a href="#contact" className={`mt-8 inline-flex w-full justify-center border px-5 py-4 text-xs font-bold uppercase tracking-[0.14em] transition-colors ${plan.featured ? 'border-[#e9c176] bg-[#e9c176] text-black hover:bg-white' : 'border-black text-black hover:bg-black hover:text-white'}`}>
+                <a href="/contact#consultation" data-consultation-modal className={`mt-8 inline-flex w-full justify-center border px-5 py-4 text-xs font-bold uppercase tracking-[0.14em] transition-colors ${plan.featured ? 'border-[#e9c176] bg-[#e9c176] text-black hover:bg-white' : 'border-black text-black hover:bg-black hover:text-white'}`}>
                   Select Plan
                 </a>
               </article>
@@ -251,7 +251,7 @@ export default function PricingPage() {
         <div className="mx-auto max-w-7xl px-5 text-center sm:px-8 lg:px-16">
           <h2 className="font-secondary text-4xl font-bold tracking-[-0.03em]">Find The Right Solution For Your Practice</h2>
           <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-            <a href="mailto:vinaysalempur45@gmail.com" className="border border-black bg-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#775a19] hover:bg-[#775a19]">
+            <a href="/contact#consultation" data-consultation-modal className="border border-black bg-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#775a19] hover:bg-[#775a19]">
               Request Proposal
             </a>
             <a href="tel:+918840734369" className="border border-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">

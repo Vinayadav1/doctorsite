@@ -14,6 +14,18 @@ const COUPONS: Record<string, { discount: number; label: string }> = {
 
 const ADD_ON_PRICES = { logo: 999, seo: 2999, fastDelivery: 1499 };
 
+const DESIGN_NAMES: Record<string, string> = {
+  'dr-priya': 'Dermatology Authority',
+  'dr-rajesh': 'Orthopedic Precision',
+  'smile-dental': 'Smile Dental Modern',
+  'dr-amit': 'Cardiac Specialist',
+  'healthcare-plus': 'Multi-Specialty System',
+  'bright-smile': 'Dental Conversion',
+  'city-medical': 'Family Medical Center',
+  'dr-sneha': "Women's Care Studio",
+  'dr-vikram': 'Neurosurgery Elite',
+};
+
 const stages = [
   {
     step: 1,
@@ -83,6 +95,8 @@ function CheckoutContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const planId = searchParams.get('plan') || 'professional';
+  const designId = searchParams.get('design') || '';
+  const selectedDesignName = designId ? DESIGN_NAMES[designId] || designId : '';
   const selectedPlan = pricingPlans.find(p => p.id === planId) || pricingPlans[1];
 
   const [formData, setFormData] = React.useState({ name: '', phone: '', email: '', clinicName: '' });
@@ -142,6 +156,7 @@ function CheckoutContent() {
       email: formData.email,
       clinicName: formData.clinicName,
       plan: selectedPlan.name,
+      design: selectedDesignName || 'Not selected',
       addOns: [
         addOns.logo ? 'Logo Design' : '',
         addOns.seo ? 'SEO Boost' : '',
@@ -154,7 +169,7 @@ function CheckoutContent() {
     });
 
     router.push(
-      `/payment?plan=${planId}&amount=${enteredAmount}&total=${totalPrice}&name=${encodeURIComponent(formData.name)}&email=${encodeURIComponent(formData.email)}`
+      `/payment?plan=${planId}&design=${encodeURIComponent(designId)}&amount=${enteredAmount}&total=${totalPrice}&name=${encodeURIComponent(formData.name)}&email=${encodeURIComponent(formData.email)}`
     );
   };
 
@@ -234,6 +249,15 @@ function CheckoutContent() {
                     {selectedPlan.name} — {formatAmount(selectedPlan.price)}
                   </div>
                 </div>
+
+                {selectedDesignName && (
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Selected Design</label>
+                    <div className="w-full px-4 py-3 bg-amber-50 border border-amber-200 rounded-lg text-gray-900 font-semibold">
+                      {selectedDesignName}
+                    </div>
+                  </div>
+                )}
 
                 {/* Add-ons */}
                 <div>
@@ -340,6 +364,12 @@ function CheckoutContent() {
                     <span>{selectedPlan.name} Plan</span>
                     <span>{formatAmount(selectedPlan.price)}</span>
                   </div>
+                  {selectedDesignName && (
+                    <div className="flex justify-between text-gray-700">
+                      <span>Design</span>
+                      <span className="text-right">{selectedDesignName}</span>
+                    </div>
+                  )}
                   {addOns.logo && <div className="flex justify-between text-gray-700"><span>Logo Design</span><span>+{formatAmount(addOnPrices.logo)}</span></div>}
                   {addOns.seo && <div className="flex justify-between text-gray-700"><span>SEO Boost</span><span>+{formatAmount(addOnPrices.seo)}</span></div>}
                   {addOns.fastDelivery && <div className="flex justify-between text-gray-700"><span>Fast Delivery</span><span>+{formatAmount(addOnPrices.fastDelivery)}</span></div>}

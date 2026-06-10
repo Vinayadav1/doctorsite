@@ -71,7 +71,10 @@ export default function AboutPage() {
 
         <div className="relative flex items-center justify-center">
           <div className="relative w-full border border-black bg-white p-6">
-            <div className="border border-black/20 bg-[#e4e2e2] p-5">
+            <div
+              className="border border-black/20 bg-[#e4e2e2] bg-cover bg-center p-5"
+              style={{ backgroundImage: 'linear-gradient(90deg, rgba(228,226,226,0.94), rgba(228,226,226,0.42)), url(https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1200&q=80)' }}
+            >
               <div className="mb-5 flex items-center justify-between border-b border-[#c6c6cd] pb-4">
                 <span className="h-3 w-24 bg-black" />
                 <span className="h-3 w-16 bg-[#e9c176]" />
@@ -85,7 +88,7 @@ export default function AboutPage() {
                     <span className="block h-8 w-28 bg-black" />
                   </div>
                 </div>
-                <div className="bg-[#111312] p-5 text-white">
+                <div className="bg-[#111312]/90 p-5 text-white">
                   <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#e9c176]">Practice System</p>
                   <p className="mt-8 font-secondary text-3xl leading-tight">Trust-first medical websites.</p>
                   <div className="mt-10 grid grid-cols-2 gap-3">
@@ -264,7 +267,7 @@ export default function AboutPage() {
             Let&apos;s Build A Website Worthy Of Your Expertise
           </h2>
           <div className="flex flex-col gap-4 sm:flex-row">
-            <a href="mailto:vinaysalempur45@gmail.com" className="border border-white bg-white px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">
+            <a href="/contact#consultation" data-consultation-modal className="border border-white bg-white px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">
               Request Audit
             </a>
             <a href="tel:+918840734369" className="border border-white px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:bg-white hover:text-black">

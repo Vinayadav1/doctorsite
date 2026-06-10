@@ -24,10 +24,10 @@ export default function DrPriyaPreview() {
             Transform your skin with expert dermatological care. Specializing in acne treatment, anti-aging, and cosmetic dermatology.
           </p>
           <div className="flex gap-4 justify-center">
-            <button className="bg-purple-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-purple-700 transition-colors shadow-lg">
+            <button type="button" data-consultation-modal className="bg-purple-600 text-white px-8 py-4 rounded-full font-semibold hover:bg-purple-700 transition-colors shadow-lg">
               Book Consultation
             </button>
-            <button className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-full font-semibold hover:bg-purple-50 transition-colors">
+            <button type="button" data-consultation-modal className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-full font-semibold hover:bg-purple-50 transition-colors">
               View Services
             </button>
           </div>
@@ -100,7 +100,7 @@ export default function DrPriyaPreview() {
               <span>Delhi, India</span>
             </div>
           </div>
-          <button className="bg-white text-purple-600 px-10 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors shadow-xl">
+          <button type="button" data-consultation-modal className="bg-white text-purple-600 px-10 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors shadow-xl">
             Schedule Appointment
           </button>
         </div>

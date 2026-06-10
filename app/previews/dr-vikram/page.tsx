@@ -18,10 +18,10 @@ export default function DrVikramPreview() {
                 Advanced neurological care and brain surgery expertise. Specializing in complex brain tumors, spine surgery, and minimally invasive neurosurgery.
               </p>
               <div className="flex gap-4">
-                <button className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg">
+                <button type="button" data-consultation-modal className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg">
                   Book Consultation
                 </button>
-                <button className="border-2 border-blue-600 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-900 transition-colors">
+                <button type="button" data-consultation-modal className="border-2 border-blue-600 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-900 transition-colors">
                   Emergency Care
                 </button>
               </div>
@@ -196,7 +196,7 @@ export default function DrVikramPreview() {
               <div className="text-blue-200">Bangalore, India</div>
             </div>
           </div>
-          <button className="bg-white text-blue-900 px-10 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors shadow-xl">
+          <button type="button" data-consultation-modal className="bg-white text-blue-900 px-10 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors shadow-xl">
             Book Appointment Now
           </button>
         </div>

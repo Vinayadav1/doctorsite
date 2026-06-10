@@ -19,6 +19,10 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-padding-top: 88px;
+}
+
 body {
   color: #1b1c1c;
   background: #fbf9f8;
@@ -45,12 +49,12 @@ a {
 
 /* Smooth animations */
 @media (prefers-reduced-motion: no-preference) {
-  * {
+  html {
     scroll-behavior: smooth;
   }
 }
 
-/* Scroll-triggered lazy rendering for page sections. */
+/* Scroll-triggered lazy rendering for section content only. */
 [data-scroll-reveal='true'] {
   content-visibility: auto;
   contain-intrinsic-size: auto 760px;
@@ -66,20 +70,24 @@ a {
     will-change: opacity, transform;
   }
 
+  [data-scroll-reveal-settled='true'] {
+    will-change: auto;
+  }
+
   [data-scroll-reveal-style='rise'] {
-    transform: translate3d(0, 52px, 0);
+    transform: translate3d(0, 44px, 0);
   }
 
-  [data-scroll-reveal-style='slide-left'] {
-    transform: translate3d(-48px, 28px, 0);
-  }
-
-  [data-scroll-reveal-style='slide-right'] {
-    transform: translate3d(48px, 28px, 0);
+  [data-scroll-reveal-style='soft-rise'] {
+    transform: translate3d(0, 24px, 0);
   }
 
   [data-scroll-reveal-style='scale-up'] {
-    transform: translate3d(0, 36px, 0) scale(0.96);
+    transform: translate3d(0, 28px, 0) scale(0.97);
+  }
+
+  [data-scroll-reveal-style='fade-up'] {
+    transform: translate3d(0, 16px, 0);
   }
 
   [data-scroll-reveal-visible='true'] {

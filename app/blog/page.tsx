@@ -218,9 +218,11 @@ export default function BlogPage() {
           <p className="mx-auto mt-5 max-w-xl text-base leading-8 text-[#444748]">
             Receive occasional insights on healthcare websites, clinic visibility, patient trust, and appointment conversion.
           </p>
-          <form className="mx-auto mt-10 flex max-w-xl flex-col gap-4 sm:flex-row">
+          <form data-lead-form data-form-type="newsletter" className="mx-auto mt-10 flex max-w-xl flex-col gap-4 sm:flex-row">
             <input
               type="email"
+              name="email"
+              required
               aria-label="Email address"
               placeholder="Email address"
               className="min-h-[52px] flex-1 border border-black bg-transparent px-5 text-sm outline-none focus:border-[#775a19]"
@@ -236,7 +238,7 @@ export default function BlogPage() {
         <div className="mx-auto max-w-4xl px-5 sm:px-8">
           <h2 className="font-secondary text-4xl font-bold tracking-[-0.03em] lg:text-5xl">Need More Than Advice?</h2>
           <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-            <a href="mailto:vinaysalempur45@gmail.com" className="border border-black bg-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#775a19] hover:bg-[#775a19]">
+            <a href="/contact#consultation" data-consultation-modal className="border border-black bg-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#775a19] hover:bg-[#775a19]">
               Book Audit
             </a>
             <a href="/services" className="border border-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">
