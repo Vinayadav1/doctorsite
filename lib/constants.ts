@@ -22,33 +22,33 @@ export const navigationLinks: NavLink[] = [
 export const services: Service[] = [
   {
     id: 'more-patients-package',
-    title: 'More Patients Package',
+    title: 'Patient Acquisition Websites',
     description: 'A professional medical website designed to build trust and turn visitors into patient inquiries.',
     icon: 'globe',
     features: ['Professional website', 'Mobile optimized', 'Trust-building design'],
     category: 'core',
-    price: '2,999',
+    price: '4,999',
     priceNote: 'starting price',
     priceSubtext: 'Includes WhatsApp booking and contact form basics'
   },
   {
     id: 'google-visibility-package',
-    title: 'Google Visibility Package',
+    title: 'Google & Local Search Visibility',
     description: 'Improve how your clinic appears when local patients search for your specialty nearby.',
     icon: 'search',
     features: ['Google Business setup', 'Local SEO', 'Location ranking'],
     category: 'marketing',
-    price: '7,999',
+    price: '9,999',
     priceNote: 'starting price'
   },
   {
     id: 'appointment-automation',
-    title: 'Appointment Automation',
+    title: 'Appointment Conversion Systems',
     description: 'Make it easy for patients to contact, book, and get tracked from the moment they land on your site.',
     icon: 'calendar',
     features: ['WhatsApp booking', 'Contact forms', 'Lead tracking'],
     category: 'core',
-    price: '14,999',
+    price: '24,999',
     priceNote: 'starting price'
   },
   {
@@ -98,48 +98,48 @@ export const pricingPlans: PricingPlan[] = [
   {
     id: 'starter',
     name: 'Starter',
-    price: 2999,
+    price: 4999,
     period: 'one-time',
-    description: 'Perfect for clinics that need a fast professional online presence.',
+    description: 'Perfect for individual doctors and small clinics establishing their online presence.',
     features: [
-      '1 Page Website',
-      'WhatsApp Button',
-      'Mobile Responsive',
-      'Contact Form'
+      'Premium single-page website',
+      'Doctor profile section',
+      'WhatsApp appointment button',
+      'Basic SEO optimization'
     ],
     isPopular: false,
     targetAudience: 'Doctors starting online'
   },
   {
     id: 'professional',
-    name: 'Professional',
-    price: 7999,
+    name: 'Growth',
+    price: 9999,
     period: 'one-time',
-    description: 'Best for practices that want stronger trust and booking flow.',
+    description: 'Designed for specialists who want more visibility, credibility, and patient inquiries.',
     features: [
-      '5 Pages',
-      'SEO Setup',
-      'Appointment Booking',
-      'Google Maps'
+      'Up to 5 custom pages',
+      'SEO-friendly Next.js setup',
+      'Online appointment request form',
+      'Technical support for 30 days'
     ],
     isPopular: true,
     targetAudience: 'Growing clinics'
   },
   {
     id: 'growth',
-    name: 'Growth',
-    price: 14999,
+    name: 'Elite',
+    price: 24999,
     period: 'one-time',
-    description: 'For clinics ready to compete harder on Google and speed.',
+    description: 'A complete digital growth platform for established clinics and multi-specialty practices.',
     features: [
-      'Everything Above',
-      'Local SEO',
-      'Blog Setup',
-      'Speed Optimization',
-      'Priority support'
+      'Up to 15 custom pages',
+      'Dynamic admin dashboard',
+      'Appointment management system',
+      'Lead tracking dashboard',
+      'Secure backend infrastructure'
     ],
     isPopular: false,
-    targetAudience: 'Competitive practices'
+    targetAudience: 'Multi-specialty clinics'
   }
 ];
 

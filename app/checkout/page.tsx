@@ -15,15 +15,16 @@ const COUPONS: Record<string, { discount: number; label: string }> = {
 const ADD_ON_PRICES = { logo: 999, seo: 2999, fastDelivery: 1499 };
 
 const DESIGN_NAMES: Record<string, string> = {
-  'dr-priya': 'Dermatology Authority',
-  'dr-rajesh': 'Orthopedic Precision',
+  'dermis-elite': 'Dermis Elite',
+  'dr-priya': 'Priya Skin Institute',
+  'dr-rajesh': 'OrthoAxis Surgical Center',
   'smile-dental': 'Smile Dental Modern',
-  'dr-amit': 'Cardiac Specialist',
-  'healthcare-plus': 'Multi-Specialty System',
-  'bright-smile': 'Dental Conversion',
-  'city-medical': 'Family Medical Center',
-  'dr-sneha': "Women's Care Studio",
-  'dr-vikram': 'Neurosurgery Elite',
+  'dr-amit': 'Amit Cardiac Institute',
+  'healthcare-plus': 'HealthCare Plus System',
+  'bright-smile': 'Bright Smile Studio',
+  'city-medical': 'City Medical Center',
+  'dr-sneha': "Sneha Women's Care",
+  'dr-vikram': 'NeuroVanguard Institute',
 };
 
 const stages = [

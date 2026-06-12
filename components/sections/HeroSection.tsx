@@ -22,18 +22,18 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onConsultationClick }) => {
   };
 
   const trustItems = [
-    { label: 'Starting ₹2,999', color: 'text-green-600', bg: 'bg-green-50' },
-    { label: 'Delivered in 3 Days', color: 'text-teal-600', bg: 'bg-teal-50' },
-    { label: 'Free Homepage Mockup', color: 'text-blue-600', bg: 'bg-blue-50' },
-    { label: 'WhatsApp Booking Included', color: 'text-green-600', bg: 'bg-green-50' },
+    { label: 'Starting ₹4,999', color: 'text-green-600', bg: 'bg-green-50' },
+    { label: 'Audit-led Strategy', color: 'text-teal-600', bg: 'bg-teal-50' },
+    { label: 'Google Ready', color: 'text-blue-600', bg: 'bg-blue-50' },
+    { label: 'WhatsApp Integrated', color: 'text-green-600', bg: 'bg-green-50' },
   ];
 
   const stats = [
-    { value: '500+', label: 'Doctors Trust Us', bg: 'bg-blue-50', color: 'text-blue-600' },
-    { value: '3x', label: 'More Appointments', bg: 'bg-green-50', color: 'text-green-600' },
-    { value: '4.9/5', label: 'Client Rating', bg: 'bg-purple-50', color: 'text-purple-600' },
-    { value: '3 Days', label: 'Average Delivery', bg: 'bg-orange-50', color: 'text-orange-500' },
-    { value: '100%', label: 'Satisfaction', bg: 'bg-pink-50', color: 'text-pink-500' },
+    { value: 'Trust', label: 'Patient-first proof', bg: 'bg-blue-50', color: 'text-blue-600' },
+    { value: 'Search', label: 'Google-ready pages', bg: 'bg-green-50', color: 'text-green-600' },
+    { value: 'Mobile', label: 'Booking-first UX', bg: 'bg-purple-50', color: 'text-purple-600' },
+    { value: 'WhatsApp', label: 'Inquiry flow', bg: 'bg-orange-50', color: 'text-orange-500' },
+    { value: 'Audit', label: 'Strategy before build', bg: 'bg-pink-50', color: 'text-pink-500' },
   ];
 
   return (
@@ -71,7 +71,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onConsultationClick }) => {
             >
               <span className="block">Get More Patients</span>
               <span className="block">Online</span>
-              <span className="block text-blue-600 lg:whitespace-nowrap">Starting at Just ₹2,999</span>
+              <span className="block text-blue-600 lg:whitespace-nowrap">Built For Patient Appointments</span>
             </motion.h1>
 
             <motion.p

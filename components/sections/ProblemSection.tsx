@@ -15,9 +15,9 @@ const ProblemSection: React.FC = () => {
   ];
 
   const stats = [
-    { value: '73%', label: 'of patients search online before booking' },
-    { value: '88%', label: 'trust clinics with professional websites' },
-    { value: '3x', label: 'more appointments from online presence' },
+    { value: 'Search', label: 'patients compare clinics before booking' },
+    { value: 'Trust', label: 'professional proof reduces hesitation' },
+    { value: 'Booking', label: 'clear CTAs turn intent into inquiries' },
   ];
 
   return (

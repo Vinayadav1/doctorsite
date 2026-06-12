@@ -239,7 +239,7 @@ export default function BlogPage() {
           <h2 className="font-secondary text-4xl font-bold tracking-[-0.03em] lg:text-5xl">Need More Than Advice?</h2>
           <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
             <a href="/contact#consultation" data-consultation-modal className="border border-black bg-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#775a19] hover:bg-[#775a19]">
-              Book Audit
+              Book Free Website Audit
             </a>
             <a href="/services" className="border border-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">
               View Services

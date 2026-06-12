@@ -1,8 +1,8 @@
 const stats = [
-  { value: '150+', label: 'Healthcare pages designed' },
-  { value: '2.8x', label: 'Average inquiry lift' },
-  { value: '12', label: 'Specialties served' },
-  { value: '100%', label: 'Mobile-first builds' },
+  { value: 'Mobile', label: 'Optimized patient experience' },
+  { value: 'Booking', label: 'Appointment-focused journeys' },
+  { value: 'Google', label: 'Local search-ready structure' },
+  { value: 'Trust', label: 'Healthcare-specific proof' },
 ];
 
 const projectHighlights = [
@@ -63,21 +63,21 @@ const strategy = [
 export default function PortfolioPage() {
   return (
     <div className="bg-[#fbf9f8] text-[#1b1c1c]">
-      <section className="mx-auto grid min-h-screen max-w-7xl grid-cols-1 gap-12 px-5 pb-20 pt-28 sm:px-8 lg:grid-cols-[6fr_6fr] lg:px-16 lg:pb-28 lg:pt-32">
+      <section className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-5 pb-16 pt-24 sm:px-8 sm:pt-28 lg:min-h-screen lg:grid-cols-[6fr_6fr] lg:px-16 lg:pb-24 lg:pt-32">
         <div className="flex flex-col justify-center">
           <p className="mb-6 text-xs font-bold uppercase tracking-[0.18em] text-[#775a19]">Portfolio</p>
           <h1 className="font-secondary text-5xl font-bold leading-[1.08] tracking-[-0.04em] text-black sm:text-6xl lg:text-[72px]">
-            Healthcare Websites Designed To <span className="italic text-[#775a19]">Build Trust.</span>
+            Healthcare Case Studies Designed To <span className="italic text-[#775a19]">Book Consultations.</span>
           </h1>
           <p className="mt-8 max-w-xl text-xl leading-8 text-[#444748]">
-            A curated view of premium healthcare website systems built to improve credibility, patient clarity, and appointment conversion.
+            A curated view of healthcare website systems built to improve credibility, patient clarity, Google visibility, and appointment conversion.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <a href="#projects" className="border border-black bg-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#775a19] hover:bg-[#775a19]">
               View Projects
             </a>
             <a href="/contact#consultation" data-consultation-modal className="border border-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">
-              Start Your Site
+              Book Free Website Audit
             </a>
           </div>
         </div>
@@ -106,8 +106,8 @@ export default function PortfolioPage() {
               <h2 className="mt-3 font-secondary text-3xl font-bold">Trust-first clinical interface</h2>
             </div>
             <div className="absolute -bottom-8 left-8 bg-[#775a19] px-8 py-5 text-white">
-              <p className="font-secondary text-4xl font-bold">90%</p>
-              <p className="text-xs font-bold uppercase tracking-[0.16em]">Clarity score</p>
+              <p className="font-secondary text-4xl font-bold">Audit</p>
+              <p className="text-xs font-bold uppercase tracking-[0.16em]">Ready</p>
             </div>
           </div>
         </div>
@@ -167,7 +167,7 @@ export default function PortfolioPage() {
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-16">
           <div className="mb-12 flex flex-col justify-between gap-6 border-b border-black pb-8 lg:flex-row lg:items-end">
             <h2 className="font-secondary text-4xl font-bold tracking-[-0.03em] lg:text-5xl">More Healthcare Projects</h2>
-            <a href="/contact#consultation" data-consultation-modal className="text-xs font-bold uppercase tracking-[0.16em] text-[#775a19]">Request A Similar Build</a>
+            <a href="/contact#consultation" data-consultation-modal className="text-xs font-bold uppercase tracking-[0.16em] text-[#775a19]">Book Free Website Audit</a>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
             {projects.map((project) => (
@@ -259,7 +259,7 @@ export default function PortfolioPage() {
           </h2>
           <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
             <a href="/contact#consultation" data-consultation-modal className="border border-black bg-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#775a19] hover:bg-[#775a19]">
-              Start A Project
+              Book Free Website Audit
             </a>
             <a href="tel:+918840734369" className="border border-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">
               Book Strategy Call

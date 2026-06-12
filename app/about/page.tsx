@@ -1,70 +1,88 @@
-const specialtyCards = [
+const healthcareDifferences = [
   {
-    title: 'Healthcare-Focused Expertise',
-    body: 'Every layout, message, and call-to-action is built around how patients evaluate medical expertise online.',
+    title: 'Patients are anxious, not casual shoppers',
+    body: 'They need reassurance, clarity, credentials, and a simple next step before they contact a clinic.',
   },
   {
-    title: 'Patient-Centered Design',
-    body: 'We create calm, clear paths from first impression to appointment so visitors know what to do next.',
+    title: 'Trust is built before the first call',
+    body: 'Doctor profiles, service explanations, reviews, and professional presentation shape the decision early.',
     featured: true,
   },
   {
-    title: 'Websites That Adapt',
-    body: 'Responsive systems designed for mobile searches, clinic discovery, service pages, and trust-building content.',
+    title: 'Local visibility matters',
+    body: 'A strong healthcare website must support Google Maps, specialty searches, and location-based patient intent.',
     gold: true,
   },
   {
-    title: 'Professional First Impression',
-    body: 'A premium visual presence that makes your practice feel established before a patient calls.',
+    title: 'Booking friction loses patients',
+    body: 'The path from search to WhatsApp, phone, form, or appointment must be obvious on mobile.',
   },
   {
-    title: 'Built to Earn Trust',
-    body: 'Credentials, testimonials, services, and patient guidance organized into a reassuring digital experience.',
+    title: 'Medical content needs structure',
+    body: 'Services, conditions, FAQs, schema, and internal links help patients and search engines understand your expertise.',
   },
   {
-    title: 'Quality Over Templates',
-    body: 'No generic clinic clones. Every website is planned for your specialty, practice model, and growth goals.',
+    title: 'Generic agencies miss the patient journey',
+    body: 'Most agencies design pages. We design the route from discovery to trust to booked consultation.',
     dark: true,
   },
 ];
 
-const workflow = [
-  { step: '01', title: 'Understand The Practice', body: 'We study your specialty, patients, services, competition, and current online position.' },
-  { step: '02', title: 'Plan The Patient Experience', body: 'We map the journey from search intent to trust, inquiry, and booking.' },
-  { step: '03', title: 'Create With Trust In Mind', body: 'We design and write pages that explain expertise clearly and reduce patient hesitation.' },
-  { step: '04', title: 'Test & Optimize', body: 'We check mobile usability, speed, messaging, forms, SEO basics, and conversion clarity.' },
-  { step: '05', title: 'Launch & Support', body: 'We help publish the site and keep improving it as your digital presence grows.' },
+const genericFailures = [
+  'Template layouts that do not match the specialty',
+  'Pretty pages with no appointment strategy',
+  'Weak doctor authority and credential presentation',
+  'No local SEO or Google Maps thinking',
+  'Poor mobile CTA hierarchy',
+  'Copy that sounds like an agency, not a clinic',
 ];
 
-const disciplines = ['Dentists', 'Surgeons', 'Dermatologists', 'Physicians', 'Clinics', 'Specialists'];
+const workflow = [
+  { step: '01', title: 'Audit The Current Presence', body: 'We review your website, Google visibility, mobile experience, trust proof, and conversion path.' },
+  { step: '02', title: 'Map The Patient Journey', body: 'We identify how patients search, compare, hesitate, inquire, and book in your specialty.' },
+  { step: '03', title: 'Design The Growth System', body: 'We plan the site architecture, copy, visuals, local SEO pages, and appointment CTAs.' },
+  { step: '04', title: 'Build With Healthcare Standards', body: 'We create a premium, mobile-first website with service pages, schema, forms, and WhatsApp paths.' },
+  { step: '05', title: 'Launch, Measure, Improve', body: 'We help publish the site and keep improving trust, visibility, inquiries, and booked consultations.' },
+];
 
-const performanceItems = [
-  'Clear patient journey',
-  'Mobile-first experience',
-  'Trust-building structure',
-  'SEO-ready pages',
-  'Appointment-focused CTAs',
-  'Professional brand presence',
+const disciplines = ['Dentists', 'Surgeons', 'Dermatologists', 'Physicians', 'Hospitals', 'Specialists'];
+
+const expertiseItems = [
+  'Doctor website design',
+  'Clinic website design',
+  'Medical SEO and local search',
+  'AI search optimization',
+  'WhatsApp inquiry funnels',
+  'Trust-first healthcare copy',
+];
+
+const credibilityItems = [
+  'Healthcare-only positioning',
+  'Transparent audit process',
+  'Real specialty page planning',
+  'Mobile booking focus',
+  'Google-ready technical structure',
+  'Conversion-first content strategy',
 ];
 
 export default function AboutPage() {
   return (
     <div className="bg-[#fbf9f8] text-[#1b1c1c]">
-      <section className="mx-auto grid min-h-screen max-w-7xl grid-cols-1 gap-12 px-5 pb-20 pt-28 sm:px-8 lg:grid-cols-[5fr_7fr] lg:px-16 lg:pb-28 lg:pt-32">
+      <section className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-5 pb-16 pt-24 sm:px-8 sm:pt-28 lg:min-h-screen lg:grid-cols-[5fr_7fr] lg:px-16 lg:pb-24 lg:pt-32">
         <div className="flex flex-col justify-center">
-          <p className="mb-6 text-xs font-bold uppercase tracking-[0.18em] text-[#775a19]">About DoctorSite</p>
+          <p className="mb-6 text-xs font-bold uppercase tracking-[0.18em] text-[#775a19]">Why DoctorSite Exists</p>
           <h1 className="font-secondary text-5xl font-bold leading-[1.08] tracking-[-0.04em] text-black sm:text-6xl lg:text-[72px]">
-            Built Exclusively For <span className="italic text-[#775a19]">Healthcare Professionals</span>
+            Healthcare Growth Is Different From <span className="italic text-[#775a19]">Website Design</span>
           </h1>
           <p className="mt-8 max-w-xl text-lg leading-8 tracking-[0.01em] text-[#45464d]">
-            We are a specialized website studio creating digital systems for doctors, clinics, and medical teams who need trust, clarity, and patient growth.
+            DoctorSite was created for doctors, clinics, surgeons, hospitals, and specialists who need more patient trust, better visibility, and easier consultation booking.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <a href="#workflow" className="border border-black bg-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#775a19] hover:bg-[#775a19]">
-              How We Work
+            <a href="/contact#consultation" data-consultation-modal className="border border-black bg-black px-7 py-4 text-center text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#775a19] hover:bg-[#775a19]">
+              Book Free Website Audit
             </a>
-            <a href="#standards" className="border border-black bg-white px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">
-              Our Standards
+            <a href="#standards" className="border border-black bg-white px-7 py-4 text-center text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">
+              Why Healthcare Is Different
             </a>
           </div>
         </div>
@@ -89,8 +107,8 @@ export default function AboutPage() {
                   </div>
                 </div>
                 <div className="bg-[#111312]/90 p-5 text-white">
-                  <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#e9c176]">Practice System</p>
-                  <p className="mt-8 font-secondary text-3xl leading-tight">Trust-first medical websites.</p>
+                  <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#e9c176]">Healthcare Growth System</p>
+                  <p className="mt-8 font-secondary text-3xl leading-tight">Trust-first patient acquisition.</p>
                   <div className="mt-10 grid grid-cols-2 gap-3">
                     <span className="h-16 border border-white/15 bg-white/10" />
                     <span className="h-16 border border-white/15 bg-white/10" />
@@ -102,23 +120,23 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section id="disciplines" className="py-24 lg:py-32">
+      <section id="disciplines" className="py-20 lg:py-28">
         <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[5fr_7fr] lg:px-16">
           <h2 className="font-secondary text-4xl font-medium leading-tight tracking-[-0.02em] lg:text-5xl">
-            A Great Medical Website Does More Than <span className="italic text-[#775a19]">Look Good.</span>
+            Doctors Do Not Buy Websites. They Buy <span className="italic text-[#775a19]">Patient Growth.</span>
           </h2>
           <div className="space-y-6 text-lg leading-8 text-[#45464d]">
             <p>
-              It explains your expertise, reduces patient hesitation, builds confidence, and makes booking the next step obvious.
+              A medical website should help more patients find your practice, trust your expertise, ask better questions, and book consultations with less friction.
             </p>
             <p>
-              DoctorSite exists because healthcare professionals deserve a digital presence as thoughtful, reliable, and precise as the care they provide.
+              That is why DoctorSite focuses on healthcare only: the strategy, copy, SEO, visual hierarchy, and calls to action must match how patients make medical decisions.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="bg-[#111312] py-24 text-white lg:py-32">
+      <section className="bg-[#111312] py-20 text-white lg:py-28">
         <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[5fr_7fr] lg:px-16">
           <div className="border border-white/15 bg-white/5 p-5">
             <div className="h-[420px] border border-white/15 bg-[linear-gradient(135deg,#f2f0f0,#5f5e5e_48%,#111312)] p-5">
@@ -126,32 +144,32 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="flex flex-col justify-center">
-            <p className="mb-6 text-xs font-bold uppercase tracking-[0.18em] text-[#e9c176]">Our Purpose</p>
+            <p className="mb-6 text-xs font-bold uppercase tracking-[0.18em] text-[#e9c176]">Founder Story</p>
             <h2 className="font-secondary text-4xl font-medium leading-tight tracking-[-0.02em] lg:text-5xl">
-              Why DoctorSite Was Created
+              We Saw Good Doctors Losing Trust Online
             </h2>
             <div className="mt-8 space-y-6 text-base leading-8 text-white/70">
               <p>
-                Most healthcare websites are either generic templates or overcomplicated corporate pages. Neither helps a patient quickly understand why they should trust a doctor.
+                DoctorSite began with a simple observation: many excellent healthcare professionals had websites that looked acceptable but failed to explain expertise, answer patient doubts, or make booking easy.
               </p>
               <p>
-                We built DoctorSite to give medical professionals a focused digital partner: one that understands clinical credibility, patient psychology, and conversion strategy.
+                We built a focused practice around healthcare because generic agency thinking does not solve medical trust. Doctors need a digital growth partner who understands patient psychology, local search, reputation, and appointment conversion.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="standards" className="py-24 lg:py-32">
+      <section id="standards" className="py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-16">
           <div className="mb-14 max-w-3xl">
-            <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#775a19]">Built For Healthcare</p>
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#775a19]">Why Healthcare Is Different</p>
             <h2 className="font-secondary text-4xl font-medium tracking-[-0.02em] lg:text-5xl">
-              Built For Healthcare. <span className="italic">Not Everyone.</span>
+              A Healthcare Website Must Earn Trust Before It Sells.
             </h2>
           </div>
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {specialtyCards.map((card) => (
+            {healthcareDifferences.map((card) => (
               <article
                 key={card.title}
                 className={`min-h-[230px] border border-black p-7 ${
@@ -177,17 +195,36 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section id="workflow" className="bg-[#111312] py-24 text-white lg:py-32">
+      <section className="bg-[#e4e2e2] py-20 lg:py-28">
+        <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[5fr_7fr] lg:px-16">
+          <div>
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#775a19]">Why Generic Agencies Fail Doctors</p>
+            <h2 className="font-secondary text-4xl font-medium leading-tight tracking-[-0.02em] lg:text-5xl">
+              Beautiful Design Alone Does Not Book Consultations
+            </h2>
+          </div>
+          <div className="grid gap-px border border-black/15 bg-black/15 sm:grid-cols-2">
+            {genericFailures.map((item) => (
+              <div key={item} className="bg-[#fbf9f8] p-6">
+                <span className="mb-8 block h-px w-12 bg-[#775a19]" />
+                <p className="font-secondary text-2xl font-medium">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="workflow" className="bg-[#111312] py-20 text-white lg:py-28">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-16">
           <div className="mb-12 flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
             <div>
-              <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#e9c176]">Our Method</p>
+              <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#e9c176]">Our Process</p>
               <h2 className="font-secondary text-4xl font-medium tracking-[-0.02em] lg:text-5xl">
-                The Surgical <span className="italic">Workflow.</span>
+                From Free Audit To Patient Acquisition System
               </h2>
             </div>
             <p className="max-w-md text-sm leading-7 text-white/60">
-              A clear process for turning medical expertise into a patient-ready digital presence.
+              A transparent process for turning medical expertise into search visibility, trust, inquiries, and booked consultations.
             </p>
           </div>
           <div className="border-t border-white/15">
@@ -204,7 +241,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-24 lg:py-32">
+      <section className="py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-16">
           <div className="mb-12 max-w-3xl">
             <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#775a19]">Trusted By</p>
@@ -226,28 +263,28 @@ export default function AboutPage() {
       <section className="bg-[#111312] py-20 text-white">
         <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:px-8 lg:grid-cols-2 lg:px-16">
           <article className="border border-white/15 bg-white/5 p-8">
-            <h3 className="font-secondary text-3xl font-medium">We help local doctors compete with larger hospitals.</h3>
+            <h3 className="font-secondary text-3xl font-medium">We help local doctors compete with stronger digital brands.</h3>
             <p className="mt-5 text-base leading-8 text-white/60">
-              Patients often choose the provider who communicates trust most clearly. We make independent practices look credible, modern, and prepared.
+              Patients often choose the provider who communicates trust most clearly. We make independent practices look credible, searchable, and ready for patient action.
             </p>
           </article>
           <article className="border border-white/15 bg-white/5 p-8">
-            <h3 className="font-secondary text-3xl font-medium">We become the digital partner behind your growth.</h3>
+            <h3 className="font-secondary text-3xl font-medium">We focus on healthcare because patient trust is specialized.</h3>
             <p className="mt-5 text-base leading-8 text-white/60">
-              From brand positioning to appointment funnels, we build assets that support long-term patient acquisition.
+              From doctor authority to appointment funnels, we build assets that support long-term patient acquisition rather than one-time design delivery.
             </p>
           </article>
         </div>
       </section>
 
-      <section className="py-24 lg:py-32">
+      <section className="py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-5 text-center sm:px-8 lg:px-16">
-          <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#775a19]">Outcome</p>
+          <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#775a19]">Expertise</p>
           <h2 className="font-secondary text-4xl font-medium tracking-[-0.02em] lg:text-5xl">
-            Presence That <span className="italic">Performs.</span>
+            Healthcare Growth Capabilities
           </h2>
           <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-6">
-            {performanceItems.map((item) => (
+            {expertiseItems.map((item) => (
               <div key={item} className="border border-black bg-white p-6">
                 <span className="mx-auto mb-5 flex h-10 w-10 items-center justify-center border border-[#775a19] text-[#775a19]">
                   <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -261,17 +298,40 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <section className="bg-[#e4e2e2] py-20 lg:py-28">
+        <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[4fr_8fr] lg:px-16">
+          <div>
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#775a19]">Credibility</p>
+            <h2 className="font-secondary text-4xl font-medium leading-tight tracking-[-0.02em] lg:text-5xl">
+              What Makes DoctorSite A Healthcare Growth Partner
+            </h2>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {credibilityItems.map((item) => (
+              <div key={item} className="border border-black bg-[#fbf9f8] p-6">
+                <span className="mb-8 flex h-9 w-9 items-center justify-center border border-[#775a19] text-[#775a19]">
+                  <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </span>
+                <p className="font-secondary text-xl font-medium">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="contact" className="bg-[#775a19] py-20 text-white">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 px-5 text-center sm:px-8 lg:flex-row lg:px-16 lg:text-left">
           <h2 className="max-w-2xl font-secondary text-4xl font-medium leading-tight tracking-[-0.02em]">
-            Let&apos;s Build A Website Worthy Of Your Expertise
+            Let&apos;s Audit Your Practice Website For Trust, Search, And Booking
           </h2>
           <div className="flex flex-col gap-4 sm:flex-row">
             <a href="/contact#consultation" data-consultation-modal className="border border-white bg-white px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">
-              Request Audit
+              Book Free Website Audit
             </a>
             <a href="tel:+918840734369" className="border border-white px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:bg-white hover:text-black">
-              Call Studio
+              Call DoctorSite
             </a>
           </div>
         </div>

@@ -2,11 +2,15 @@
 
 import * as React from 'react';
 import { usePathname } from 'next/navigation';
+import emailjs from '@emailjs/browser';
 import Navigation from './Navigation';
 import Footer from './Footer';
 import ConsultationModal from '../modals/ConsultationModal';
 
-const sheetsEndpoint = 'https://script.google.com/macros/s/AKfycbwJ-GIUCcn2wXBQ8KJKaIhUgbSdf0zqWqPyO_eY0u4iskfBAZD0uezqHSGl1YRfxc8_HA/exec';
+const EMAILJS_SERVICE_ID = 'service_5wkd6mg';
+const EMAILJS_TEMPLATE_ID = 'template_p02q1hg';
+const EMAILJS_PUBLIC_KEY = 'ja_G9Ipwlp27pvPxE';
+const OWNER_EMAIL = 'vinaysalempur45@gmail.com';
 
 interface ClientLayoutProps {
   children: React.ReactNode;
@@ -14,6 +18,7 @@ interface ClientLayoutProps {
 
 const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
   const pathname = usePathname();
+  const isPreviewRoute = pathname.startsWith('/previews/');
   const [isModalOpen, setIsModalOpen] = React.useState(false);
 
   const openModal = React.useCallback(() => setIsModalOpen(true), []);
@@ -59,22 +64,51 @@ const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
 
       const formData = new FormData(form);
       const payload = Object.fromEntries(formData.entries());
+      const submittedAt = new Date().toLocaleString('en-IN', {
+        dateStyle: 'medium',
+        timeStyle: 'short',
+      });
+      const formType = form.dataset.formType || 'lead';
+      const payloadText = Object.entries(payload)
+        .map(([key, value]) => `${key}: ${String(value || 'N/A')}`)
+        .join('\n');
+      const name = String(payload.name || 'Website Visitor');
+      const email = String(payload.email || OWNER_EMAIL);
+      const phone = String(payload.phone || 'N/A');
+      const clinicName = String(payload.clinicName || payload.practiceType || 'N/A');
 
-      void fetch(sheetsEndpoint, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'text/plain' },
-        body: JSON.stringify({
-          type: form.dataset.formType || 'lead',
-          ...payload,
-        }),
-      })
+      void emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          to_name: 'DoctorSite',
+          to_email: OWNER_EMAIL,
+          owner_email: OWNER_EMAIL,
+          from_name: name,
+          name,
+          email,
+          phone,
+          clinic_name: clinicName,
+          clinicName,
+          practice_name: clinicName,
+          reply_to: email,
+          subject: `New ${formType} form submission`,
+          form_type: formType,
+          plan: `${formType.toUpperCase()} FORM DATA\nName: ${name}\nPhone: ${phone}`,
+          plan_name: `${formType.toUpperCase()} FORM DATA\nName: ${name}\nPhone: ${phone}`,
+          amount: `Email: ${email}\nClinic/Practice: ${clinicName}`,
+          transaction_id: `Submitted: ${submittedAt}\nDetails:\n${payloadText}`,
+          transactionId: `Submitted: ${submittedAt}\nDetails:\n${payloadText}`,
+          message: `New ${formType} form submission:\n${payloadText}\nSubmitted At: ${submittedAt}`,
+        },
+        EMAILJS_PUBLIC_KEY
+      )
         .then(() => {
           form.reset();
-          window.alert('Thank you. We will get back to you shortly.');
+          window.alert('Thank you. Your details have been sent successfully.');
         })
         .catch(() => {
-          window.alert('Something went wrong. Please call or email us directly.');
+          window.alert('Email send nahi ho paya. Please call or WhatsApp us directly.');
         })
         .finally(() => {
           if (submitButton) {
@@ -92,6 +126,10 @@ const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
   }, []);
 
   React.useEffect(() => {
+    if (isPreviewRoute) {
+      return;
+    }
+
     const sections = Array.from(
       document.querySelectorAll<HTMLElement>('main > div > section:not(:first-child), main > section:not(:first-child)')
     );
@@ -180,7 +218,11 @@ const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
       transitionCleanups.forEach((cleanup) => cleanup());
       observer.disconnect();
     };
-  }, [pathname]);
+  }, [isPreviewRoute, pathname]);
+
+  if (isPreviewRoute) {
+    return <>{children}</>;
+  }
 
   return (
     <>

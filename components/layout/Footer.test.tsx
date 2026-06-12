@@ -12,7 +12,8 @@ describe('Footer Component', () => {
 
   it('displays company description', () => {
     render(<Footer />);
-    expect(screen.getByText(/Building professional digital presence for doctors/i)).toBeInTheDocument();
+    expect(screen.getByText(/Healthcare growth partner for doctors/i)).toBeInTheDocument();
+    expect(screen.getByText('Book Free Website Audit')).toBeInTheDocument();
   });
 
   it('renders Quick Links section with navigation links', () => {

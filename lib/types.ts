@@ -20,7 +20,7 @@ export interface Service {
 
 export interface PricingPlan {
   id: string;
-  name: 'Starter' | 'Professional' | 'Growth';
+  name: 'Starter' | 'Growth' | 'Elite';
   price: number;
   period: 'month' | 'one-time';
   description: string;

@@ -18,7 +18,7 @@ describe('HeroSection', () => {
     render(<HeroSection {...defaultProps} />);
     expect(screen.getByText(/Get More Patients/i)).toBeInTheDocument();
     expect(screen.getByText('Online')).toBeInTheDocument();
-    expect(screen.getByText(/Starting at Just ₹2,999/i)).toBeInTheDocument();
+    expect(screen.getByText(/Built For Patient Appointments/i)).toBeInTheDocument();
   });
 
   it('renders the subheading correctly', () => {
@@ -34,10 +34,10 @@ describe('HeroSection', () => {
 
   it('renders the trust strip', () => {
     render(<HeroSection {...defaultProps} />);
-    expect(screen.getAllByText('Starting ₹2,999').length).toBeGreaterThan(0);
-    expect(screen.getAllByText('Delivered in 3 Days').length).toBeGreaterThan(0);
-    expect(screen.getAllByText('Free Homepage Mockup').length).toBeGreaterThan(0);
-    expect(screen.getAllByText('WhatsApp Booking Included').length).toBeGreaterThan(0);
+    expect(screen.getAllByText('Starting ₹4,999').length).toBeGreaterThan(0);
+    expect(screen.getAllByText('Audit-led Strategy').length).toBeGreaterThan(0);
+    expect(screen.getAllByText('Google Ready').length).toBeGreaterThan(0);
+    expect(screen.getAllByText('WhatsApp Integrated').length).toBeGreaterThan(0);
   });
 
   it('renders hero background styling', () => {

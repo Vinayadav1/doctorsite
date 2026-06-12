@@ -10,7 +10,7 @@ jest.mock('next/navigation', () => ({
 }));
 
 describe('Navigation Component', () => {
-  const landingLinks = ['Home', 'About', 'Service', 'Pricing'];
+  const landingLinks = ['Home', 'About', 'Services', 'Shop', 'Portfolio', 'Pricing'];
 
   it('renders the site name/logo', () => {
     render(<Navigation />);
@@ -27,13 +27,13 @@ describe('Navigation Component', () => {
 
   it('renders the CTA button', () => {
     render(<Navigation />);
-    expect(screen.getByText('Book Audit')).toBeInTheDocument();
+    expect(screen.getByText('Book Free Website Audit')).toBeInTheDocument();
   });
 
   it('highlights the active link', () => {
     render(<Navigation currentPath="/services" />);
     
-    const servicesLink = screen.getByText('Service');
+    const servicesLink = screen.getByText('Services');
     expect(servicesLink).toHaveClass('border-b', 'text-black');
   });
 

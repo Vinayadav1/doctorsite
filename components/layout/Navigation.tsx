@@ -18,7 +18,9 @@ const Navigation: React.FC<NavigationProps> = ({ currentPath, onGetStartedClick 
   const navLinks = [
     { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },
-    { label: 'Service', href: '/services' },
+    { label: 'Services', href: '/services' },
+    { label: 'Shop', href: '/shop' },
+    { label: 'Portfolio', href: '/portfolio' },
     { label: 'Pricing', href: '/pricing' },
   ];
 
@@ -58,14 +60,16 @@ const Navigation: React.FC<NavigationProps> = ({ currentPath, onGetStartedClick 
           <div className="hidden lg:block">
             {onGetStartedClick ? (
               <button
+                type="button"
+                data-consultation-modal
                 onClick={onGetStartedClick}
-                className="whitespace-nowrap border border-black bg-black px-5 py-2.5 text-xs font-bold uppercase tracking-[0.12em] text-white transition-colors hover:bg-[#775a19] hover:border-[#775a19]"
+                className="whitespace-nowrap border border-black bg-black px-5 py-2.5 text-xs font-bold uppercase tracking-[0.12em] text-white transition-colors hover:border-[#775a19] hover:bg-[#775a19]"
               >
-                Book Audit
+                Book Free Website Audit
               </button>
             ) : (
               <Link href="/#contact" className="inline-flex whitespace-nowrap border border-black bg-black px-5 py-2.5 text-xs font-bold uppercase tracking-[0.12em] text-white transition-colors hover:border-[#775a19] hover:bg-[#775a19]">
-                Book Audit
+                Book Free Website Audit
               </Link>
             )}
           </div>
@@ -112,10 +116,12 @@ const Navigation: React.FC<NavigationProps> = ({ currentPath, onGetStartedClick 
             <div className="pt-2 pb-1">
               {onGetStartedClick ? (
                 <button
+                  type="button"
+                  data-consultation-modal
                   onClick={() => { setMenuOpen(false); onGetStartedClick(); }}
                   className="w-full border border-black bg-black py-3 text-xs font-bold uppercase tracking-[0.12em] text-white transition-colors hover:bg-[#775a19]"
                 >
-                  Book Audit
+                  Book Free Website Audit
                 </button>
               ) : (
                 <Link
@@ -123,7 +129,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentPath, onGetStartedClick 
                   onClick={() => setMenuOpen(false)}
                   className="block w-full border border-black bg-black py-3 text-center text-xs font-bold uppercase tracking-[0.12em] text-white transition-colors hover:bg-[#775a19]"
                 >
-                  Book Audit
+                  Book Free Website Audit
                 </Link>
               )}
             </div>

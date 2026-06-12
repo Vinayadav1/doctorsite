@@ -12,13 +12,13 @@ describe('Button Component', () => {
   it('renders primary variant by default', () => {
     render(<Button text="Primary" />);
     const button = screen.getByText('Primary').closest('button');
-    expect(button).toHaveClass('bg-gradient-to-r');
+    expect(button).toHaveClass('bg-blue-600');
   });
 
   it('renders secondary variant', () => {
     render(<Button text="Secondary" variant="secondary" />);
     const button = screen.getByText('Secondary').closest('button');
-    expect(button).toHaveClass('bg-secondary-main');
+    expect(button).toHaveClass('bg-teal-500');
   });
 
   it('renders outline variant', () => {

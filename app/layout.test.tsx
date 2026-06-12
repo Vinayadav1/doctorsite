@@ -27,7 +27,7 @@ describe('RootLayout', () => {
     // Check for navigation elements - use getAllByText since DoctorSite appears in both nav and footer
     const doctorSiteElements = screen.getAllByText('DoctorSite');
     expect(doctorSiteElements.length).toBeGreaterThan(0);
-    expect(screen.getByText('Book Audit')).toBeInTheDocument();
+    expect(screen.getAllByText('Book Free Website Audit').length).toBeGreaterThan(0);
   });
 
   it('renders Footer component', () => {

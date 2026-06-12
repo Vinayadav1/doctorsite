@@ -18,7 +18,7 @@ describe('Card Component', () => {
   it('renders glass variant with glassmorphism styling', () => {
     render(<Card variant="glass">Glass Card</Card>);
     const card = screen.getByText('Glass Card').closest('div');
-    expect(card).toHaveClass('bg-white/20', 'backdrop-blur-md', 'shadow-glass');
+    expect(card).toHaveClass('bg-white', 'shadow-md', 'border', 'border-gray-100');
   });
 
   it('renders elevated variant', () => {

@@ -1,289 +1,358 @@
-const essentials = [
-  'Clinic website',
-  'Doctor profile',
-  'Service pages',
-  'Google visibility',
-  'WhatsApp booking',
-  'Trust content',
-];
-
-const developmentFeatures = [
-  'Specialty-focused website strategy',
-  'Mobile-first patient experience',
-  'Conversion-focused service pages',
-  'Fast, secure, SEO-ready build',
-];
-
-const brandingFeatures = [
-  'Doctor profile positioning',
-  'Credential and expertise storytelling',
-  'Authority-building visual system',
-  'Patient-first communication',
-];
-
-const specialties = [
-  'Dentists',
-  'Dermatologists',
-  'Surgeons',
-  'Physicians',
-  'Pediatricians',
-  'Orthopedic doctors',
-  'Gynecologists',
-  'Multi-specialty clinics',
-];
-
-const healthcareSystems = [
+const problems = [
   {
-    title: 'Medical Websites',
-    body: 'Premium websites built around trust, clarity, services, credentials, and patient conversion.',
+    problem: 'Website looks outdated and unprofessional',
+    solution: 'We redesign your digital presence with premium visuals, clearer messaging, and trust-building layouts.',
+    outcome: 'Stronger first impressions and more confidence from potential customers.',
   },
   {
-    title: 'Built For SEO',
-    body: 'Search-ready pages structured for local discovery, specialty keywords, and Google visibility.',
+    problem: 'Not getting enough leads',
+    solution: 'We create conversion paths, better CTAs, inquiry forms, and landing pages built around customer intent.',
+    outcome: 'More qualified inquiries from the traffic you already have.',
   },
   {
-    title: 'Booking Experience',
-    body: 'Clear contact flows, WhatsApp actions, inquiry forms, and appointment-focused calls to action.',
+    problem: 'Poor Google visibility',
+    solution: 'We improve technical SEO, on-page structure, page speed, content hierarchy, and search-friendly architecture.',
+    outcome: 'Better discoverability and more organic traffic over time.',
+  },
+  {
+    problem: 'Low conversion rates',
+    solution: 'We refine your user journey, message hierarchy, trust proof, forms, and page-level calls to action.',
+    outcome: 'More visitors turn into leads, calls, bookings, or sales.',
+  },
+  {
+    problem: 'Slow website performance',
+    solution: 'We optimize code, assets, loading behavior, responsiveness, and technical foundations.',
+    outcome: 'Better user retention, stronger SEO signals, and fewer drop-offs.',
+  },
+  {
+    problem: 'Weak online presence',
+    solution: 'We align your website, brand, SEO, social content, and conversion strategy into one digital growth system.',
+    outcome: 'A more credible presence that helps you compete online.',
+  },
+  {
+    problem: 'Inconsistent branding',
+    solution: 'We define visual direction, typography, color systems, messaging, and digital consistency across channels.',
+    outcome: 'A more memorable brand that feels professional and trustworthy.',
+  },
+  {
+    problem: 'Social media not generating results',
+    solution: 'We plan content, improve creative direction, and connect social activity to trust and lead generation.',
+    outcome: 'Stronger awareness, better engagement, and a clearer reason to follow or inquire.',
+  },
+  {
+    problem: 'Losing customers to competitors',
+    solution: 'We position your business with clearer value, better digital proof, and a stronger conversion experience.',
+    outcome: 'More buyers understand why they should choose you.',
   },
 ];
 
-const launchSteps = [
-  { label: 'Consultation', body: 'We understand your practice, specialty, patient audience, and goals.' },
-  { label: 'Strategy', body: 'We map the website structure, service pages, messaging, and booking path.' },
-  { label: 'Build', body: 'We design and develop a clean, responsive, credibility-first medical website.' },
-  { label: 'Launch', body: 'We publish, verify, and support your site so it is ready for real patients.' },
+const services = [
+  {
+    name: 'Web Design',
+    problem: "Your website doesn't create trust or convert visitors.",
+    solution: 'Modern UI/UX design focused on credibility and conversion.',
+    outcome: 'Higher engagement and stronger first impressions.',
+    image: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    name: 'Web Development',
+    problem: 'Slow, outdated, or poorly built websites.',
+    solution: 'Fast, scalable, responsive websites built with modern technologies.',
+    outcome: 'Better performance, user experience, and growth potential.',
+    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    name: 'Website Redesign',
+    problem: 'Your current website feels outdated and loses potential customers.',
+    solution: 'Complete redesign with modern visuals and improved user journeys.',
+    outcome: 'More trust, better engagement, higher conversions.',
+    image: 'https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    name: 'SEO Optimization',
+    problem: 'Customers cannot find you on Google.',
+    solution: 'Technical SEO, on-page SEO, content optimization, and visibility improvements.',
+    outcome: 'More organic traffic and qualified leads.',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    name: 'Social Media Management',
+    problem: 'Inconsistent content and weak online engagement.',
+    solution: 'Content planning, creative design, posting strategy, and audience growth.',
+    outcome: 'Stronger brand awareness and customer trust.',
+    image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    name: 'Landing Page Development',
+    problem: 'Advertising campaigns are not converting.',
+    solution: 'Conversion-focused landing pages designed for lead generation.',
+    outcome: 'Lower acquisition costs and higher conversion rates.',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    name: 'E-Commerce Development',
+    problem: 'Limited online sales opportunities.',
+    solution: 'Custom online stores with secure payment integration.',
+    outcome: 'Increased revenue and digital scalability.',
+    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    name: 'Performance Optimization',
+    problem: 'Slow websites causing visitor drop-offs.',
+    solution: 'Speed optimization and technical improvements.',
+    outcome: 'Better rankings and user retention.',
+    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    name: 'Branding & Digital Identity',
+    problem: 'Business lacks a memorable and professional identity.',
+    solution: 'Brand strategy, visual identity, and digital consistency.',
+    outcome: 'Stronger market positioning and trust.',
+    image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    name: 'Maintenance & Support',
+    problem: 'Websites become outdated, vulnerable, and difficult to manage.',
+    solution: 'Ongoing updates, monitoring, backups, and support.',
+    outcome: 'Long-term stability and peace of mind.',
+    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80',
+  },
 ];
 
-const faqs = [
+const processSteps = [
   {
-    question: 'Can you redesign my existing clinic website?',
-    answer: 'Yes. We can modernize the design, improve messaging, rebuild service pages, and make the booking journey clearer.',
+    step: '01',
+    title: 'Discovery & Strategy',
+    body: 'We clarify your goals, audience, competitors, offers, and the business outcome your digital system must create.',
+    icon: 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2m-6 0a2 2 0 002 2h2a2 2 0 002-2m-6 0a2 2 0 012-2h2a2 2 0 012 2',
   },
   {
-    question: 'Do you write the website content?',
-    answer: 'Yes. We create patient-friendly copy around your specialty, services, credentials, and local search needs.',
+    step: '02',
+    title: 'Design & Planning',
+    body: 'We plan the user journey, page structure, visual direction, content hierarchy, and conversion strategy.',
+    icon: 'M4 5a2 2 0 012-2h3.5a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm10 0a2 2 0 012-2h2a2 2 0 012 2v5a2 2 0 01-2 2h-2a2 2 0 01-2-2V5z',
   },
   {
-    question: 'Is SEO included?',
-    answer: 'Every build includes SEO-ready structure. Higher plans can include deeper local SEO and specialty page planning.',
+    step: '03',
+    title: 'Development & Optimization',
+    body: 'We build fast, responsive, scalable pages and optimize performance, SEO foundations, forms, and technical details.',
+    icon: 'M8 9l3 3-3 3m5 0h3M5 5h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2z',
   },
+  {
+    step: '04',
+    title: 'Launch & Testing',
+    body: 'We test responsive behavior, speed, forms, tracking, metadata, and launch readiness before the site goes live.',
+    icon: 'M5 13l4 4L19 7',
+  },
+  {
+    step: '05',
+    title: 'Growth & Support',
+    body: 'We help improve visibility, conversions, content, campaigns, and stability as your business grows online.',
+    icon: 'M13 7h8m0 0v8m0-8l-8 8-4-4-6 6',
+  },
+];
+
+const results = [
+  'More Leads',
+  'Better Google Visibility',
+  'Stronger Brand Authority',
+  'Faster Website Performance',
+  'Higher Conversion Rates',
+  'Improved Customer Trust',
 ];
 
 export default function ServicesPage() {
   return (
     <div className="bg-[#fbf9f8] text-[#1b1c1c]">
-      <section className="mx-auto grid min-h-screen max-w-7xl grid-cols-1 gap-12 px-5 pb-20 pt-28 sm:px-8 lg:grid-cols-[6fr_6fr] lg:px-16 lg:pb-28 lg:pt-32">
+      <section className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-5 pb-16 pt-24 sm:px-8 sm:pt-28 lg:min-h-screen lg:grid-cols-[5fr_7fr] lg:px-16 lg:pb-24 lg:pt-32">
         <div className="flex flex-col justify-center">
-          <p className="mb-6 text-xs font-bold uppercase tracking-[0.18em] text-[#775a19]">Our Services</p>
-          <h1 className="font-secondary text-5xl font-bold leading-[1.08] tracking-[-0.04em] text-black sm:text-6xl lg:text-[72px]">
-            Healthcare Digital Solutions Designed For <span className="italic text-[#775a19]">Modern Practices</span>
+          <p className="mb-6 text-xs font-bold uppercase tracking-[0.18em] text-[#775a19]">Digital Growth Services</p>
+          <h1 className="font-secondary text-5xl font-bold leading-[1.05] tracking-[-0.04em] text-black sm:text-6xl lg:text-[76px]">
+            More Than Websites. We Build <span className="italic text-[#775a19]">Digital Growth Systems.</span>
           </h1>
           <p className="mt-8 max-w-xl text-lg leading-8 tracking-[0.01em] text-[#45464d]">
-            We create premium medical websites, personal branding systems, and patient acquisition experiences for doctors, clinics, and healthcare teams.
+            From website design and development to SEO, branding, and social media management, we help businesses attract more customers, generate more leads, and build a stronger online presence.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <a href="#services" className="border border-black bg-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#775a19] hover:bg-[#775a19]">
+            <a href="/contact#consultation" data-consultation-modal className="border border-black bg-black px-7 py-4 text-center text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#775a19] hover:bg-[#775a19]">
+              Let&apos;s Grow Your Business
+            </a>
+            <a href="#services" className="border border-black bg-white px-7 py-4 text-center text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">
               Explore Services
             </a>
-            <a href="/contact#consultation" data-consultation-modal className="border border-black bg-white px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">
-              Book Free Audit
-            </a>
           </div>
         </div>
 
-        <div className="relative flex items-center justify-center">
-          <div className="relative w-full max-w-[520px] border border-black bg-white p-6">
-            <div className="bg-[#111312] p-6 text-white">
-              <div className="mb-8 bg-black p-5 ring-1 ring-white/15">
-                <div
-                  className="mx-auto h-64 w-full border border-[#e9c176]/40 bg-cover bg-center"
-                  style={{ backgroundImage: 'linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.42)), url(https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=80)' }}
-                />
+        <div className="relative flex items-center">
+          <div className="relative w-full border border-black bg-[#e4e2e2] p-4 sm:p-6">
+            <div
+              className="min-h-[520px] border border-black/20 bg-[#111312] bg-cover bg-center p-5 text-white"
+              style={{ backgroundImage: 'linear-gradient(90deg, rgba(17,19,18,0.94), rgba(17,19,18,0.38)), url(https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1400&q=80)' }}
+            >
+              <div className="grid h-full min-h-[470px] gap-4 sm:grid-cols-[1fr_1.25fr]">
+                <div className="flex flex-col justify-between border border-white/20 bg-black/30 p-5">
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#e9c176]">Strategy / Design / Growth</p>
+                  <h2 className="font-secondary text-4xl font-bold leading-tight">From clicks to customers.</h2>
+                </div>
+                <div className="flex flex-col justify-end gap-3">
+                  {['Lead Generation', 'Search Visibility', 'Conversion Strategy'].map((item) => (
+                    <div key={item} className="border border-white/15 bg-white/10 p-4 text-sm font-semibold">
+                      {item}
+                    </div>
+                  ))}
+                </div>
               </div>
-              <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#e9c176]">Digital Practice Engine</p>
-              <h2 className="mt-4 font-secondary text-3xl font-medium">Medical Presence OS</h2>
-              <div className="mt-6 grid grid-cols-3 gap-3">
-                <span className="h-16 border border-white/15 bg-white/10" />
-                <span className="h-16 border border-white/15 bg-white/10" />
-                <span className="h-16 border border-white/15 bg-white/10" />
-              </div>
+            </div>
+            <div className="absolute -bottom-8 left-8 bg-[#775a19] px-8 py-5 text-white">
+              <p className="font-secondary text-4xl font-bold">10</p>
+              <p className="text-xs font-bold uppercase tracking-[0.16em]">Growth services</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-24 lg:py-32">
-        <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[5fr_7fr] lg:px-16">
-          <div>
-            <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#775a19]">Practice Infrastructure</p>
-            <h2 className="font-secondary text-4xl font-medium leading-tight tracking-[-0.02em] lg:text-5xl">
-              Everything Your Practice Needs Online
-            </h2>
-            <p className="mt-8 max-w-md text-base leading-8 text-[#45464d]">
-              A complete digital foundation for practices that need more than a simple online brochure.
+      <section id="problems" className="bg-[#111312] py-20 text-white lg:py-28">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-16">
+          <div className="mb-12 grid gap-8 lg:grid-cols-[5fr_7fr]">
+            <div>
+              <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#e9c176]">Problems We Solve</p>
+              <h2 className="font-secondary text-4xl font-bold leading-tight tracking-[-0.03em] lg:text-5xl">
+                Business Problems First. Services Second.
+              </h2>
+            </div>
+            <p className="text-lg leading-8 text-white/65">
+              Most businesses do not need random deliverables. They need a sharper digital system that creates trust, brings qualified traffic, and turns attention into revenue opportunities.
             </p>
           </div>
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {essentials.map((item, index) => (
-              <article key={item} className="border border-black bg-white p-6">
-                <span className="mb-12 flex h-10 w-10 items-center justify-center border border-[#775a19] text-[#775a19]">
-                  {index + 1}
-                </span>
-                <h3 className="font-secondary text-2xl font-medium">{item}</h3>
+          <div className="grid gap-px bg-white/15 md:grid-cols-2 lg:grid-cols-3">
+            {problems.map((item) => (
+              <article key={item.problem} className="bg-[#111312] p-6">
+                <span className="mb-8 block h-px w-12 bg-[#e9c176]" />
+                <h3 className="font-secondary text-2xl font-semibold">{item.problem}</h3>
+                <p className="mt-5 text-sm leading-7 text-white/60"><span className="font-bold text-white">Solution:</span> {item.solution}</p>
+                <p className="mt-4 text-sm leading-7 text-[#e9c176]"><span className="font-bold text-white">Outcome:</span> {item.outcome}</p>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="services" className="space-y-0">
-        <article className="bg-white py-24 lg:py-32">
-          <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[5fr_7fr] lg:px-16">
-            <div className="border border-black bg-[#e4e2e2] p-5">
-              <div
-                className="h-[360px] bg-cover bg-center p-5"
-                style={{ backgroundImage: 'linear-gradient(135deg, rgba(242,240,240,0.24), rgba(17,19,18,0.54)), url(https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1000&q=80)' }}
-              >
-                <div className="h-full border border-white/30 bg-black/10" />
-              </div>
-            </div>
-            <div className="flex flex-col justify-center">
-              <p className="mb-5 text-xs font-bold uppercase tracking-[0.18em] text-[#775a19]">Core Service</p>
-              <h2 className="font-secondary text-4xl font-medium tracking-[-0.02em] lg:text-5xl">Medical Website Development</h2>
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-[#45464d]">
-                Premium websites designed for doctors and clinics who need credibility, clarity, and a direct path from search to appointment.
-              </p>
-              <ul className="mt-10 grid gap-4 sm:grid-cols-2">
-                {developmentFeatures.map((feature) => (
-                  <li key={feature} className="flex items-start gap-3 text-sm leading-6 text-[#45464d]">
-                    <span className="mt-1 h-2 w-2 flex-shrink-0 bg-[#775a19]" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <article className="py-24 lg:py-32">
-          <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[7fr_5fr] lg:px-16">
-            <div className="flex flex-col justify-center">
-              <p className="mb-5 text-xs font-bold uppercase tracking-[0.18em] text-[#775a19]">Authority Service</p>
-              <h2 className="font-secondary text-4xl font-medium tracking-[-0.02em] lg:text-5xl">Doctor Personal Branding</h2>
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-[#45464d]">
-                Position your medical expertise with refined messaging, professional presentation, and trust-building content that helps patients feel confident.
-              </p>
-              <ul className="mt-10 grid gap-4 sm:grid-cols-2">
-                {brandingFeatures.map((feature) => (
-                  <li key={feature} className="flex items-start gap-3 text-sm leading-6 text-[#45464d]">
-                    <span className="mt-1 h-2 w-2 flex-shrink-0 bg-[#775a19]" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="border border-black bg-white p-5">
-              <div className="h-[380px] bg-[linear-gradient(135deg,#111312,#5f5e5e_55%,#fbf9f8)] p-5">
-                <div className="ml-auto h-full w-2/3 border border-white/30 bg-white/10" />
-              </div>
-            </div>
-          </div>
-        </article>
-      </section>
-
-      <section id="specialties" className="bg-[#111312] py-24 text-white lg:py-32">
-        <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[4fr_8fr] lg:px-16">
-          <div>
-            <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#e9c176]">Specialties</p>
-            <h2 className="font-secondary text-4xl font-medium leading-tight tracking-[-0.02em] lg:text-5xl">
-              Healthcare Specialties We Serve
-            </h2>
-          </div>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {specialties.map((specialty) => (
-              <div key={specialty} className="border border-white/15 bg-white/5 p-6">
-                <span className="mb-10 block h-8 w-8 border border-[#e9c176]" />
-                <p className="text-sm font-semibold">{specialty}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="built-for" className="py-24 lg:py-32">
-        <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[6fr_6fr] lg:px-16">
-          <div>
-            <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#775a19]">Built Around Outcomes</p>
-            <h2 className="font-secondary text-4xl font-medium leading-tight tracking-[-0.02em] lg:text-5xl">
-              Built Exclusively For Healthcare
-            </h2>
-            <div className="mt-10 space-y-6">
-              {healthcareSystems.map((item) => (
-                <article key={item.title} className="border border-black bg-white p-6">
-                  <h3 className="font-secondary text-2xl font-medium">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-[#45464d]">{item.body}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-          <div className="flex items-center">
-            <blockquote className="border border-black bg-white p-10">
-              <p className="font-secondary text-3xl font-medium italic leading-tight">
-                Your website should feel like a trusted extension of your practice, not a generic template.
-              </p>
-              <p className="mt-8 text-xs font-bold uppercase tracking-[0.18em] text-[#775a19]">DoctorSite Service Standard</p>
-            </blockquote>
-          </div>
-        </div>
-      </section>
-
-      <section id="launch" className="bg-[#f5f3f3] py-24 lg:py-32">
+      <section id="services" className="py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-16">
-          <div className="mx-auto mb-14 max-w-3xl text-center">
-            <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#775a19]">Delivery</p>
-            <h2 className="font-secondary text-4xl font-medium tracking-[-0.02em] lg:text-5xl">From Consultation To Launch</h2>
+          <div className="mb-14 flex flex-col justify-between gap-8 border-b border-black pb-8 lg:flex-row lg:items-end">
+            <div>
+              <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#775a19]">Services</p>
+              <h2 className="font-secondary text-4xl font-bold tracking-[-0.03em] lg:text-5xl">Premium Digital Services Built Around Growth</h2>
+            </div>
+            <p className="max-w-md text-sm leading-7 text-[#444748]">
+              Every service is positioned around a business problem, a strategic solution, and a measurable outcome.
+            </p>
           </div>
-          <div className="grid gap-5 lg:grid-cols-4">
-            {launchSteps.map((step, index) => (
-              <article key={step.label} className="border border-black bg-[#fbf9f8] p-7">
-                <p className="font-secondary text-5xl text-black/10">0{index + 1}</p>
-                <h3 className="mt-8 font-secondary text-2xl font-medium">{step.label}</h3>
-                <p className="mt-4 text-sm leading-7 text-[#45464d]">{step.body}</p>
+          <div className="grid gap-6">
+            {services.map((service, index) => (
+              <article key={service.name} className={`grid overflow-hidden border border-black bg-white lg:grid-cols-[5fr_7fr] ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
+                <div className={`${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+                  <div
+                    className="h-full min-h-[320px] bg-[#111312] bg-cover bg-center"
+                    style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.48)), url(${service.image})` }}
+                    aria-label={`${service.name} service image`}
+                  />
+                </div>
+                <div className="flex flex-col justify-center p-7 sm:p-9">
+                  <p className="mb-5 text-xs font-bold uppercase tracking-[0.18em] text-[#775a19]">0{index + 1}</p>
+                  <h3 className="font-secondary text-4xl font-bold tracking-[-0.03em]">{service.name}</h3>
+                  <div className="mt-8 grid gap-5">
+                    <div className="border-t border-black/15 pt-5">
+                      <p className="text-xs font-bold uppercase tracking-[0.16em] text-black">Problem We Solve</p>
+                      <p className="mt-3 text-sm leading-7 text-[#444748]">{service.problem}</p>
+                    </div>
+                    <div className="border-t border-black/15 pt-5">
+                      <p className="text-xs font-bold uppercase tracking-[0.16em] text-black">Solution</p>
+                      <p className="mt-3 text-sm leading-7 text-[#444748]">{service.solution}</p>
+                    </div>
+                    <div className="border-t border-black/15 pt-5">
+                      <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#775a19]">Expected Business Outcome</p>
+                      <p className="mt-3 font-secondary text-2xl font-semibold leading-tight">{service.outcome}</p>
+                    </div>
+                  </div>
+                </div>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="faq" className="bg-[#e4e2e2] py-24 lg:py-32">
-        <div className="mx-auto max-w-4xl px-5 text-center sm:px-8">
-          <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#775a19]">Questions</p>
-          <h2 className="font-secondary text-4xl font-medium tracking-[-0.02em] lg:text-5xl">Frequently Asked Questions</h2>
-          <div className="mt-12 space-y-4 text-left">
-            {faqs.map((faq) => (
-              <article key={faq.question} className="border border-black bg-white p-7">
-                <h3 className="font-secondary text-2xl font-medium">{faq.question}</h3>
-                <p className="mt-4 text-sm leading-7 text-[#45464d]">{faq.answer}</p>
+      <section id="process" className="bg-[#e4e2e2] py-20 lg:py-28">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-16">
+          <div className="mb-12 grid gap-8 lg:grid-cols-[4fr_8fr]">
+            <div>
+              <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#775a19]">Process</p>
+              <h2 className="font-secondary text-4xl font-bold leading-tight tracking-[-0.03em] lg:text-5xl">A Clear System From Strategy To Growth</h2>
+            </div>
+            <p className="text-lg leading-8 text-[#444748]">
+              We move from business diagnosis to launch and ongoing improvement, so the work connects to leads, trust, visibility, and revenue outcomes.
+            </p>
+          </div>
+          <div className="grid gap-4 lg:grid-cols-5">
+            {processSteps.map((step) => (
+              <article key={step.step} className="border border-black bg-[#fbf9f8] p-6">
+                <span className="mb-8 flex h-12 w-12 items-center justify-center border border-[#775a19] text-[#775a19]">
+                  <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={step.icon} />
+                  </svg>
+                </span>
+                <p className="font-secondary text-5xl text-black/10">{step.step}</p>
+                <h3 className="mt-5 font-secondary text-2xl font-bold">{step.title}</h3>
+                <p className="mt-4 text-sm leading-7 text-[#444748]">{step.body}</p>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="contact" className="bg-black py-24 text-white">
-        <div className="mx-auto max-w-7xl px-5 text-center sm:px-8 lg:px-16">
-          <h2 className="mx-auto max-w-3xl font-secondary text-4xl font-medium leading-tight tracking-[-0.02em] lg:text-5xl">
-            Your Practice Deserves A Better Digital Experience
-          </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-white/60">
-            Let us create a premium medical website and online patient journey that reflects the quality of your care.
-          </p>
-          <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-            <a href="/contact#consultation" data-consultation-modal className="border border-[#775a19] bg-[#775a19] px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:bg-white hover:text-black">
-              Start Your Website
+      <section id="results" className="bg-[#111312] py-20 text-white lg:py-28">
+        <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[5fr_7fr] lg:px-16">
+          <div>
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#e9c176]">Results</p>
+            <h2 className="font-secondary text-4xl font-bold leading-tight tracking-[-0.03em] lg:text-5xl">
+              Outcomes That Matter To A Growing Business
+            </h2>
+            <p className="mt-6 text-base leading-8 text-white/60">
+              The goal is not just to look better. The goal is to become easier to find, easier to trust, and easier to buy from.
+            </p>
+          </div>
+          <div className="grid gap-px bg-white/15 sm:grid-cols-2 lg:grid-cols-3">
+            {results.map((result) => (
+              <div key={result} className="bg-[#111312] p-7">
+                <span className="mb-10 flex h-10 w-10 items-center justify-center border border-[#e9c176] text-[#e9c176]">
+                  <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                  </svg>
+                </span>
+                <h3 className="font-secondary text-2xl font-semibold">{result}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" className="py-20 lg:py-28">
+        <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[7fr_5fr] lg:px-16">
+          <div>
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#775a19]">Start Growing</p>
+            <h2 className="font-secondary text-4xl font-bold leading-tight tracking-[-0.03em] lg:text-6xl">
+              Ready to Turn Your Website Into a Growth Engine?
+            </h2>
+            <p className="mt-6 max-w-2xl text-base leading-8 text-[#444748]">
+              Whether you need a brand-new website, better rankings, or a complete digital strategy, we can help your business grow online.
+            </p>
+          </div>
+          <div className="flex flex-col justify-center gap-4">
+            <a href="/contact#consultation" data-consultation-modal className="border border-black bg-black px-7 py-4 text-center text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#775a19] hover:bg-[#775a19]">
+              Book a Free Consultation
             </a>
-            <a href="tel:+918840734369" className="border border-white px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:bg-white hover:text-black">
-              Ask Your Questions
+            <a href="/portfolio" className="border border-black px-7 py-4 text-center text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">
+              View Our Work
             </a>
           </div>
         </div>

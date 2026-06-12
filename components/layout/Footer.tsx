@@ -8,6 +8,14 @@ export interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ className = '' }) => {
   const currentYear = new Date().getFullYear();
+  const seoClusters = [
+    'Doctor Website Design',
+    'Clinic Website Design',
+    'Medical SEO',
+    'Healthcare Marketing',
+    'Google Maps SEO For Doctors',
+    'AI Search Optimization For Doctors',
+  ];
 
   return (
     <footer className={`bg-gray-900 text-gray-100 ${className}`}>
@@ -18,8 +26,11 @@ export const Footer: React.FC<FooterProps> = ({ className = '' }) => {
           <div className="space-y-5">
             <h3 className="font-secondary text-2xl font-bold tracking-[-0.02em] text-white">{SITE_NAME}</h3>
             <p className="text-sm leading-6 text-gray-400">
-              Building professional digital presence for doctors and surgeons with editorial design, surgical precision, and conversion clarity.
+              Healthcare growth partner for doctors, clinics, surgeons, hospitals, and specialists who need more trust, visibility, inquiries, and booked consultations.
             </p>
+            <Link href="/contact#consultation" data-consultation-modal className="inline-flex border border-[#e9c176] bg-[#e9c176] px-5 py-3 text-xs font-bold uppercase tracking-[0.12em] text-black transition-colors hover:bg-white">
+              Book Free Website Audit
+            </Link>
           </div>
 
           {/* Quick Links */}
@@ -139,6 +150,21 @@ export const Footer: React.FC<FooterProps> = ({ className = '' }) => {
                 </a>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div className="mb-12 border-b border-white/15 pb-12">
+          <h4 className="mb-5 text-xs font-bold uppercase tracking-[0.16em] text-[#e9c176]">Healthcare Growth Topics</h4>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {seoClusters.map((cluster) => (
+              <Link
+                key={cluster}
+                href="/blog"
+                className="border border-white/15 px-4 py-3 text-sm text-gray-400 transition-colors hover:border-white hover:text-white"
+              >
+                {cluster}
+              </Link>
+            ))}
           </div>
         </div>
 

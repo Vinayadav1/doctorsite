@@ -17,20 +17,28 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "DoctorSite - Build Your Digital Presence as a Doctor",
-  description: "Professional website development for doctors and surgeons. Get more patients, build trust, and establish your online presence.",
-  keywords: ["doctor website", "medical website", "surgeon website", "healthcare digital presence", "doctor SEO"],
+  title: "DoctorSite - Healthcare Websites That Generate Patient Appointments",
+  description: "Healthcare website design, medical SEO, AI search optimization, and appointment conversion systems for doctors, clinics, surgeons, hospitals, and specialists. Book a free website audit.",
+  keywords: [
+    "doctor website design",
+    "clinic website design",
+    "medical SEO",
+    "healthcare marketing",
+    "Google Maps SEO for doctors",
+    "AI search optimization for doctors",
+    "healthcare website audit",
+  ],
   authors: [{ name: "DoctorSite" }],
   openGraph: {
-    title: "DoctorSite - Build Your Digital Presence as a Doctor",
-    description: "Professional website development for doctors and surgeons. Get more patients, build trust, and establish your online presence.",
+    title: "DoctorSite - Healthcare Websites That Generate Patient Appointments",
+    description: "Healthcare website design, medical SEO, AI search optimization, and appointment conversion systems for doctors, clinics, surgeons, hospitals, and specialists.",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "DoctorSite - Build Your Digital Presence as a Doctor",
-    description: "Professional website development for doctors and surgeons. Get more patients, build trust, and establish your online presence.",
+    title: "DoctorSite - Healthcare Websites That Generate Patient Appointments",
+    description: "Healthcare website design, medical SEO, AI search optimization, and appointment conversion systems for healthcare professionals.",
   },
 };
 

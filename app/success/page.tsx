@@ -27,7 +27,7 @@ function SuccessContent() {
   const customerName = searchParams.get('name')   || '';
 
   const planNames: Record<string, string> = {
-    starter: 'Starter', professional: 'Professional', growth: 'Growth',
+    starter: 'Starter', professional: 'Growth', growth: 'Elite',
   };
   const planName = planNames[planId] || planId || 'Website Plan';
   const formattedAmount = `₹${(parseInt(amount, 10) || 0).toLocaleString('en-IN')}`;
@@ -88,10 +88,13 @@ function SuccessContent() {
         {
           to_name:        customerName || 'Valued Customer',
           to_email:       email,
+          from_name:      customerName || 'Valued Customer',
           name:           customerName || 'Valued Customer',
           email:          email,
+          plan:           planName,
           plan_name:      planName,
           amount:         formattedAmount,
+          transactionId:   transactionId || 'N/A',
           transaction_id: transactionId || 'N/A',
           owner_email:    OWNER_EMAIL,
           reply_to:       email,
