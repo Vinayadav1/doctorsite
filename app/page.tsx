@@ -210,9 +210,10 @@ export default function Home() {
       <section className="border-y border-black/10 bg-white py-5">
         <div className="mx-auto grid max-w-7xl items-center gap-4 px-5 sm:px-8 md:grid-cols-[140px_1fr] lg:px-16">
           <p className="text-center text-xs font-bold uppercase tracking-[0.18em] text-[#775a19] md:text-left">Trusted By</p>
-          <div className="grid gap-px border border-black/15 bg-black/15 sm:grid-cols-2 lg:grid-cols-5">
-            {trustSegments.map((segment) => (
-              <div key={segment} className="flex min-h-[58px] items-center justify-center gap-3 bg-white px-4 py-3 text-center">
+          <div className="overflow-hidden border border-black/15 bg-black/15 md:overflow-visible">
+            <div className="trust-marquee-track flex w-max gap-px md:grid md:w-full md:grid-cols-5">
+              {[...trustSegments, ...trustSegments].map((segment, index) => (
+              <div key={`${segment}-${index}`} aria-hidden={index >= trustSegments.length} className={`flex min-h-[58px] min-w-[210px] items-center justify-center gap-3 bg-white px-4 py-3 text-center md:min-w-0 ${index >= trustSegments.length ? 'md:hidden' : ''}`}>
                 <span className="flex h-8 w-8 items-center justify-center border border-[#775a19] text-[#775a19]">
                   <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -220,7 +221,8 @@ export default function Home() {
                 </span>
                 <span className="text-sm font-semibold leading-tight text-[#444748]">{segment}</span>
               </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>

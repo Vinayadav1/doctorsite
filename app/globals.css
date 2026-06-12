@@ -54,6 +54,27 @@ a {
   }
 }
 
+@keyframes trust-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.trust-marquee-track {
+  animation: trust-marquee 18s linear infinite;
+}
+
+@media (min-width: 768px), (prefers-reduced-motion: reduce) {
+  .trust-marquee-track {
+    animation: none;
+    transform: none;
+  }
+}
+
 /* Scroll-triggered lazy rendering for section content only. */
 [data-scroll-reveal='true'] {
   content-visibility: auto;
