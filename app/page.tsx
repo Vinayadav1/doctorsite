@@ -179,27 +179,27 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative min-h-[380px] border border-black bg-[#e4e2e2] p-4 sm:min-h-[420px] sm:p-6 lg:h-[520px] lg:min-h-0 xl:h-[560px]">
+        <div className="relative min-h-[520px] border border-black bg-[#e4e2e2] p-4 sm:min-h-[420px] sm:p-6 lg:h-[520px] lg:min-h-0 xl:h-[560px]">
           <div className="absolute inset-6 border border-black/20" />
           <div
-            className="absolute bottom-7 left-7 right-7 top-7 bg-[#101111] bg-cover bg-center p-4 text-white sm:bottom-10 sm:left-10 sm:right-10 sm:top-10 sm:p-6"
+            className="absolute bottom-5 left-5 right-5 top-5 overflow-hidden bg-[#101111] bg-cover bg-center p-3 text-white sm:bottom-10 sm:left-10 sm:right-10 sm:top-10 sm:p-6"
             style={{ backgroundImage: 'linear-gradient(90deg, rgba(16,17,17,0.92), rgba(16,17,17,0.38)), url(/images/home_page/hero.png)' }}
           >
-            <div className="grid h-full gap-4 sm:grid-cols-[1fr_1.35fr]">
-              <div className="border border-white/20 bg-white/5 p-4">
-                <div className="mb-8 h-px bg-white/30" />
-                <p className="font-secondary text-3xl leading-tight">Patient Growth Audit</p>
-                <p className="mt-4 text-xs uppercase tracking-[0.16em] text-[#e9c176]">Trust. Search. Booking.</p>
+            <div className="grid h-full grid-rows-[0.78fr_1.22fr] gap-3 sm:grid-rows-none sm:gap-4 sm:grid-cols-[1fr_1.35fr]">
+              <div className="border border-white/20 bg-white/5 p-3 sm:p-4">
+                <div className="mb-5 h-px bg-white/30 sm:mb-8" />
+                <p className="font-secondary text-2xl leading-tight sm:text-3xl">Patient Growth Audit</p>
+                <p className="mt-3 text-[10px] uppercase tracking-[0.16em] text-[#e9c176] sm:mt-4 sm:text-xs">Trust. Search. Booking.</p>
               </div>
-              <div className="flex flex-col justify-end border border-white/20 bg-black/30 p-5">
-                <div className="mb-4 border border-white/15 bg-white/10 p-4">
-                  <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#e9c176]">Next Patient Action</p>
-                  <p className="mt-3 font-secondary text-3xl">Book Consultation</p>
+              <div className="flex min-h-0 flex-col justify-end border border-white/20 bg-black/30 p-3 sm:p-5">
+                <div className="mb-3 border border-white/15 bg-white/10 p-3 sm:mb-4 sm:p-4">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#e9c176] sm:text-xs">Next Patient Action</p>
+                  <p className="mt-2 font-secondary text-2xl leading-tight sm:mt-3 sm:text-3xl">Book Consultation</p>
                 </div>
-                <div className="grid grid-cols-1 gap-2 sm:grid-cols-3">
-                  <span className="border border-white/15 bg-white/10 p-3 text-xs">Google Ready</span>
-                  <span className="border border-white/15 bg-white/10 p-3 text-xs">WhatsApp CTA</span>
-                  <span className="border border-white/15 bg-white/10 p-3 text-xs">Trust Proof</span>
+                <div className="grid grid-cols-3 gap-2">
+                  <span className="border border-white/15 bg-white/10 p-2 text-[9px] leading-tight sm:p-3 sm:text-xs">Google Ready</span>
+                  <span className="border border-white/15 bg-white/10 p-2 text-[9px] leading-tight sm:p-3 sm:text-xs">WhatsApp CTA</span>
+                  <span className="border border-white/15 bg-white/10 p-2 text-[9px] leading-tight sm:p-3 sm:text-xs">Trust Proof</span>
                 </div>
               </div>
             </div>
