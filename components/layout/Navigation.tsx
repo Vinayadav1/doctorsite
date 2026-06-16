@@ -57,7 +57,7 @@ const Navigation: React.FC<NavigationProps> = ({ currentPath, onGetStartedClick 
           </div>
 
           {/* Desktop CTA */}
-          <div className="hidden lg:block">
+          <div className="hidden items-center gap-3 lg:flex">
             {onGetStartedClick ? (
               <button
                 type="button"
@@ -72,6 +72,14 @@ const Navigation: React.FC<NavigationProps> = ({ currentPath, onGetStartedClick 
                 Book Free Website Audit
               </Link>
             )}
+            <a
+              href="https://wa.me/917291978840"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex whitespace-nowrap border border-[#25D366] bg-[#25D366] px-4 py-2.5 text-xs font-bold uppercase tracking-[0.12em] text-white"
+            >
+              WhatsApp
+            </a>
           </div>
 
           {/* Mobile Hamburger */}
@@ -132,6 +140,15 @@ const Navigation: React.FC<NavigationProps> = ({ currentPath, onGetStartedClick 
                   Book Free Website Audit
                 </Link>
               )}
+              <a
+                href="https://wa.me/917291978840"
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => setMenuOpen(false)}
+                className="mt-3 block w-full border border-[#25D366] bg-[#25D366] py-3 text-center text-xs font-bold uppercase tracking-[0.12em] text-white"
+              >
+                WhatsApp Us
+              </a>
             </div>
           </div>
         </div>

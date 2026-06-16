@@ -4,14 +4,17 @@ const dispatches = [
   {
     title: 'Digital Trust: The Silent Patient Experience',
     body: 'How patients judge credibility before reading your full services page.',
+    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=80',
   },
   {
     title: 'Google & Appointment Flow: Search To Specialist',
     body: 'Why discovery and booking should be designed as one patient journey.',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80',
   },
   {
     title: 'Specialty Positioning For The Local Market',
     body: 'How specialist practices can communicate authority without sounding generic.',
+    image: 'https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=900&q=80',
   },
 ];
 
@@ -54,29 +57,37 @@ const reasons = [
 export default function BlogPage() {
   return (
     <div className="bg-[#fbf9f8] text-[#1b1c1c]">
-      <section className="mx-auto grid min-h-screen max-w-7xl grid-cols-1 gap-12 px-5 pb-20 pt-28 sm:px-8 lg:grid-cols-[6fr_6fr] lg:px-16 lg:pb-28 lg:pt-32">
+      <section className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-5 pb-14 pt-24 sm:px-8 sm:pt-28 lg:mt-16 lg:min-h-[calc(90vh-64px)] lg:grid-cols-[6fr_6fr] lg:items-center lg:gap-8 lg:px-16 lg:pb-8 lg:pt-4">
         <div className="flex flex-col justify-center">
-          <p className="mb-6 text-xs font-bold uppercase tracking-[0.18em] text-[#775a19]">Insights</p>
-          <h1 className="font-secondary text-5xl font-bold leading-[1.08] tracking-[-0.04em] text-black sm:text-6xl lg:text-[72px]">
+          <p className="mb-5 text-xs font-bold uppercase tracking-[0.18em] text-[#775a19]">Insights</p>
+          <h1 className="font-secondary text-5xl font-bold leading-[1.02] tracking-[-0.04em] text-black sm:text-6xl lg:text-[56px] xl:text-[62px]">
             Healthcare <span className="italic text-[#775a19]">Digital Insights</span>
           </h1>
-          <p className="mt-8 max-w-xl text-xl leading-8 text-[#444748]">
+          <p className="mt-5 max-w-xl text-base leading-7 text-[#444748]">
             Practical strategies for doctors, clinics, and healthcare brands that want to build trust, improve visibility, and convert more patients online.
           </p>
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <a href="#latest" className="border border-black bg-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#775a19] hover:bg-[#775a19]">
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+            <a href="#latest" className="border border-black bg-black px-6 py-3.5 text-[11px] font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#775a19] hover:bg-[#775a19]">
               Read Articles
             </a>
-            <a href="#subscribe" className="border border-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">
+            <a href="#subscribe" className="border border-black px-6 py-3.5 text-[11px] font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">
               Stay Informed
+            </a>
+            <a href="https://wa.me/917291978840" target="_blank" rel="noreferrer" className="border border-[#25D366] bg-[#25D366] px-6 py-3.5 text-center text-[11px] font-bold uppercase tracking-[0.14em] text-white">
+              WhatsApp Us
             </a>
           </div>
         </div>
 
         <div className="flex items-center">
           <div className="w-full border border-black bg-black p-8 text-white">
-            <div className="mb-8 h-[420px] bg-[radial-gradient(circle_at_35%_45%,#f2f0f0_0%,#555_14%,#111_45%,#030303_74%)] p-8">
-              <div className="h-full border border-white/15 bg-white/5" />
+            <div
+              className="mb-6 h-[340px] bg-cover bg-center p-5 sm:h-[420px] sm:p-8 lg:h-[400px] xl:h-[440px]"
+              style={{ backgroundImage: 'linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.62)), url(https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80)' }}
+            >
+              <div className="flex h-full items-end border border-white/15 bg-black/20 p-6">
+                <p className="font-secondary text-4xl font-bold leading-tight">Insights for clinic growth.</p>
+              </div>
             </div>
             <div className="flex items-end justify-between gap-6">
               <div>
@@ -102,7 +113,10 @@ export default function BlogPage() {
       <section id="latest" className="py-24 lg:py-32">
         <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[5fr_7fr] lg:px-16">
           <div className="border border-black bg-[#e4e2e2] p-8">
-            <div className="h-[460px] bg-[linear-gradient(135deg,#f2f0f0,#1b1c1c_62%,#050505)]" />
+            <div
+              className="h-[460px] bg-cover bg-center"
+              style={{ backgroundImage: 'linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.5)), url(https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80)' }}
+            />
           </div>
           <article className="flex flex-col justify-center">
             <p className="mb-5 text-xs font-bold uppercase tracking-[0.18em] text-[#775a19]">Featured Article</p>
@@ -130,9 +144,12 @@ export default function BlogPage() {
             <a href="#subscribe" className="text-xs font-bold uppercase tracking-[0.16em] text-[#775a19]">Subscribe For Updates</a>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
-            {dispatches.map((post, index) => (
+            {dispatches.map((post) => (
               <article key={post.title} className="border border-black bg-white p-5">
-                <div className={`mb-6 h-56 ${index === 0 ? 'bg-[linear-gradient(135deg,#0b7776,#030303)]' : index === 1 ? 'bg-[radial-gradient(circle_at_center,#0b7776,#111_55%,#030303)]' : 'bg-[linear-gradient(135deg,#f2f0f0,#5f5e5e,#111)]'}`} />
+                <div
+                  className="mb-6 h-56 bg-cover bg-center"
+                  style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.48)), url(${post.image})` }}
+                />
                 <p className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-[#775a19]">Clinic Insight</p>
                 <h3 className="font-secondary text-2xl font-bold leading-tight">{post.title}</h3>
                 <p className="mt-4 text-sm leading-7 text-[#444748]">{post.body}</p>
@@ -188,7 +205,10 @@ export default function BlogPage() {
             </a>
           </div>
           <div className="border border-black bg-[#e4e2e2] p-8">
-            <div className="h-[430px] bg-[linear-gradient(135deg,#f2f0f0,#5f5e5e_60%,#111)] p-8">
+            <div
+              className="h-[430px] bg-cover bg-center p-8"
+              style={{ backgroundImage: 'linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.58)), url(https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80)' }}
+            >
               <div className="h-full border border-white/30 bg-black/20" />
             </div>
           </div>

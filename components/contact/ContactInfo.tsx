@@ -16,7 +16,7 @@ const ContactInfo: React.FC = () => {
         </svg>
       ),
       title: 'Phone',
-      value: '+91 88407 34369',
+      value: '+91 72919 78840',
       description: 'Mon-Sat, 9 AM - 7 PM',
     },
     {

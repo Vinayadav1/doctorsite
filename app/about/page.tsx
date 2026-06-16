@@ -68,50 +68,59 @@ const credibilityItems = [
 export default function AboutPage() {
   return (
     <div className="bg-[#fbf9f8] text-[#1b1c1c]">
-      <section className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-5 pb-16 pt-24 sm:px-8 sm:pt-28 lg:min-h-screen lg:grid-cols-[5fr_7fr] lg:px-16 lg:pb-24 lg:pt-32">
+      <section className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-5 pb-14 pt-24 sm:px-8 sm:pt-28 lg:mt-16 lg:min-h-[calc(90vh-64px)] lg:grid-cols-[5fr_7fr] lg:items-center lg:gap-8 lg:px-16 lg:pb-8 lg:pt-4">
         <div className="flex flex-col justify-center">
-          <p className="mb-6 text-xs font-bold uppercase tracking-[0.18em] text-[#775a19]">Why DoctorSite Exists</p>
-          <h1 className="font-secondary text-5xl font-bold leading-[1.08] tracking-[-0.04em] text-black sm:text-6xl lg:text-[72px]">
+          <p className="mb-5 text-xs font-bold uppercase tracking-[0.18em] text-[#775a19]">Why DoctorSite Exists</p>
+          <h1 className="font-secondary text-5xl font-bold leading-[1.02] tracking-[-0.04em] text-black sm:text-6xl lg:text-[56px] xl:text-[62px]">
             Healthcare Growth Is Different From <span className="italic text-[#775a19]">Website Design</span>
           </h1>
-          <p className="mt-8 max-w-xl text-lg leading-8 tracking-[0.01em] text-[#45464d]">
+          <p className="mt-5 max-w-xl text-base leading-7 tracking-[0.01em] text-[#45464d]">
             DoctorSite was created for doctors, clinics, surgeons, hospitals, and specialists who need more patient trust, better visibility, and easier consultation booking.
           </p>
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <a href="/contact#consultation" data-consultation-modal className="border border-black bg-black px-7 py-4 text-center text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#775a19] hover:bg-[#775a19]">
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+            <a href="/contact#consultation" data-consultation-modal className="border border-black bg-black px-6 py-3.5 text-center text-[11px] font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#775a19] hover:bg-[#775a19]">
               Book Free Website Audit
             </a>
-            <a href="#standards" className="border border-black bg-white px-7 py-4 text-center text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">
-              Why Healthcare Is Different
+            <a href="https://wa.me/917291978840" target="_blank" rel="noreferrer" className="border border-[#25D366] bg-[#25D366] px-6 py-3.5 text-center text-[11px] font-bold uppercase tracking-[0.14em] text-white">
+              WhatsApp Us
             </a>
           </div>
         </div>
 
         <div className="relative flex items-center justify-center">
-          <div className="relative w-full border border-black bg-white p-6">
+          <div className="relative w-full border border-black bg-white p-4 sm:p-6">
             <div
-              className="border border-black/20 bg-[#e4e2e2] bg-cover bg-center p-5"
+              className="border border-black/20 bg-[#e4e2e2] bg-cover bg-center p-4 sm:p-5 lg:max-h-[500px] lg:overflow-hidden"
               style={{ backgroundImage: 'linear-gradient(90deg, rgba(228,226,226,0.94), rgba(228,226,226,0.42)), url(https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1200&q=80)' }}
             >
-              <div className="mb-5 flex items-center justify-between border-b border-[#c6c6cd] pb-4">
+              <div className="mb-4 flex items-center justify-between border-b border-[#c6c6cd] pb-3">
                 <span className="h-3 w-24 bg-black" />
                 <span className="h-3 w-16 bg-[#e9c176]" />
               </div>
               <div className="grid gap-4 md:grid-cols-[1.3fr_1fr]">
-                <div className="border border-black/15 bg-white p-5">
-                  <div className="mb-8 h-32 bg-[linear-gradient(135deg,#111312,#c9c6c5)]" />
+                <div className="border border-black/15 bg-white p-4 sm:p-5">
+                  <div
+                    className="mb-5 h-28 bg-cover bg-center sm:h-32"
+                    style={{ backgroundImage: 'linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.45)), url(https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=900&q=80)' }}
+                  />
                   <div className="space-y-3">
                     <span className="block h-3 w-5/6 bg-[#e4e2e2]" />
                     <span className="block h-3 w-2/3 bg-[#e4e2e2]" />
-                    <span className="block h-8 w-28 bg-black" />
+                    <span className="inline-flex bg-black px-4 py-2 text-[10px] font-bold uppercase tracking-[0.14em] text-white">
+                      Patient Trust
+                    </span>
                   </div>
                 </div>
-                <div className="bg-[#111312]/90 p-5 text-white">
+                <div className="bg-[#111312]/90 p-4 text-white sm:p-5">
                   <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#e9c176]">Healthcare Growth System</p>
-                  <p className="mt-8 font-secondary text-3xl leading-tight">Trust-first patient acquisition.</p>
-                  <div className="mt-10 grid grid-cols-2 gap-3">
-                    <span className="h-16 border border-white/15 bg-white/10" />
-                    <span className="h-16 border border-white/15 bg-white/10" />
+                  <p className="mt-6 font-secondary text-2xl leading-tight sm:text-3xl">Trust-first patient acquisition.</p>
+                  <div className="mt-7 grid grid-cols-2 gap-3">
+                    <span className="flex h-14 items-center justify-center border border-white/15 bg-white/10 px-3 text-center text-[10px] font-bold uppercase tracking-[0.12em] text-white/75">
+                      Google Ready
+                    </span>
+                    <span className="flex h-14 items-center justify-center border border-white/15 bg-white/10 px-3 text-center text-[10px] font-bold uppercase tracking-[0.12em] text-white/75">
+                      Booking Path
+                    </span>
                   </div>
                 </div>
               </div>
@@ -139,8 +148,13 @@ export default function AboutPage() {
       <section className="bg-[#111312] py-20 text-white lg:py-28">
         <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[5fr_7fr] lg:px-16">
           <div className="border border-white/15 bg-white/5 p-5">
-            <div className="h-[420px] border border-white/15 bg-[linear-gradient(135deg,#f2f0f0,#5f5e5e_48%,#111312)] p-5">
-              <div className="h-full border border-white/20 bg-white/10" />
+            <div
+              className="h-[420px] border border-white/15 bg-cover bg-center p-5"
+              style={{ backgroundImage: 'linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.62)), url(https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80)' }}
+            >
+              <div className="flex h-full items-end border border-white/20 bg-black/20 p-5">
+                <p className="font-secondary text-3xl font-bold leading-tight">Built for doctors who need patient trust online.</p>
+              </div>
             </div>
           </div>
           <div className="flex flex-col justify-center">
@@ -330,7 +344,7 @@ export default function AboutPage() {
             <a href="/contact#consultation" data-consultation-modal className="border border-white bg-white px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">
               Book Free Website Audit
             </a>
-            <a href="tel:+918840734369" className="border border-white px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:bg-white hover:text-black">
+            <a href="tel:+917291978840" className="border border-white px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:bg-white hover:text-black">
               Call DoctorSite
             </a>
           </div>

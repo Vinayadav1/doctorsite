@@ -170,7 +170,7 @@ export default function Home() {
             <a href="/contact#consultation" data-consultation-modal className="inline-flex justify-center border border-black bg-black px-6 py-3.5 text-[11px] font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#775a19] hover:bg-[#775a19]">
               Book Free Website Audit
             </a>
-            <a href="https://wa.me/918840734369" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-3 border border-[#25D366] bg-[#25D366] px-6 py-3.5 text-[11px] font-bold uppercase tracking-[0.14em] text-white shadow-[0_14px_30px_rgba(37,211,102,0.24)]">
+            <a href="https://wa.me/917291978840" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-3 border border-[#25D366] bg-[#25D366] px-6 py-3.5 text-[11px] font-bold uppercase tracking-[0.14em] text-white shadow-[0_14px_30px_rgba(37,211,102,0.24)]">
               <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 004.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.76 14.18c-.24.68-1.2 1.25-1.88 1.41-.5.11-1.15.2-3.34-.7-2.81-1.16-4.62-4.02-4.76-4.2-.13-.18-1.14-1.52-1.14-2.9s.72-2.05.98-2.34c.24-.27.64-.39 1.03-.39.13 0 .25.01.36.01.31.01.47.03.68.53.26.63.88 2.15.96 2.31.08.16.16.37.05.59-.1.23-.19.33-.36.53-.18.2-.35.35-.53.57-.16.19-.34.4-.14.75.19.34.86 1.42 1.84 2.3 1.27 1.13 2.29 1.49 2.68 1.65.29.12.64.09.84-.13.27-.29.6-.77.94-1.25.24-.34.55-.38.87-.26.33.11 2.07.98 2.43 1.15.36.18.59.27.68.42.08.15.08.86-.16 1.54z" />
               </svg>
@@ -380,7 +380,6 @@ export default function Home() {
           <div className="grid gap-6 lg:grid-cols-3">
             {testimonials.map((item) => (
               <article key={item.name} className="border border-white/15 bg-white/[0.04] p-7">
-                <div className="mb-7 h-20 w-20 border border-[#e9c176] bg-[linear-gradient(135deg,#f2f0f0,#775a19)]" />
                 <p className="text-sm leading-7 text-white/70">&quot;{item.quote}&quot;</p>
                 <div className="mt-8 border-t border-white/15 pt-6">
                   <p className="font-secondary text-2xl font-semibold">{item.name}</p>
@@ -477,7 +476,7 @@ export default function Home() {
             <a href="/contact#consultation" data-consultation-modal className="border border-white bg-white px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">
               Book Free Website Audit
             </a>
-            <a href="tel:+918840734369" className="border border-white px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:bg-white hover:text-black">
+            <a href="tel:+917291978840" className="border border-white px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:bg-white hover:text-black">
               Call DoctorSite
             </a>
           </div>

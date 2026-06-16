@@ -63,21 +63,24 @@ const strategy = [
 export default function PortfolioPage() {
   return (
     <div className="bg-[#fbf9f8] text-[#1b1c1c]">
-      <section className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-5 pb-16 pt-24 sm:px-8 sm:pt-28 lg:min-h-screen lg:grid-cols-[6fr_6fr] lg:px-16 lg:pb-24 lg:pt-32">
+      <section className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-5 pb-14 pt-24 sm:px-8 sm:pt-28 lg:mt-16 lg:min-h-[calc(90vh-64px)] lg:grid-cols-[6fr_6fr] lg:items-center lg:gap-8 lg:px-16 lg:pb-8 lg:pt-4">
         <div className="flex flex-col justify-center">
-          <p className="mb-6 text-xs font-bold uppercase tracking-[0.18em] text-[#775a19]">Portfolio</p>
-          <h1 className="font-secondary text-5xl font-bold leading-[1.08] tracking-[-0.04em] text-black sm:text-6xl lg:text-[72px]">
+          <p className="mb-5 text-xs font-bold uppercase tracking-[0.18em] text-[#775a19]">Portfolio</p>
+          <h1 className="font-secondary text-5xl font-bold leading-[1.02] tracking-[-0.04em] text-black sm:text-6xl lg:text-[56px] xl:text-[62px]">
             Healthcare Case Studies Designed To <span className="italic text-[#775a19]">Book Consultations.</span>
           </h1>
-          <p className="mt-8 max-w-xl text-xl leading-8 text-[#444748]">
+          <p className="mt-5 max-w-xl text-base leading-7 text-[#444748]">
             A curated view of healthcare website systems built to improve credibility, patient clarity, Google visibility, and appointment conversion.
           </p>
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <a href="#projects" className="border border-black bg-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#775a19] hover:bg-[#775a19]">
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+            <a href="#projects" className="border border-black bg-black px-6 py-3.5 text-[11px] font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#775a19] hover:bg-[#775a19]">
               View Projects
             </a>
-            <a href="/contact#consultation" data-consultation-modal className="border border-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">
+            <a href="/contact#consultation" data-consultation-modal className="border border-black px-6 py-3.5 text-[11px] font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">
               Book Free Website Audit
+            </a>
+            <a href="https://wa.me/917291978840" target="_blank" rel="noreferrer" className="border border-[#25D366] bg-[#25D366] px-6 py-3.5 text-center text-[11px] font-bold uppercase tracking-[0.14em] text-white">
+              WhatsApp Us
             </a>
           </div>
         </div>
@@ -92,20 +95,29 @@ export default function PortfolioPage() {
                 </div>
                 <div className="grid gap-4 md:grid-cols-[1.4fr_1fr]">
                   <div
-                    className="h-72 bg-cover bg-center"
+                    className="h-56 bg-cover bg-center sm:h-72"
                     style={{ backgroundImage: 'linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.58)), url(https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1000&q=80)' }}
                   />
                   <div className="space-y-4">
-                    <div className="h-20 border border-white/15 bg-white/10" />
-                    <div className="h-20 border border-white/15 bg-white/10" />
-                    <div className="h-20 border border-white/15 bg-white/10" />
+                    <div className="flex h-20 flex-col justify-center border border-white/15 bg-white/10 px-4">
+                      <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#e9c176]">Challenge</p>
+                      <p className="mt-2 text-sm font-semibold text-white/80">Low patient confidence</p>
+                    </div>
+                    <div className="flex h-20 flex-col justify-center border border-white/15 bg-white/10 px-4">
+                      <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#e9c176]">Solution</p>
+                      <p className="mt-2 text-sm font-semibold text-white/80">Trust-first pages</p>
+                    </div>
+                    <div className="flex h-20 flex-col justify-center border border-white/15 bg-white/10 px-4">
+                      <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#e9c176]">Outcome</p>
+                      <p className="mt-2 text-sm font-semibold text-white/80">Clear booking path</p>
+                    </div>
                   </div>
                 </div>
               </div>
               <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#e9c176]">Website Case Study</p>
               <h2 className="mt-3 font-secondary text-3xl font-bold">Trust-first clinical interface</h2>
             </div>
-            <div className="absolute -bottom-8 left-8 bg-[#775a19] px-8 py-5 text-white">
+            <div className="absolute left-0 top-10 bg-[#775a19] px-6 py-4 text-white sm:left-8 sm:px-8 sm:py-5">
               <p className="font-secondary text-4xl font-bold">Audit</p>
               <p className="text-xs font-bold uppercase tracking-[0.16em]">Ready</p>
             </div>
@@ -195,7 +207,10 @@ export default function PortfolioPage() {
             </div>
           </div>
           <div className="border border-black bg-[#e4e2e2] p-8">
-            <div className="h-[430px] bg-[linear-gradient(135deg,#0b0b0b,#2f3538,#d5d1cc)] p-8">
+            <div
+              className="h-[430px] bg-cover bg-center p-8"
+              style={{ backgroundImage: 'linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.58)), url(https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80)' }}
+            >
               <div className="h-full border border-white/25 bg-black/30" />
             </div>
           </div>
@@ -207,7 +222,10 @@ export default function PortfolioPage() {
           <p className="mb-5 text-xs font-bold uppercase tracking-[0.18em] text-[#e9c176]">Responsive Systems</p>
           <h2 className="font-secondary text-4xl font-bold tracking-[-0.03em] lg:text-5xl">Designed For Every Device</h2>
           <div className="mx-auto mt-14 max-w-5xl border border-white/15 bg-[#050706] p-8">
-            <div className="relative mx-auto h-[520px] max-w-4xl bg-[radial-gradient(circle_at_center,#0b7776,#062a2a_40%,#020303_70%)]">
+            <div
+              className="relative mx-auto h-[520px] max-w-4xl bg-cover bg-center"
+              style={{ backgroundImage: 'linear-gradient(180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.72)), url(https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80)' }}
+            >
               <div className="absolute left-1/2 top-12 h-64 w-[520px] -translate-x-1/2 border border-cyan-300/50 bg-cyan-300/10" />
               <div className="absolute bottom-20 left-24 h-56 w-36 border border-cyan-300/50 bg-cyan-300/10" />
               <div className="absolute bottom-16 right-24 h-48 w-64 border border-cyan-300/50 bg-cyan-300/10" />
@@ -261,7 +279,7 @@ export default function PortfolioPage() {
             <a href="/contact#consultation" data-consultation-modal className="border border-black bg-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#775a19] hover:bg-[#775a19]">
               Book Free Website Audit
             </a>
-            <a href="tel:+918840734369" className="border border-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">
+            <a href="tel:+917291978840" className="border border-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">
               Book Strategy Call
             </a>
           </div>

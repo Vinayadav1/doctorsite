@@ -81,21 +81,21 @@ export const Footer: React.FC<FooterProps> = ({ className = '' }) => {
               <div className="flex items-start space-x-2">
                 <span className="text-gray-400">Phone:</span>
                 <a
-                  href="tel:+918840734369"
+                  href="tel:+917291978840"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  +91 88407 34369
+                  +91 72919 78840
                 </a>
               </div>
               <div className="flex items-start space-x-2">
                 <span className="text-gray-400">WhatsApp:</span>
                 <a
-                  href="https://wa.me/918840734369"
+                  href="https://wa.me/917291978840"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  +91 88407 34369
+                  +91 72919 78840
                 </a>
               </div>
             </div>

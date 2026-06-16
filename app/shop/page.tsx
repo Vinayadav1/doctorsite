@@ -249,24 +249,24 @@ export default function ShopPage() {
 
   return (
     <div className="bg-[#fbf9f8] text-[#1b1c1c]">
-      <section className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-5 pb-16 pt-24 sm:px-8 sm:pt-28 lg:min-h-screen lg:grid-cols-[5fr_7fr] lg:px-16 lg:pb-24 lg:pt-32">
+      <section className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-5 pb-14 pt-24 sm:px-8 sm:pt-28 lg:mt-16 lg:min-h-[calc(90vh-64px)] lg:grid-cols-[5fr_7fr] lg:items-center lg:gap-8 lg:px-16 lg:pb-8 lg:pt-4">
         <div className="flex flex-col justify-center">
-          <p className="mb-6 text-xs font-bold uppercase tracking-[0.18em] text-[#775a19]">Ready-Made Medical Website Solutions</p>
-          <h1 className="font-secondary text-5xl font-bold leading-[1.05] tracking-[-0.04em] text-black sm:text-6xl lg:text-[72px]">
+          <p className="mb-5 text-xs font-bold uppercase tracking-[0.18em] text-[#775a19]">Ready-Made Medical Website Solutions</p>
+          <h1 className="font-secondary text-5xl font-bold leading-[1.02] tracking-[-0.04em] text-black sm:text-6xl lg:text-[56px] xl:text-[62px]">
             Choose A Proven Website Structure Tailored To Your <span className="italic text-[#775a19]">Specialty</span>
           </h1>
-          <p className="mt-8 max-w-xl text-lg leading-8 text-[#444748]">
+          <p className="mt-5 max-w-xl text-base leading-7 text-[#444748]">
             Launch faster with healthcare website systems planned around patient trust, Google visibility, WhatsApp inquiries, and appointment conversion.
           </p>
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <a href="/contact#consultation" data-consultation-modal className="border border-black bg-black px-7 py-4 text-center text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#775a19] hover:bg-[#775a19]">
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+            <a href="/contact#consultation" data-consultation-modal className="border border-black bg-black px-6 py-3.5 text-center text-[11px] font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#775a19] hover:bg-[#775a19]">
               Book Free Website Audit
             </a>
-            <a href="#designs" className="border border-black px-7 py-4 text-center text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">
-              Browse Solutions
+            <a href="https://wa.me/917291978840" target="_blank" rel="noreferrer" className="border border-[#25D366] bg-[#25D366] px-6 py-3.5 text-center text-[11px] font-bold uppercase tracking-[0.14em] text-white">
+              WhatsApp Us
             </a>
           </div>
-          <div className="mt-8 grid gap-3 sm:grid-cols-2">
+          <div className="mt-6 grid gap-3 sm:grid-cols-2">
             {solutionBenefits.map((benefit) => (
               <div key={benefit} className="border border-black/15 bg-white px-4 py-3 text-sm font-semibold text-[#444748]">
                 {benefit}

@@ -115,31 +115,39 @@ const faqs = [
 export default function HowItWorksPage() {
   return (
     <div className="bg-[#fbf9f8] text-[#1b1c1c]">
-      <section className="mx-auto grid min-h-screen max-w-7xl grid-cols-1 gap-12 px-5 pb-20 pt-28 sm:px-8 lg:grid-cols-[6fr_6fr] lg:px-16 lg:pb-28 lg:pt-32">
+      <section className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-5 pb-14 pt-24 sm:px-8 sm:pt-28 lg:mt-16 lg:min-h-[calc(90vh-64px)] lg:grid-cols-[6fr_6fr] lg:items-center lg:gap-8 lg:px-16 lg:pb-8 lg:pt-4">
         <div className="flex flex-col justify-center">
-          <p className="mb-6 text-xs font-bold uppercase tracking-[0.18em] text-[#775a19]">How We Work</p>
-          <h1 className="font-secondary text-5xl font-bold leading-[1.08] tracking-[-0.04em] text-black sm:text-6xl lg:text-[72px]">
+          <p className="mb-5 text-xs font-bold uppercase tracking-[0.18em] text-[#775a19]">How We Work</p>
+          <h1 className="font-secondary text-5xl font-bold leading-[1.02] tracking-[-0.04em] text-black sm:text-6xl lg:text-[56px] xl:text-[62px]">
             A Proven Process For <span className="italic text-[#775a19]">Exceptional Healthcare Websites</span>
           </h1>
-          <p className="mt-8 max-w-xl text-xl leading-8 text-[#444748]">
+          <p className="mt-5 max-w-xl text-base leading-7 text-[#444748]">
             A focused, transparent process for building premium medical websites that communicate expertise, improve patient trust, and support appointment growth.
           </p>
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <a href="#execution" className="border border-black bg-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#775a19] hover:bg-[#775a19]">
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+            <a href="#execution" className="border border-black bg-black px-6 py-3.5 text-[11px] font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#775a19] hover:bg-[#775a19]">
               View Process
             </a>
-            <a href="/contact#consultation" data-consultation-modal className="border border-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">
+            <a href="/contact#consultation" data-consultation-modal className="border border-black px-6 py-3.5 text-[11px] font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">
               Start Project
+            </a>
+            <a href="https://wa.me/917291978840" target="_blank" rel="noreferrer" className="border border-[#25D366] bg-[#25D366] px-6 py-3.5 text-center text-[11px] font-bold uppercase tracking-[0.14em] text-white">
+              WhatsApp Us
             </a>
           </div>
         </div>
 
         <div className="flex items-center">
           <div className="relative w-full border border-black bg-[#e4e2e2] p-6">
-            <div className="h-[520px] bg-[linear-gradient(135deg,#f2f0f0,#777_38%,#111)] p-8">
-              <div className="h-full border border-white/30 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.65),transparent_30%)]" />
+            <div
+              className="h-[380px] bg-cover bg-center p-5 sm:h-[520px] sm:p-8 lg:h-[500px] xl:h-[540px]"
+              style={{ backgroundImage: 'linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.58)), url(https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80)' }}
+            >
+              <div className="flex h-full items-end border border-white/30 bg-black/20 p-6 text-white">
+                <p className="font-secondary text-4xl font-bold leading-tight">Strategy before design.</p>
+              </div>
             </div>
-            <div className="absolute -bottom-8 left-8 bg-white px-8 py-5 text-black ring-1 ring-black">
+            <div className="absolute left-0 top-10 bg-white px-6 py-4 text-black ring-1 ring-black sm:left-8 sm:px-8 sm:py-5">
               <p className="font-secondary text-4xl font-bold">0.01mm</p>
               <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#775a19]">Process precision</p>
             </div>
@@ -233,8 +241,13 @@ export default function HowItWorksPage() {
       <section className="bg-[#e4e2e2] py-24 lg:py-32">
         <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[5fr_7fr] lg:px-16">
           <div className="border border-black bg-black p-8">
-            <div className="h-[430px] bg-[radial-gradient(circle_at_center,#777,#111_55%,#050505)] p-8">
-              <div className="h-full border border-white/20 bg-white/5" />
+            <div
+              className="h-[430px] bg-cover bg-center p-8"
+              style={{ backgroundImage: 'linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.62)), url(https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=1200&q=80)' }}
+            >
+              <div className="flex h-full items-end border border-white/20 bg-black/25 p-6 text-white">
+                <p className="font-secondary text-3xl font-bold leading-tight">Built around clinical trust.</p>
+              </div>
             </div>
           </div>
           <div className="flex flex-col justify-center">
@@ -279,7 +292,7 @@ export default function HowItWorksPage() {
             <a href="/contact#consultation" data-consultation-modal className="bg-white px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-[#e9c176]">
               Start A Project
             </a>
-            <a href="tel:+918840734369" className="border border-white px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:bg-white hover:text-black">
+            <a href="tel:+917291978840" className="border border-white px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:bg-white hover:text-black">
               Book A Call
             </a>
           </div>

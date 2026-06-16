@@ -138,24 +138,27 @@ const faqs = [
 export default function PricingPage() {
   return (
     <div className="bg-[#fbf9f8] text-[#1b1c1c]">
-      <section className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-5 pb-16 pt-24 sm:px-8 sm:pt-28 lg:min-h-screen lg:grid-cols-[6fr_6fr] lg:px-16 lg:pb-24 lg:pt-32">
+      <section className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-5 pb-14 pt-24 sm:px-8 sm:pt-28 lg:mt-16 lg:min-h-[calc(90vh-64px)] lg:grid-cols-[6fr_6fr] lg:items-center lg:gap-8 lg:px-16 lg:pb-8 lg:pt-4">
         <div className="flex flex-col justify-center">
-          <p className="mb-6 text-xs font-bold uppercase tracking-[0.18em] text-[#775a19]">Pricing</p>
-          <h1 className="font-secondary text-5xl font-bold leading-[1.08] tracking-[-0.04em] text-black sm:text-6xl lg:text-[72px]">
+          <p className="mb-5 text-xs font-bold uppercase tracking-[0.18em] text-[#775a19]">Pricing</p>
+          <h1 className="font-secondary text-5xl font-bold leading-[1.02] tracking-[-0.04em] text-black sm:text-6xl lg:text-[56px] xl:text-[62px]">
             Transparent Pricing For Modern <span className="italic text-[#775a19]">Clinics &amp; Specialists</span>
           </h1>
-          <p className="mt-8 max-w-xl text-xl leading-8 text-[#444748]">
+          <p className="mt-5 max-w-xl text-base leading-7 text-[#444748]">
             Choose the solution that best fits your clinic&apos;s growth stage. From a professional online presence to a complete patient acquisition system.
           </p>
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <a href="/contact#consultation" data-consultation-modal className="border border-black bg-black px-7 py-4 text-center text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#775a19] hover:bg-[#775a19]">
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+            <a href="/contact#consultation" data-consultation-modal className="border border-black bg-black px-6 py-3.5 text-center text-[11px] font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#775a19] hover:bg-[#775a19]">
               Book Free Website Audit
             </a>
-            <a href="#plans" className="border border-black px-7 py-4 text-center text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">
+            <a href="#plans" className="border border-black px-6 py-3.5 text-center text-[11px] font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">
               View Packages
             </a>
+            <a href="https://wa.me/917291978840" target="_blank" rel="noreferrer" className="border border-[#25D366] bg-[#25D366] px-6 py-3.5 text-center text-[11px] font-bold uppercase tracking-[0.14em] text-white">
+              WhatsApp Us
+            </a>
           </div>
-          <div className="mt-10 flex flex-wrap gap-6 border-t border-black/15 pt-6 text-xs font-bold uppercase tracking-[0.12em] text-[#444748]">
+          <div className="mt-6 flex flex-wrap gap-4 border-t border-black/15 pt-5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#444748]">
             <span>Outcome-led scope</span>
             <span>Clear technology fit</span>
             <span>Upgrade anytime</span>
@@ -164,10 +167,15 @@ export default function PricingPage() {
 
         <div className="flex items-center">
           <div className="relative w-full border border-black bg-[#e4e2e2] p-6">
-            <div className="h-[520px] bg-[linear-gradient(135deg,#0c0c0c,#5f5e5e_52%,#e5e2e1)] p-8">
-              <div className="h-full border border-white/20 bg-[repeating-linear-gradient(135deg,rgba(255,255,255,0.18)_0_2px,transparent_2px_26px)]" />
+            <div
+              className="h-[420px] bg-cover bg-center p-5 sm:h-[500px] sm:p-8 lg:h-[500px] xl:h-[540px]"
+              style={{ backgroundImage: 'linear-gradient(180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.62)), url(https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80)' }}
+            >
+              <div className="flex h-full items-end border border-white/20 bg-black/20 p-5 text-white sm:p-6">
+                <p className="ml-auto max-w-[280px] text-right font-secondary text-3xl font-bold leading-tight sm:text-4xl">Choose the right growth stage.</p>
+              </div>
             </div>
-            <div className="absolute bottom-14 left-0 bg-[#775a19] px-8 py-6 text-white">
+            <div className="absolute left-0 top-10 bg-[#775a19] px-6 py-5 text-white sm:px-8 sm:py-6">
               <p className="text-xs font-bold uppercase tracking-[0.16em]">From</p>
               <p className="font-secondary text-4xl font-bold">₹4,999</p>
             </div>
@@ -223,6 +231,9 @@ export default function PricingPage() {
                 </div>
                 <a href="/contact#consultation" data-consultation-modal className={`mt-8 inline-flex w-full justify-center border px-5 py-4 text-xs font-bold uppercase tracking-[0.14em] transition-colors ${plan.featured ? 'border-[#e9c176] bg-[#e9c176] text-black hover:bg-white' : 'border-black text-black hover:bg-black hover:text-white'}`}>
                   Book Free Website Audit
+                </a>
+                <a href={`https://wa.me/917291978840?text=${encodeURIComponent(`Hi DoctorSite, I am interested in the ${plan.name} package.`)}`} target="_blank" rel="noreferrer" className="mt-3 inline-flex w-full justify-center border border-[#25D366] bg-[#25D366] px-5 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white">
+                  WhatsApp This Plan
                 </a>
               </article>
             ))}
@@ -337,7 +348,7 @@ export default function PricingPage() {
             <a href="/contact#consultation" data-consultation-modal className="border border-black bg-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#775a19] hover:bg-[#775a19]">
               Book Free Website Audit
             </a>
-            <a href="tel:+918840734369" className="border border-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">
+            <a href="tel:+917291978840" className="border border-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">
               Call For Pricing
             </a>
           </div>

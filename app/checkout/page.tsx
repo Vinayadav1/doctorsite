@@ -222,7 +222,7 @@ function CheckoutContent() {
 
                 {[
                   { id: 'name', label: 'Full Name', type: 'text', placeholder: 'Dr. John Doe' },
-                  { id: 'phone', label: 'Phone Number', type: 'tel', placeholder: '+91 88407 34369' },
+                  { id: 'phone', label: 'Phone Number', type: 'tel', placeholder: '+91 72919 78840' },
                   { id: 'email', label: 'Email Address', type: 'email', placeholder: 'doctor@example.com' },
                   { id: 'clinicName', label: 'Clinic/Practice Name', type: 'text', placeholder: 'ABC Medical Center' },
                 ].map(field => (

@@ -55,15 +55,15 @@ describe('Footer Component', () => {
 
   it('renders phone link with correct href', () => {
     render(<Footer />);
-    const phoneLinks = screen.getAllByText('+91 88407 34369');
-    expect(phoneLinks[0]).toHaveAttribute('href', 'tel:+918840734369');
+    const phoneLinks = screen.getAllByText('+91 72919 78840');
+    expect(phoneLinks[0]).toHaveAttribute('href', 'tel:+917291978840');
   });
 
   it('renders WhatsApp link with correct href and target', () => {
     render(<Footer />);
-    const whatsappLinks = screen.getAllByText('+91 88407 34369');
+    const whatsappLinks = screen.getAllByText('+91 72919 78840');
     const whatsappLink = whatsappLinks[1];
-    expect(whatsappLink).toHaveAttribute('href', 'https://wa.me/918840734369');
+    expect(whatsappLink).toHaveAttribute('href', 'https://wa.me/917291978840');
     expect(whatsappLink).toHaveAttribute('target', '_blank');
     expect(whatsappLink).toHaveAttribute('rel', 'noopener noreferrer');
   });

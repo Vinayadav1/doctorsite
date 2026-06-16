@@ -18,7 +18,7 @@ const auditCards = [
 ];
 
 const contactMethods = [
-  { value: '+91 88407 34369', label: 'Call or WhatsApp' },
+  { value: '+91 72919 78840', label: 'Call or WhatsApp' },
   { value: 'vinaysalempur45@gmail.com', label: 'Email address' },
   { value: 'India-wide', label: 'Remote consultation' },
   { value: '24-48 hrs', label: 'Average response' },
@@ -50,21 +50,24 @@ const faqs = [
 export default function ContactPage() {
   return (
     <div className="bg-[#fbf9f8] text-[#1b1c1c]">
-      <section className="mx-auto grid min-h-screen max-w-7xl grid-cols-1 gap-12 px-5 pb-20 pt-28 sm:px-8 lg:grid-cols-[6fr_6fr] lg:px-16 lg:pb-28 lg:pt-32">
+      <section className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-5 pb-14 pt-24 sm:px-8 sm:pt-28 lg:mt-16 lg:min-h-[calc(90vh-64px)] lg:grid-cols-[6fr_6fr] lg:items-center lg:gap-8 lg:px-16 lg:pb-8 lg:pt-4">
         <div className="flex flex-col justify-center">
-          <p className="mb-6 text-xs font-bold uppercase tracking-[0.18em] text-[#775a19]">Contact</p>
-          <h1 className="font-secondary text-5xl font-bold leading-[1.08] tracking-[-0.04em] text-black sm:text-6xl lg:text-[72px]">
+          <p className="mb-5 text-xs font-bold uppercase tracking-[0.18em] text-[#775a19]">Contact</p>
+          <h1 className="font-secondary text-5xl font-bold leading-[1.02] tracking-[-0.04em] text-black sm:text-6xl lg:text-[56px] xl:text-[62px]">
             Let&apos;s Discuss <span className="italic text-[#775a19]">Your Practice.</span>
           </h1>
-          <p className="mt-8 max-w-xl text-xl leading-8 text-[#444748]">
+          <p className="mt-5 max-w-xl text-base leading-7 text-[#444748]">
             Whether you are launching a new clinic, redesigning an existing website, or planning a better patient acquisition system, start the conversation here.
           </p>
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <a href="#consultation" className="border border-black bg-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#775a19] hover:bg-[#775a19]">
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+            <a href="#consultation" className="border border-black bg-black px-6 py-3.5 text-[11px] font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#775a19] hover:bg-[#775a19]">
               Start Conversation
             </a>
-            <a href="tel:+918840734369" className="border border-black px-7 py-4 text-xs font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">
+            <a href="tel:+917291978840" className="border border-black px-6 py-3.5 text-[11px] font-bold uppercase tracking-[0.14em] text-black transition-colors hover:bg-black hover:text-white">
               Call The Studio
+            </a>
+            <a href="https://wa.me/917291978840" target="_blank" rel="noreferrer" className="border border-[#25D366] bg-[#25D366] px-6 py-3.5 text-center text-[11px] font-bold uppercase tracking-[0.14em] text-white">
+              WhatsApp Us
             </a>
           </div>
         </div>
@@ -72,11 +75,16 @@ export default function ContactPage() {
         <div className="flex items-center">
           <div className="relative w-full border border-black bg-[#e4e2e2] p-6">
             <div className="bg-black p-8 text-white">
-              <div className="mx-auto h-[360px] max-w-md bg-[radial-gradient(circle_at_70%_45%,#f2f0f0_0%,#777_12%,#222_34%,#030303_70%)] p-8">
-                <div className="h-full border border-white/15 bg-white/10" />
+              <div
+                className="mx-auto h-[320px] max-w-md bg-cover bg-center p-5 sm:h-[360px] sm:p-8 lg:h-[400px]"
+                style={{ backgroundImage: 'linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.68)), url(https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1000&q=80)' }}
+              >
+                <div className="flex h-full items-end border border-white/15 bg-black/20 p-5">
+                  <p className="font-secondary text-3xl leading-tight">Talk to a healthcare growth specialist.</p>
+                </div>
               </div>
             </div>
-            <div className="absolute -bottom-8 left-8 bg-white px-8 py-5 text-black shadow-none ring-1 ring-black">
+            <div className="absolute left-0 top-10 bg-white px-6 py-4 text-black shadow-none ring-1 ring-black sm:left-8 sm:px-8 sm:py-5">
               <p className="font-secondary text-4xl font-bold">24h</p>
               <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#775a19]">Reply window</p>
             </div>
@@ -214,7 +222,10 @@ export default function ContactPage() {
             We work remotely with doctors, specialists, clinics, and healthcare teams across major Indian cities.
           </p>
           <div className="mx-auto mt-14 max-w-5xl border border-black bg-[#c9c6c5] p-8">
-            <div className="h-[420px] bg-[radial-gradient(circle_at_center,#f2f0f0_0%,#777_22%,#444_45%,#222_75%)] opacity-80" />
+            <div
+              className="h-[420px] bg-cover bg-center opacity-90"
+              style={{ backgroundImage: 'linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.48)), url(https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80)' }}
+            />
           </div>
         </div>
       </section>
