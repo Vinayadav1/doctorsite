@@ -11,6 +11,7 @@ const EMAILJS_SERVICE_ID = 'service_5wkd6mg';
 const EMAILJS_TEMPLATE_ID = 'template_p02q1hg';
 const EMAILJS_PUBLIC_KEY = 'ja_G9Ipwlp27pvPxE';
 const OWNER_EMAIL = 'vinaysalempur45@gmail.com';
+const AUTO_MODAL_SESSION_KEY = 'doctorsite-audit-modal-shown';
 
 interface ClientLayoutProps {
   children: React.ReactNode;
@@ -21,8 +22,44 @@ const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
   const isPreviewRoute = pathname.startsWith('/previews/');
   const [isModalOpen, setIsModalOpen] = React.useState(false);
 
-  const openModal = React.useCallback(() => setIsModalOpen(true), []);
+  const markAutoModalSeen = React.useCallback(() => {
+    try {
+      window.sessionStorage.setItem(AUTO_MODAL_SESSION_KEY, 'true');
+    } catch {
+      // Ignore storage issues; the modal should still work.
+    }
+  }, []);
+
+  const hasSeenAutoModal = React.useCallback(() => {
+    try {
+      return window.sessionStorage.getItem(AUTO_MODAL_SESSION_KEY) === 'true';
+    } catch {
+      return false;
+    }
+  }, []);
+
+  const openModal = React.useCallback(() => {
+    markAutoModalSeen();
+    setIsModalOpen(true);
+  }, [markAutoModalSeen]);
   const closeModal = React.useCallback(() => setIsModalOpen(false), []);
+
+  React.useEffect(() => {
+    if (isPreviewRoute || hasSeenAutoModal()) {
+      return;
+    }
+
+    const timer = window.setTimeout(() => {
+      if (hasSeenAutoModal()) {
+        return;
+      }
+
+      markAutoModalSeen();
+      setIsModalOpen(true);
+    }, 5000);
+
+    return () => window.clearTimeout(timer);
+  }, [hasSeenAutoModal, isPreviewRoute, markAutoModalSeen]);
 
   React.useEffect(() => {
     const handleModalClick = (event: MouseEvent) => {
