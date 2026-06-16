@@ -166,6 +166,9 @@ export default function Home() {
           <p className="mt-5 max-w-xl text-base leading-7 text-[#444748]">
             We create healthcare websites that improve patient trust, rank on Google, streamline bookings, and convert visitors into consultations.
           </p>
+          <div className="mt-5 inline-flex w-fit border border-[#775a19]/30 bg-[#f4ead2] px-4 py-2 text-[11px] font-bold uppercase tracking-[0.16em] text-[#775a19]">
+            Packages Starting ₹4,999
+          </div>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
             <a href="/contact#consultation" data-consultation-modal className="inline-flex justify-center border border-black bg-black px-6 py-3.5 text-[11px] font-bold uppercase tracking-[0.14em] text-white transition-colors hover:border-[#775a19] hover:bg-[#775a19]">
               Book Free Website Audit
