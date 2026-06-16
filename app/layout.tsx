@@ -19,6 +19,9 @@ const playfairDisplay = Playfair_Display({
 export const metadata: Metadata = {
   title: "DoctorSite - Healthcare Websites That Generate Patient Appointments",
   description: "Healthcare website design, medical SEO, AI search optimization, and appointment conversion systems for doctors, clinics, surgeons, hospitals, and specialists. Book a free website audit.",
+  icons: {
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
+  },
   keywords: [
     "doctor website design",
     "clinic website design",
